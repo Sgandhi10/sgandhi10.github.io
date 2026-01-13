@@ -1,533 +1,1262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Soham Gandhi - Young engineer harnessing robotics and technology to solve complex challenges with inventive thinking and a positive and collaborative mindset.">
+<title>Soham Gandhi</title>
+<link href="/assets/img/favicon.png" rel="icon">
+<link rel="stylesheet" href="/assets/style.css">
 
-    <title>Soham Gandhi</title>
-    <meta content="Personal Portfolio encompassing all past, current, and published works" name="description">
-    <meta content="Digital Design, Verification, FPGA, ASIC Development" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="assets/img/devpost.png" rel="devpost">
-    
-    <!-- Google Fonts -->
-    <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-            rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- =======================================================
-    * Template Name: MyResume - v4.7.0
-    * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
 </head>
-
 <body>
 
-<!-- ======= Mobile nav toggle button ======= -->
-<!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-<!-- ======= Header ======= -->
-<header class="d-flex flex-column justify-content-center" id="header">
+<!--<div class="cursor" id="cursor">-->
+<!--    <div class="cursor__dot" id="cDot"></div>-->
+<!--    <div class="cursor__ring r1"></div>-->
+<!--    <div class="cursor__ring r2"></div>-->
+<!--</div>-->
 
-    <nav class="navbar nav-menu" id="navbar">
-        <ul>
-            <li><a class="nav-link scrollto active" href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
-            <li><a class="nav-link scrollto" href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-            <li><a class="nav-link scrollto" href="#portfolio"><i class="bx bx-book-content"></i><span>Portfolio</span></a>
-            </li>
-            <li><a class="nav-link scrollto" href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
-            </li>
-        </ul>
-    </nav><!-- .nav-menu -->
-</header><!-- End Header -->
+<main>
+<!-- white-cursor invert-cursor big-cursor black-cursor -->
 
-<!-- ======= Hero Section ======= -->
-<section class="d-flex flex-column justify-content-center" id="hero">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>Soham Gandhi</h1>
-        <p>I'm a <span class="typed" data-typed-items="Tinkerer, Developer, Creator, Innovator"></span></p>
-        <div class="social-links">
-            <a class="email" href="mailto:sohamgandhi@live.com" target="_blank"><i class="bx bx-envelope"></i></a>
-            <a class="github" href="https://github.com/Sgandhi10" target="_blank"><i class="bx bxl-github"></i></a>
-            <a class="linkedin" href="https://www.linkedin.com/in/soham-gandhi/" target="_blank"><i
-                    class="bx bxl-linkedin"></i></a>
-            <!--            Custom icon for devpost-->
-            <!--            <a class="devpost" href="https://devpost.com/Sgandhi10" target="_blank"><img alt="Devpost"-->
-            <!--                                                                                         src="assets/img/devpost.png"></a>-->
+<section class="hero black-cursor" id="hero" aria-label="Interactive hero background">
+    <div class="blobs">
+        <div class="blob a"></div>
+        <div class="blob b"></div>
+        <div class="blob c"></div>
+    </div>
+
+    <canvas id="net"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div id="mouseLight" class="mouse-light" aria-hidden="true"></div>
+
+    <div class="content reveal-up reveal-stagger">
+        <h1 class="hero-title">Soham Gandhi</h1>
+        <h2 class="normal-weight underlined-group"><span class="underlined">Developer</span> &nbsp;&nbsp;|&nbsp;&nbsp; <span class="underlined">Creator</span> &nbsp;&nbsp;|&nbsp;&nbsp; <span class="underlined">Tinkerer</span></h2>
+        <p class="hero-lead">Young engineer harnessing robotics and technology for social good, solving complex challenges with inventive, cross-disciplinary thinking and a positive, collaborative mindset.</p>
+        <a class="cta primary" href="#aboutlink">Explore Work</a>
+    </div>
+</section>
+<section id="aboutlink"></section>
+<section class="about panel reveal-up" id="about">
+    <div class="photo-wrap" id="photoWrap" aria-hidden="true">
+        <img class="photo animated-color-fill" src="/assets/img/soham-gandhi.jpg" alt="Portrait" />
+    </div>
+    <div class="reveal-up reveal-stagger">
+        <div class="eyebrow">About Me</div>
+        <h2 class="about-title normal-weight underlined-group"><span class="underlined">Innovator & Developer</span></h2>
+        <p class="lead">I am an engineer focused on turning technology and robotics into real social value. I like hard, open-ended problems and I enjoy learning across fields to solve them. I work best in positive, collaborative teams and I try to bring a practical mindset, clear communication, and steady execution to every project.</p>
+        <p class="mutedp">I started by tinkering at home, then in 7th grade a Raspberry Pi pulled me deeper into computer engineering. My first bigger project was a robot that navigated the house to deliver drinks to my parents. Since then I have kept raising the bar, from robots that detect microbes to digital design work and a small satellite project, all of which strengthened my creativity, systems thinking, and problem-solving skills.</p>
+
+        <div class="badges" id="badges">
+            <span class="badge">Computer & Electrical Engineer</span>
+            <span class="badge">Minor: Computer Science</span>
+            <span class="badge">Focus: Digital Design, Verification, FPGAs, ASICs</span>
         </div>
-        <div class="col-lg-6">
-            <a aria-pressed="true" class="btn btn-primary btn-lg active"
-               href="https://sohamgandhi.dev/Soham's%20Resume.pdf"
-               role="button"
-               target="_blank">Download Resume</a>
+
+        <div class="actions">
+            <div class="row">
+                <a class="btn primary" href="/assets/Soham's%20Resume.pdf" target="_blank" id="resumeBtn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 3a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4A1 1 0 0 1 8.293 11.293L10.586 13.586V4a1 1 0 0 1 1-1z"/>
+                        <path d="M5 20a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z"/>
+                    </svg>
+                    Download Resume
+                </a>
+            </div>
+            <div class="row">
+                <a class="icon-btn" href="mailto:sohamgandhi@live.com" aria-label="Email">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11zM4.5 6a.5.5 0 0 0-.5.5v.34l8 5.16 8-5.16V6.5a.5.5 0 0 0-.5-.5h-15zM20 9.74l-7.47 4.82a1.5 1.5 0 0 1-1.62 0L3.5 9.74V17.5a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5V9.74z"/>
+                    </svg>
+                    Email
+                </a>
+                <a class="icon-btn" href="https://github.com/Sgandhi10" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.7 2 12.38c0 4.56 2.87 8.43 6.85 9.79.5.1.68-.23.68-.5v-1.86c-2.78.63-3.36-1.38-3.36-1.38-.46-1.2-1.12-1.52-1.12-1.52-.92-.65.07-.64.07-.64 1.02.08 1.55 1.08 1.55 1.08.9 1.62 2.36 1.15 2.94.88.09-.68.35-1.15.63-1.42-2.22-.26-4.55-1.15-4.55-5.1 0-1.13.39-2.06 1.03-2.79-.1-.26-.45-1.32.1-2.75 0 0 .85-.28 2.8 1.06a9.25 9.25 0 0 1 5.1 0c1.95-1.34 2.8-1.06 2.8-1.06.55 1.43.2 2.49.1 2.75.64.73 1.03 1.66 1.03 2.79 0 3.96-2.34 4.84-4.57 5.09.36.33.68.98.68 1.98v2.94c0 .28.18.62.69.5A10.06 10.06 0 0 0 22 12.38C22 6.7 17.52 2 12 2z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a class="icon-btn" href="https://www.linkedin.com/in/soham-gandhi/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.84v2.05h.05c.54-1.02 1.86-2.1 3.84-2.1 4.11 0 4.87 2.7 4.87 6.2V23h-4v-6.8c0-1.62-.03-3.7-2.26-3.7-2.27 0-2.61 1.77-2.61 3.59V23h-4V8z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
         </div>
     </div>
-</section><!-- End Hero -->
+</section>
 
-<main id="main">
+<section class="skills" aria-label="Skills & Tools">
+  <div class="skills__inner">
+    <div class="carousel" id="carousel" aria-live="polite">
+    <ul class="carousel__track" id="track">
+      <!-- ===== Programming Languages ===== -->
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""><span class="skill__name">Python</span></li>
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt=""><span class="skill__name">Java</span></li>
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""><span class="skill__name">C++</span></li>
+      <li class="skill"><span class="skill__name">Bash</span></li>
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""><span class="skill__name">CSS</span></li>
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""><span class="skill__name">HTML</span></li>
+      <li class="skill"><span class="skill__name">LaTeX</span></li>
+      <li class="skill"><span class="skill__name">MATLAB</span></li>
 
-    <!-- ======= About Section ======= -->
-    <section class="about" id="about">
-        <div class="container" data-aos="fade-up">
+      <!-- ===== Tools & Frameworks ===== -->
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt=""><span class="skill__name">Unity</span></li>
+      <li class="skill"><span class="skill__name">XR</span></li>
+      <li class="skill"><span class="skill__name">LTSpice</span></li>
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt=""><span class="skill__name">OpenCV</span></li>
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt=""><span class="skill__name">TensorFlow</span></li>
+      <li class="skill"><span class="skill__name">SolidWorks</span></li>
+      <li class="skill"><span class="skill__name">Fusion 360</span></li>
+      <li class="skill"><span class="skill__name">AutoCAD</span></li>
 
-            <div class="section-title">
-                <h2>About Me</h2>
-                <p>Passionate about all things engineering, I am a young engineer interested in realizing tech and
-                    robotics’ potential for social good. I am always striving to tackle big problems with ingenuity
-                    and transdisciplinary approaches. Most importantly, I am a positive, collaborative, and open-minded
-                    individual striving to reach ambitious goals.</p>
+      <!-- ===== Hardware / Embedded ===== -->
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt=""><span class="skill__name">Raspberry Pi</span></li>
+      <li class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt=""><span class="skill__name">Arduino</span></li>
+      <li class="skill"><span class="skill__name">Teensy</span></li>
+      <li class="skill"><span class="skill__name">I2C</span></li>
+      <li class="skill"><span class="skill__name">SPI</span></li>
+      <li class="skill"><span class="skill__name">RS232</span></li>
+      <li class="skill"><span class="skill__name">UART</span></li>
+    </ul>
+    </div>
+  </div>
+</section>
+
+<section class="experience">
+    <div class="exp-head">
+        <span class="edu-eyebrow">Profile Milestones</span>
+        <h2 class="edu-title">Experience</h2>
+    </div>
+
+    <!-- Digital IC Design Engineer -->
+    <article class="exp-row reveal-up">
+        <div class="exp-date">Jul 2025 – Present</div>
+        <div class="exp-card">
+            <div class="exp-header">
+                <h3 class="exp-role">Digital IC Design Engineer</h3>
+                <span class="exp-company">Texas Instruments, Santa Clara, CA</span>
             </div>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <img alt="" class="img-fluid rounded-3" src="assets/img/profile-img.jpg">
-                </div>
-                <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    <h3>Innovator & Developer</h3>
-                    <p>
-                        From a young age, I tinkered with computers, trying to solve my biggest problems -- intruders
-                        (my parents) in my room. In 7th grade, when I received a raspberry pi, I delved into the world
-                        of computer engineering. My first project was programming a robot to navigate through the house
-                        to deliver drinks to my parents. Since then, I keep looking for larger and larger problems to
-                        solve, ranging from designing a robot that can detect microbes to launching a miniature
-                        satellite into space, challenging my creativity and problem-solving skills to the fullest.
-                    </p>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li>
-                                    <i class="bi bi-dash"></i>
-                                    <strong>Email:</strong> <span>sohamgandhi(at)live.com</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-dash"></i>
-                                    <strong>Interests:</strong> <span>Digital Design, Verification, FPGAs, ASICs</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-dash"></i>
-                                    <strong>College:</strong> <span>Virginia Tech</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <ul>
-                                <li>
-                                    <i class="bi bi-dash"></i>
-                                    <strong>Primary Degree:</strong> <span>Computer Engineering</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-dash"></i>
-                                    <strong>Second Degree:</strong> <span>Electrical Engineering</span>
-                                </li>
-                                <li>
-                                    <i class="bi bi-dash"></i>
-                                    <strong>Minor:</strong> <span>Computer Science</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="exp-desc">
+              <ul>
+                <li>Leading development of a bidirectional control channel over SERDES interfaces.</li>
+                <li>Integrating next-gen communication protocols (I3C, SPI) to increase secondary channel bandwidth by 12×.</li>
+                <li>Streamlining the development environment by migrating to a Git-based modular design with block-level compilation automation.</li>
+                <li>Designing reusable IP modules for block-level UVM environments, reducing verification times by 10×.</li>
+                <li>Implementing formal verification to exhaustively validate state machines, reducing design bugs by 25%.</li>
+              </ul>
             </div>
-        </div>
-
-        <!--        </div>-->
-    </section><!-- End About Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section class="portfolio section-bg" id="portfolio">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Portfolio</h2>
-                <p>Notable Achievements and Works</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <ul id="portfolio-flters">
-                        <li class="filter-active" data-filter="*">All</li>
-                        <li data-filter=".filter-hackathon">Hackathons</li>
-                        <li data-filter=".filter-paper">Publications</li>
-                        <li data-filter=".filter-project">Projects</li>
-                        <li data-filter=".filter-internship">Internships</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!--            ToDo: Items to add-->
-            <!--            - Hackviolet -> Politilink-->
-            <!--            - Latis -> Project-->
-            <!--            - Texas Instruments -> Internship-->
-            <!--            - Update Collab-->
-            <!--            - Update every single one-->
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                <!--                Texas Instruments-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-internship">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/Texas%20Instruments.html" title="Project Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/TexasInstruments.png">
-                            <div class="portfolio-info">
-                                <h4>Texas Instruments</h4>
-                                <p>Digital Design & Validation Intern</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                Latis-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/Latis.html" title="Project Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/Latis.png">
-                            <div class="portfolio-info">
-                                <h4>Latis</h4>
-                                <p>CEO & Developer</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                PolitiLink-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-hackathon">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/PolitiLink.html" title="Project Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/politilink.png">
-                            <div class="portfolio-info">
-                                <h4>PolitiLink</h4>
-                                <p>Co-Developer</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                Haptic Tactics-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/Haptic%20Tactics.html" title="Project Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/HT.jpg">
-                            <div class="portfolio-info">
-                                <h4>Haptic Tactics</h4>
-                                <p>Co-Researcher</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                Collab-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project filter-paper">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/Collab.html" title="Project Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/Collab/fetch.jpg">
-                            <div class="portfolio-info">
-                                <h4>Collaborative Robotics Lab</h4>
-                                <p>Research Assistant</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                General Dynamics-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-internship">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/GDMS.html" title="Internship Details">
-                            <img alt="" class="img-fluid"
-                                 src="assets/img/portfolio/General-Dynamics-Mission-Systems.jpg">
-                            <div class="portfolio-info">
-                                <h4>General Dynamics Mission Systems</h4>
-                                <p>Maritime Software Engineering Intern</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                DREAMs-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/DREAMs.html" title="Project Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/Rize.jpg">
-                            <div class="portfolio-info">
-                                <h4>DREAMs</h4>
-                                <p>Research Assistant</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                NLP-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-paper filter-project">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/NLP.html" title="Project Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/NLP.png">
-                            <div class="portfolio-info">
-                                <h4>Food Science Natural Language Processing</h4>
-                                <p>Co-Researcher</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                Band Aid Together-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-hackathon">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/Band%20Aid%20Together.html" title="Portfolio Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/BandAid.png">
-                            <div class="portfolio-info">
-                                <h4>Band Aid Together</h4>
-                                <p>Co-Developer</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                Finance QuizzAR-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-hackathon">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/Finance%20Quizzar.html" title="Portfolio Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/FinanceQuizzAR.jpg">
-                            <div class="portfolio-info">
-                                <h4>Finance QuizzAR</h4>
-                                <p>Co-Developer</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                TJ Nanosatellite-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/TJ%20Nanosatelite.html" title="Portfolio Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/TJNanosatellite.png">
-                            <div class="portfolio-info">
-                                <h4>TJ Space Program</h4>
-                                <p>Sat-4 Lead</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                Teach4Charity-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/Teach4Charity.html" title="Portfolio Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/Teach4Charity.png">
-                            <div class="portfolio-info">
-                                <h4>Teach4Charity</h4>
-                                <p>Founder & CEO</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--                Insignex Paper-->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-paper filter-internship">
-                    <div class="portfolio-wrap">
-                        <a class="portfolio-details-lightbox" data-glightbox="type: external"
-                           href="projects/Insignex.html" title="Portfolio Details">
-                            <img alt="" class="img-fluid" src="assets/img/portfolio/insignex.jpg">
-                            <div class="portfolio-info">
-                                <h4>InSignEx</h4>
-                                <p>Research Intern</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section class="skills section-bg" id="skills">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Skills</h2>
-                <p>Below are some of the technical skills that I have developed through my experiences during
-                    internships, research, and personal projects.</p>
+            <div class="tags">
+                <span class="tag">SystemVerilog</span>
+                <span class="tag">UVM</span>
+                <span class="tag">Formal Verification</span>
+                <span class="tag">Git</span>
             </div>
         </div>
-        <div class="container" data-aos="fade-up">
-            <div class="row">
-                <skills-programming></skills-programming>
-                <hr/>
-                <skills-platforms></skills-platforms>
-                <hr/>
-                <skills-hardware></skills-hardware>
+    </article>
+
+    <!-- Digital IC Design Intern -->
+    <article class="exp-row reveal-up">
+        <div class="exp-date">May 2024 – Aug 2024</div>
+        <div class="exp-card">
+            <div class="exp-header">
+                <h3 class="exp-role">Digital IC Design Intern</h3>
+                <span class="exp-company">Texas Instruments, Santa Clara, CA</span>
+            </div>
+            <div class="exp-desc">
+              <ul>
+                <li>Executed RTL simulations and debugging for automotive SerDes chips, improving audio and video functionality.</li>
+                <li>Designed a high-speed FIFO in SystemVerilog with prefetching logic and single-port RAM, improving performance by 50%.</li>
+              </ul>
+            </div>
+            <div class="tags">
+                <span class="tag">SystemVerilog</span>
+                <span class="tag">RTL Design</span>
+                <span class="tag">SerDes</span>
+                <span class="tag">FIFO Architecture</span>
             </div>
         </div>
-    </section><!-- End Skills Section -->
+    </article>
 
-    <!-- ======= Resume Section ======= -->
-    <section class="resume" id="resume">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Resume</h2>
+    <!-- Validation Engineering Intern -->
+    <article class="exp-row reveal-up">
+        <div class="exp-date">May 2023 – Aug 2023</div>
+        <div class="exp-card">
+            <div class="exp-header">
+                <h3 class="exp-role">Validation Engineering Intern</h3>
+                <span class="exp-company">Texas Instruments, Santa Clara, CA</span>
             </div>
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Education</h3>
-                    <div class="resume-item">
-                        <h4>Bachelor's of Computer & Electrical Engineering</h4>
-                        <h5>Aug 2021 - Present</h5>
-                        <p><em>Virginia Polytechnic Institute and State University</em></p>
-                        <p>Soham is currently pursing a degree in computer engineering with a major in machine learning
-                            and a degree in electrical engineering with a major in control, autonomy, & robotics.
-                            Soham is also a part of the <em>Calhoun Honors Discovery Program</em> where he collaborates
-                            with industry partners to work on sociotechincal problems through a transdisciplinary
-                            approach.</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Advanced High School Diploma</h4>
-                        <h5>Aug 2017 - Jun 2021</h5>
-                        <p><em>Thomas Jefferson High School for Science and Technology</em></p>
-                        <p>Soham attended the Thomas Jefferson High School for Science and Technology ranked #1 in the
-                            US by US News. During his time there, Soham took courses in artificial intelligence,
-                            computer
-                            vision, and robotics. Through these courses Soham developed a strong foundation in Java,
-                            Python, CAD, and additive manufacturing.</p>
-                    </div>
-                    <h3 class="resume-title">Projects</h3>
-                    <div class="resume-item">
-                        <h4>CEO & Developer</h4>
-                        <h5>Oct 2022 - Present</h5>
-                        <p><em>Latis</em></p>
-                        <ul>
-                            <li>Spearheading the development of a decentralized update platform for actuators. ensuring
-                                security and reliability.
-                            </li>
-                            <li>Successfully managing a team of 8 peers in market research and business planning to
-                                pitch in front of VCs.
-                            </li>
-                            <li>Built a secure app using SvelteKit for trusted interactions between manufacturers, OEMs,
-                                and devices.
-                            </li>
-                            <li>Leveraged Hedera hashgraph, FileCoin IPFS, trusted execution environments, ledgers, and
-                                smart contracts.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Professional Experience</h3>
-                    <div class="resume-item">
-                        <h4>Validation Engineering Intern</h4>
-                        <h5>May 2023 - August 2023</h5>
-                        <p><em>Texas Instruments, Santa Clara, CA</em></p>
-                        <ul>
-                            <li>Developed lab methodology to emulate automotive high-speed SerDes cables with a
-                                programable Artek Variable ISI channel, reducing SerDes link testing by 50% by
-                                eliminating the need to manually switch cables.
-                            </li>
-                            <li>
-                                Wrote automation drivers for Keysight PNA S-parameter measurements and Artek
-                                Variable ISI Channel controls via GPIB/Serial interfaces.
-                            </li>
-                            <li>Scripted Python class-based programs to setup/automate test benches to validate
-                                FPD-Link SerDes link margin.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Maritime Software Engineering Intern</h4>
-                        <h5>May 2022 - August 2022</h5>
-                        <p><em>General Dynamics Mission System, Fair Lakes, VA </em></p>
-                        <ul>
-                            <li>Implemented automated development of Centos over NFS mount using DHCP and TFTP on a
-                                secure network.
-                            </li>
-                            <li>Strengthen system security by hardening kickstarts to comply with DoD STIG requirements
-                                and developed Bash/Python script for automating various tasks: input device setup, user
-                                permissions, and environment layouts.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Research Intern</h4>
-                        <h5>May 2020 - June 2021</h5>
-                        <p><em>InSignex, Gujarat, India</em></p>
-                        <ul>
-                            <li> Developed an automated agricultural irrigation system using Python, Flask, and
-                                MySQL, for data collection.
-                            </li>
-                            <li>
-                                Reduced power consumption of ESP8266 with a shunt resistor to 30mA and presented
-                                findings in an IEEE paper.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="exp-desc">
+              <ul>
+                <li>Collaborated with an external company to develop a lab methodology that emulated automotive high-speed SerDes cables using a programmable Artek Variable ISI channel, cutting SerDes link testing time by 60%.</li>
+                <li>Automated ASIC setup and testbench configuration using Python, reducing validation time and effort by 3×.</li>
+              </ul>
             </div>
-
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Automation</span>
+                <span class="tag">SerDes</span>
+                <span class="tag">Lab Validation</span>
+            </div>
         </div>
-    </section><!-- End Resume Section -->
+    </article>
 
-</main><!-- End #main -->
+    <!-- Software Engineering Intern -->
+    <article class="exp-row reveal-up">
+        <div class="exp-date">May 2022 – Aug 2022</div>
+        <div class="exp-card">
+            <div class="exp-header">
+                <h3 class="exp-role">Software Engineering Intern</h3>
+                <span class="exp-company">General Dynamics Mission Systems, Fair Lakes, VA</span>
+            </div>
+            <div class="exp-desc">
+              <ul>
+                <li>Automated Linux OS deployment over NFS using DHCP and TFTP, cutting deployment time by 50%.</li>
+                <li>Strengthened system security by hardening kickstarts to comply with DoD STIG requirements and developing Bash/Python scripts to automate device setup, user permissions, and environment layouts.</li>
+              </ul>
+            </div>
+            <div class="tags">
+                <span class="tag">Linux</span>
+                <span class="tag">Bash</span>
+                <span class="tag">Python</span>
+                <span class="tag">NFS</span>
+            </div>
+        </div>
+    </article>
+</section>
 
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="container">
-        <h3>Soham Gandhi</h3>
-        <!--        <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi-->
-        <!--            placeat.</p>-->
-        <div class="social-links">
-            <a class="email" href="mailto:sohamgandhi(at)live.com"><i class="bx bx-envelope"></i></a>
-            <a class="github" href="https://github.com/Sgandhi10"><i class="bx bxl-github"></i></a>
-            <a class="linkedin" href="https://www.linkedin.com/in/soham-gandhi/"><i class="bx bxl-linkedin"></i></a>
+
+<section class="edu-section" id="education">
+  <div class="edu-inner">
+    <div class="edu-head">
+      <h2 class="edu-title">Education</h2>
+    </div>
+
+    <div class="edu-rowwrap">
+      <div class="edu-item">
+        <div class="edu-badge reveal-left"><span>Bachelor's</span></div>
+
+        <div class="edu-card reveal-left">
+          <div class="edu-row">
+            <div><span class="edu-chip edu-year">2021 - 2025</span></div>
+            <div><span class="edu-degree">Dual B.S. in Computer & Electrical Engineering</span></div>
+          </div>
+          <div class="edu-school">Virginia Tech</div>
+          <div class="edu-notes">
+            Completed the degree in computer engineering with a major in machine learning and a degree in electrical engineering with a major in control, autonomy, & robotics. Soham is also a part of the Calhoun Honors Discovery Program where he collaborates with industry partners to work on sociotechincal problems through a transdisciplinary approach.
+            <br><br>Minor in Computer Science
+            <br><br><strong>Relevant Coursework:</strong> Digital Design, Adv Computer Architecture, Digital & Mixed Signal System Testing, Artificial
+  Intelligence, Computer Vision, Digital Image Processing
+            <br><br><strong>Awards:</strong> Calhoun Scholar, Dean's List, HackViolet 2023 (Best Innovation Hack), 2022 CHCI Symposium (3rd)
+          </div>
+          <div class="edu-tags">
+            <span class="edu-tagpill">Scholarship</span>
+            <span class="edu-tagpill">Physics Lab Lead</span>
+          </div>
         </div>
-        <div class="copyright">
-            &copy; Copyright <strong><span>Soham Gandhi</span></strong>. All Rights Reserved
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-badge reveal-right"><span>High School</span></div>
+
+        <div class="edu-card reveal-right">
+          <div class="edu-row">
+            <div><span class="edu-chip edu-year">2017 - 2021</span></div>
+            <div><span class="edu-degree">Advanced High School Diploma</span></div>
+          </div>
+          <div class="edu-school">Thomas Jefferson High School for Science and Technology</div>
+          <div class="edu-notes">Attended the Thomas Jefferson High School for Science and Technology ranked #1 in the US (by US News). During the time there, I took courses in artificial intelligence, computer vision, and robotics. Through these courses I developed a strong foundation in Java, Python, CAD, and additive manufacturing.</div>
+          <div class="edu-tags">
+            <span class="edu-tagpill">Dean's List</span>
+            <span class="edu-tagpill">Final Year Project: WP Plugins</span>
+          </div>
         </div>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: [license-url] -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio-section">
+  <div class="container">
+    <div class="edu-head">
+      <h2 class="edu-title">Projects</h2>
+    </div>
+
+    <div class="projects-grid" id="projects">
+      <a class="project w2" href="#" aria-label="Open: Texas Instruments" data-lightbox-id="texas-instruments">
+        <img src="/assets/img/portfolio/TexasInstruments.png" alt="Texas Instruments" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="Texas Instruments">Texas Instruments</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: Latis" data-lightbox-id="latis">
+        <img src="/assets/img/portfolio/Latis.png" alt="Latis" />
+        <div class="overlay">
+            <h3 class="project-title" data-title="Latis">Latis</h3>
+            <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project h2" href="#" aria-label="Open: Politilink" data-lightbox-id="politilink">
+        <img src="/assets/img/portfolio/politilink.png" alt="Politilink" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="Politilink">Politilink</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: Haptic Tactics" data-lightbox-id="haptic-tactics">
+        <img src="/assets/img/portfolio/HT.jpg" alt="Haptic Tactics" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="Haptic Tactics">Haptic Tactics</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: DREAMs" data-lightbox-id="dreams">
+        <img src="/assets/img/portfolio/Rize.jpg" alt="DREAMs" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="DREAMs">DREAMs</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project w2" href="#" aria-label="Open: General Dynamics Mission Systems" data-lightbox-id="gdms">
+        <img src="/assets/img/portfolio/General-Dynamics-Mission-Systems.jpg" alt="General Dynamics Mission Systems" />
+        <div class="overlay">
+            <h3 class="project-title" data-title="General Dynamics Mission Systems">General Dynamics Mission Systems</h3>
+            <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: Collaborative Robotics Lab" data-lightbox-id="robotics-lab">
+        <img src="/assets/img/portfolio/Collab/fetch.jpg" alt="Collaborative Robotics Lab" />
+        <div class="overlay">
+            <h3 class="project-title" data-title="Collaborative Robotics Lab">Collaborative Robotics Lab</h3>
+            <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: Food Science Natural Language Processing" data-lightbox-id="nlp-food-science">
+        <img src="/assets/img/portfolio/NLP.png" alt="Food Science Natural Language Processing" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="Food Science Natural Language Processing">Food Science Natural Language Processing</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: Band Aid Together" data-lightbox-id="band-aid">
+        <img src="/assets/img/portfolio/BandAid.png" alt="Band Aid Together" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="Band Aid Together">Band Aid Together</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: Finance QuizzAR" data-lightbox-id="finance-quizzar">
+        <img src="/assets/img/portfolio/FinanceQuizzAR.jpg" alt="Finance QuizzAR" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="Finance QuizzAR">Finance QuizzAR</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: InSignEx" data-lightbox-id="insignex">
+        <img src="/assets/img/portfolio/insignex.jpg" alt="InSignEx" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="InSignEx">InSignEx</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project h2" href="#" aria-label="Open: TJ Space Program" data-lightbox-id="tj-space-program">
+        <img src="/assets/img/portfolio/TJNanosatellite.png" alt="TJ Space Program" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="TJ Space Program">TJ Space Program</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+
+      <a class="project" href="#" aria-label="Open: Teach4Charity" data-lightbox-id="teach4charity">
+        <img src="/assets/img/portfolio/Teach4Charity.png" alt="Teach4Charity" />
+        <div class="overlay">
+          <h3 class="project-title" data-title="Teach4Charity">Teach4Charity</h3>
+          <span class="under"></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-orbit contact-orbit--left"></div>
+  <div class="contact-orbit contact-orbit--right"></div>
+
+  <div class="contact-inner reveal-up reveal-stagger">
+    <div class="contact-header reveal-up reveal-stagger">
+      <span class="contact-kicker">Get in touch</span>
+      <h2 class="contact-title">Let's connect</h2>
+      <p class="contact-subtitle">Feel free to reach out to me to discuss any opportunities and potential collaborations.</p>
+
+      <div class="contact-header-actions">
+        <a href="mailto:sohamgandhi@live.com" rel="noreferrer" class="btn primary">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11zM4.5 6a.5.5 0 0 0-.5.5v.34l8 5.16 8-5.16V6.5a.5.5 0 0 0-.5-.5h-15zM20 9.74l-7.47 4.82a1.5 1.5 0 0 1-1.62 0L3.5 9.74V17.5a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5V9.74z"/>
+            </svg>
+            Email me<span class="contact-btn-glow"></span>
+        </a>
+        <a href="/assets/Soham's%20Resume.pdf" target="_blank" class="btn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 3a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4A1 1 0 0 1 8.293 11.293L10.586 13.586V4a1 1 0 0 1 1-1z"/>
+                <path d="M5 20a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z"/>
+            </svg>
+            Download Resume
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Left: quick info & channels -->
+      <div class="contact-info">
+        <div class="contact-highlight">
+          <h3>What I usually work on</h3>
+          <p>
+            I focus on building high-end technology solutions that are reliable, scalable, and efficient. I am passionate about AI and automation and I enjoy working on projects that leverage these technologies to solve real-world problems and automate processes.
+          </p>
+          <ul class="contact-pills">
+            <li class="contact-pill">Robotics</li>
+            <li class="contact-pill">Machine Learning and AI</li>
+            <li class="contact-pill">Embedded Systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true" aria-modal="true" role="dialog">
+    <div class="backdrop" data-close></div>
+    <div class="lb-dialog" role="document">
+        <div class="lb-left">
+            <div class="slide-stage" id="slideStage"></div>
+            <button class="nav-btn nav-prev focusable" id="prevBtn" aria-label="Previous image">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <button class="nav-btn nav-next focusable" id="nextBtn" aria-label="Next image">
+                <svg viewBox="0 0 24 24"><path d="m8.59 16.59 1.41 1.41 6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+            </button>
+            <div class="dots" id="dots"></div>
+        </div>
+        <div class="lb-right">
+            <div class="lb-head">
+                <h2 class="lb-title" id="lbTitle">Project</h2>
+                <button class="lb-close focusable" aria-label="Close" data-close>
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path fill="currentColor" d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.41 4.3 19.71 2.89 18.3 9.17 12 2.89 5.71 4.3 4.29l6.29 6.3 6.29-6.3z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="lb-body" id="lbBody">
+                <div class="tags" id="lbTags"></div>
+                <p class="lb-desc" id="lbDesc"></p>
+                <div class="lb-meta" id="lbMeta"></div>
+                <div class="lb-actions" id="lbActions"></div>
+            </div>
         </div>
     </div>
-</footer><!-- End Footer -->
+</div>
 
-<div id="preloader"></div>
-<a class="back-to-top d-flex align-items-center justify-content-center" href="#">
-    <i class="bi bi-arrow-up-short"></i></a>
+</main>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/purecounter/purecounter.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<!--<script src="cursor.js"></script>-->
+<script src="/assets/hero.js"></script>
+<script src="/assets/carousel.js"></script>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Map direction classes → animation config
+  const REVEAL_MAP = {
+    'reveal-up':    { y: 30 },
+    'reveal-down':  { y: -30 },
+    'reveal-left':  { x: -40 },
+    'reveal-right': { x: 40 },
+    'reveal-scale': { scale: 0.92 }
+  };
+
+  function getRevealConfig(el) {
+    for (const cls of el.classList) {
+      if (REVEAL_MAP[cls]) return REVEAL_MAP[cls];
+    }
+    return { y: 24 };
+  }
+
+  const singleSelector = [
+    '.reveal-up:not(.reveal-stagger)',
+    '.reveal-down:not(.reveal-stagger)',
+    '.reveal-left:not(.reveal-stagger)',
+    '.reveal-right:not(.reveal-stagger)',
+    '.reveal-scale:not(.reveal-stagger)'
+  ].join(',');
+
+  gsap.utils.toArray(singleSelector).forEach(el => {
+    const cfg = getRevealConfig(el);
+    gsap.from(el, {
+      ...cfg,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'cubic-bezier(.2,.8,.2,1)',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        once: true
+      }
+    });
+  });
+
+  gsap.utils.toArray('.reveal-stagger').forEach(group => {
+    const cfg = getRevealConfig(group);
+    const children = Array.from(group.children);
+    if (!children.length) return;
+
+    gsap.from(children, {
+      ...cfg,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'cubic-bezier(.2,.8,.2,1)',
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: group,
+        start: 'top 85%',
+        once: true
+      }
+    });
+  });
+
+  gsap.utils.toArray('.exp-row').forEach(row => {
+    const card = row.querySelector('.exp-card');
+    if (!card) return;
+
+    ScrollTrigger.create({
+      trigger: row,
+      start: 'top 85%',
+      once: true,
+      onEnter: () => {
+        gsap.delayedCall(0.7, () => {
+          card.classList.add('show-tags');
+        });
+      }
+    });
+  });
+
+  gsap.utils.toArray('.underlined-group').forEach(group => {
+    const items = Array.from(group.querySelectorAll('.underlined'));
+    ScrollTrigger.create({
+      trigger: group,
+      start: 'top 85%',
+      once: true,
+      onEnter: () => {
+        items.forEach((el, i) => {
+          gsap.delayedCall(1 + i * 0.5, () => el.classList.add('show'));
+        });
+      }
+    });
+  });
+});
+</script>
 
 
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script>
+  // Split titles into spans for the stagger animation
+  document.querySelectorAll('.title').forEach(t => {
+    const text = t.dataset.title || t.textContent;
+    t.innerHTML = text.split('').map(ch => {
+      if(ch === ' ') return `<span style="width:.28em"></span>`;
+      return `<span>${ch}</span>`;
+    }).join('');
+  });
+
+  // Subtle magnetic tilt + parallax
+  const lerp = (a,b,t)=>a+(b-a)*t;
+  document.querySelectorAll('.project').forEach((card)=>{
+    let rx=0, ry=0, trX=0, trY=0;
+    card.addEventListener('mousemove',(e)=>{
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width;
+      const y = (e.clientY - r.top) / r.height;
+      const maxR = 6; // degrees
+      ry = (x - .5) * maxR;
+      rx = -(y - .5) * maxR;
+      trX = (x - .5) * 10; // px for image
+      trY = (y - .5) * 10;
+
+      card.style.transform = `translateY(-2px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      const img = card.querySelector('img');
+      img.style.transform = `scale(1.06) translate(${trX}px, ${trY}px) rotateZ(-.4deg)`;
+    });
+    card.addEventListener('mouseleave',()=>{
+      card.style.transform='';
+      const img = card.querySelector('img');
+      img.style.transform='';
+    });
+  });
+
+  // On-scroll entrance (staggered, gentle)
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.set('.project',{y:28, opacity:0});
+  gsap.to('.project',{
+    y:0, opacity:1, ease:'power3.out', duration:.9, stagger:{each:.08, from:'edges'},
+    scrollTrigger:{
+      trigger:'.projects-grid',
+      start:'top 80%',
+    }
+  });
+</script>
+<script>
+  const PROJECTS = {
+    "texas-instruments":{
+      title:"Texas Instruments",
+      tags:["Node.js","WebSockets","Multi-tenant","Docker"],
+      desc:"<div class=\"portfolio-info\"><h3>Internship information</h3><ul><li><strong>Company</strong>: Texas Instruments</li><li><strong>Position</strong>: Validation Engineering Intern</li><li><strong>Internship date</strong>: May 2023 - Aug 2023</li><li><strong>Location</strong>: Santa Clara, CA</li><li><strong>Company Website</strong>: <a href=\"https://www.ti.com/\" target=\"_blank\">ti.com</a></li></ul></div>Worked with on the automotive SerDes product line (FPD-Link) to help create automation scripts in python. Developed an automated validation system to simulate different cables and parameters. Created correlations to help map different cable types and parameters of one cable to another cable to reduce the number of cables needed to be tested. The automated system helped to reduce cable testing times by over 50%.<br><h3>FPD-Link</h3><p>FPD-Link is a high-speed digital interface for video data transmission and is used in automotive infotainment and ADAS applications. It is a low-cost, low-power, and low EMI technology that is easy to implement. FPD-Link is a point-to-point technology that can support both uni-directional and bidirectional data transmission. It is a robust technology that can support long distance transmission over a single twisted pair cable. FPD-Link is a scalable technology that can support different resolutions and frame rates by changing the serializer and deserializer configurations.</p><h3>Role</h3><p>As a member of the validation team I worked on validation of features of the FPD-Link. My role in particular entailed working with the validation team to develop test plans and create an automated testing system to test a variety of different features. As a validation engineer we are considered the first client which entails what we work with doesn't always work, and we must test it similar to how our customers will.</p><h3>Project</h3><p>My project involved creating an automated system to validate cable parameters. The system utilizing an ISI box to replicate the insertion loss of a cable. With newer technologies coming to play the role of return loss is playing a larger role in the overall system. Therefore, my task was to emulate a variety different insertion loss values while holding return loss at a constant value to ensure the system is not affected by the return loss parameter.</p><h3>Process</h3><p> The following process was utilized to validate the setup. First, a plan was outlined highlighting the main hypothesis that an ISI box can be used to simulate the insertion loss for a cable while utilizing different cable to vary the return loss. Next, a test plan was created to first gather the s-params(insertion and return loss) for different STP and coaxial cable lengths. Once the s-params were calculated, the ISI box was automated and used to create a relation between the real loss and ISI box. After the correlation is created it is validated through a variety of tests ensuring link integrity. </p> <b> The following is a video explaining the product line I worked for at Texas Instruments. </b><br><br><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"auto\" src=\"https://www.youtube.com/embed/HNtmXPo8dbw\" title=\"YouTube video player\" width=\"100%\"></iframe>",
+      //meta:"Stack: Node.js, Redis, PostgreSQL, PM2 • Uptime 99.96% • Avg 40k msgs/day",
+      // actions:[
+      //   {label:"View Case Study", href:"#"},
+      //   {label:"Visit Demo", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/TI/tesla-autopilot-side-repeater-camera.jpg",
+        "/assets/img/portfolio/TI/257505_L_histoire_du_systeme_d_infodivertissement.jpg",
+        "/assets/img/portfolio/TI/FMCA1350Z-12.jpg",
+        "/assets/img/portfolio/TI/Adas.png"
+      ]
+    },
+    "latis":{
+      title:"Latis",
+      tags:["Next.js","WooCommerce REST","ISR","Stripe"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Category</strong>: Project</li><li><strong>Project date</strong>: November, 2022</li><li><strong>Project Report: </strong><a href=\"../assets/img/portfolio/Latis/Latis_Report.pdf\" target=\"_blank\">Latis Report</a></li></ul></div><div>Worked with industry experts to understand the issues involved with updating IoT devices in manufacturing plants. Created a system that allows for the easy updating of Scada systems in manufacturing plants using Hedera's Hashgraph and Filecoin's IPFS to store the data. The system allows for easy transfer of updates from the OEM (equipment maker) to the manufacturing plant, and allows for direct communication to the device without any manipulation by the manufacturing plant reducing the risk of cyberattacks.</div><h3>Problem</h3><p>Currently, there are over 27 billion IoT devices in use, and this number is projected to increase inthe future. These devices are utilized across various industries, including manufacturing, healthcare, and transportation. However, recent research conducted by the <a href=\"https://www.weforum.org/agenda/2023/03/why-cybersecurity-in-manufacturing-matters-to-us-all/\">World Economic Forum</a> has identified manufacturing as the most targeted sector, and with the growing number of IoT devices, the risk of cyberattacks is also on the rise.</p><h3>Solution</h3><p>To address this issue, we have developed a decentralized system that facilitates the seamless updating of IoT systems in the manufacturing sector. Our approach establishes inherent trust in the system by utilizing Hedera's Hashgraph to securely store sensitive information like encryption keys.Additionally, Filecoin's IPFS is employed to store update files. This system enables easy transfer of updates from the equipment manufacturer to the manufacturing plant while ensuring direct device communication without any interference from the plant, thereby reducing the risk of cyberattacks.</p><h3>Business Plan</h3><p>When presenting this concept to industry experts, we have positioned it as a hardware as a service (HaaS) model. Manufacturers can choose to adopt this system by paying an annual flat fee andentering into a minimum 3-year service contract. The original equipment manufacturer (OEM) will have a predetermined limit on the number of updates per quarter and will be charged a flat rate for using the system. The rationale behind this approach is that if our system can prevent even a single cyberattack, it will prove cost-effective for decades to come, considering the substantial financial losses typically associated with such attacks.</p>",
+      // meta:"TTFB < 150ms (CDN) • ISR revalidate 60s • Lighthouse 98/100",
+      // actions:[
+      //   {label:"GitHub Repo", href:"#"},
+      //   {label:"Live Site", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/Latis/Welcome%20Page.jpg",
+        "/assets/img/portfolio/Latis/OEM%20Client.jpg",
+        "/assets/img/portfolio/Latis/Manufacturing%20Client.jpg",
+        "/assets/img/portfolio/Latis/Presentation.jpg"
+      ]
+    },
+    "politilink":{
+      title:"Politilink",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Hackathon</strong>: Hack Violet 2023</li><li><strong>Project date</strong>: 5 February, 2023</li><li><strong>Project URL</strong>: <a href=\"https://devpost.com/software/politilink\" target=\"_blank\">DEVPOST</a></li></ul></div><div><p>Created an application that allows users to go to a website and understand the people they should contact if they wish to take action on a certain issue. Used OpenAI's GPT-3 to determine the best politician to contact based on the committees and subcommittees they are a part of. Used Flask to integrate the front end with the backend and BeautifulSoup2 to scrape data from the website. Won Most Innovative Hack by Bloomberg.</p></div><h3>Inspiration</h3><p>Throughout their upbringing, political events have deeply influenced every member of the Politilink team. From local government to the national stage, the actions of our country's politicians can profoundly impact the daily lives of its citizens. In our modern world, dominated by technology and social media, it's easy to feel overwhelmed and overshadowed by the countless voices on the internet. At times, advocating for one's beliefs may even seem futile.<br><br>We firmly believe that every voice holds significance. Regardless of geographical location, party affiliation, or the number of opposing voters, we maintain that a single voice has the power to bring about tangible change in the real world. Politilink goes beyond being a mere tool to connect people with Congress; it serves as a reminder that the voice of the voter is just as vital as any other. Sometimes, the greatest waves of transformation begin with small ripples.</p><h3>Solution</h3><p>Politilink is a user-friendly Google Chrome extension that examines the introduction of an article and provides the relevant contact information for Congress members associated with the topic. The extension presents a comprehensive list of email addresses, phone numbers, and Twitter handles in a simple and understandable format.<br><br>This innovative solution tackles a common challenge faced by American citizens who seek to engage with the political sphere. Extensively researching every issue to identify the politicians involved in matters affecting our daily lives can be arduous and time-consuming. Moreover, locating the precise means of contacting them can pose an additional hurdle. Politilink effectively addresses this problem by offering a convenient and efficient way for individuals to connect with their representatives and express their opinions.</p><h3>Challenges</h3><h4>Javascript Front-End</h4><p>When developing this application one of the biggest challenges that we faced involved working with the ChatGPT API in javascript. The majority of the team was unfamiliar with Javascript, which led to us struggling when trying to implement web scraping and api calls to ChatGPT. To overcome this, we utilized Flask to leverage our strengths in Python and integrate the front end with the backend.</p><h4>ChatGPT Output</h4><p>Another big issue we faced when working with ChatGPT was the output format. For some reason, the API returned different formats each time the API was called. To overcome this, we did some prompt-engineering to create a custom prompt that would specify the format in which the output should be as well as ensuring ChatGPT understood the input.</p><h3>Demo</h3><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"auto\" src=\"https://www.youtube-nocookie.com/embed/_477Q56zr9k\" title=\"YouTube video player\" width=\"100%\"></iframe>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/Politilink/Image1.jpg",
+        "/assets/img/portfolio/Politilink/Image2.jpg",
+        "/assets/img/portfolio/Politilink/Image3.jpg",
+      ]
+    },
+    "haptic-tactics":{
+      title:"Haptic Tactics",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Category</strong>: Project</li><li><strong>Position</strong>: Co-Researcher</li><li><strong>Project date</strong>: January 2022 - Present</li><li><strong>Project URL</strong>: <a href=\"https://www.linkedin.com/company/haptic-tactics/\" target=\"_blank\">Haptic Tactics</a></li></ul></div><div>Haptic Tactics is a student-led project that aimed to find a way to improve the way workers drill holes into metal surfaces on large body aircraft. The project utilized a simulated environment to train workers on how to drill holes into metal surfaces. The project was a collaboration between students at Virginia Tech and the Boeing Company. The environment functions by using a virtual reality headset and a haptic proxy that utilizes impedance control to simulate the feeling of drilling into different materials. The project was presented to Boeing's CEO and Caterpillar's CTO.</div><h3>Problem</h3><p>The project this problem is trying to solve is around the ergonomic factors that influence works long term health. When workers spend long durations of time drilling into hard surfaces, forces travel up the body causing long-term pain and health problems. Furthermore, in many of these large body aircraft holes need to be drilled in tight areas. This makes it difficult to account for the ergonomic factors that influence the worker health.</p><h3>Solution</h3><p>To solve this problem we created a virtual reality environment that allows workers to train in a simulated environment. The environment allows workers to train using real-world forces without damaging expensive materials. Furthermore, the environment provides the worker with additional data to provide analysis of the hole, force, exerted, and even suggestions to ensure proper drilling technique. This idea is the first part of a larger project that aims to bring about the idea of drill from home allowing the worker to be removed from direct forces.</p><h3>Business Plan</h3><p>The business plan for this project revolves around the idea of how much companies pay today for sprains, and long-term health affects of workers. Furthermore, the system would also help to improve the overall quality of the work being done due to the additional data and the time it would require to train workers.</p>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/Haptic%20Tactics/IMG20220429150205.jpg",
+        "/assets/img/portfolio/Haptic%20Tactics/IMG_3931.jpg",
+        "/assets/img/portfolio/Haptic%20Tactics/IMG_20220330_233108.jpg",
+      ]
+    },
+    "dreams":{
+      title:"DREAMs",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Category</strong>: Project</li><li><strong>Position</strong>: Research Assistant</li><li><strong>Project date</strong>: September 2021 - May 2022</li></ul></div><div>Wrote python scripts to create PNG bitmaps for each layer, customize settings,and allow for full control of piezo inkjet heads in a Rize One legacy inkjet & FDM 3D printer. Integrated a polymer that increases interlayer adhesion with FDM materials to increase the structural strength of printed parts. Designed a custom ink reservoir in SolidWorks to increase the printer’s compatibility with 3rd party polymers.</div><h3>Research Area</h3><p>This project worked around an additive manufacturing device that integrates FDM and inkjet allowing for complex integrated parts to be printed, which otherwise would not be possible. One major application for this technology is the use of the inkjet nozzles as a plasticizers to allow for stronger adhesion between layers. Furthermore, this technology can be expanded to electronics with the introduction of conductive inks that would allow for traces to be built into the part. This enables PCBs to be printed directly into the part, reducing the need for assembly and increasing the structural integrity of the part.</p><h3>Challenges Faced</h3><p>The first major challenge faced with this project involved the hardware hacking of the machine. Since this machine was a legacy 3D printer, there was no documentation on the hardware or software. This meant having to experiment with the proprietary file created by the slicer. After understanding the methodology behind the file, I was able to create a python script that would allow me to create my own instruction sets for the part.</p><p>The second challenge involved the integration of the actual ink with the system. This system was heavily locked down with chips integrated onto all disposable parts. This meant in order to use our inks, we needed to trick the system into thinking it was using the original ink. This was done by bypassing the ink cartridge and directly filling the ink reservoir with our ink.</p><p>The final challenge was understanding the chemical properties of the materials we utilized as an ink. When working with some inks, we realized the surface tension was too high causing the piezoelectric ink heads to get jammed and not push any ink out. This was solved by looking using the Wendell and Reynolds number to determine the surface tension of the ink and how it would behave in the system.</p>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/DREAMs/IMG_3107.jpg",
+        "/assets/img/portfolio/DREAMs/IMG_3108.jpg",
+        "/assets/img/portfolio/DREAMs/post00024.png",
+      ]
+    },
+    "gdms":{
+      title:"General Dynamics Mission Systems",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Internship information</h3><ul><li><strong>Position</strong>: Maritime Software Engineering Intern</li><li><strong>Internship date</strong>: May 2022 - July 2022</li><li><strong>Location</strong>: Fair Lakes, VA</li><li><strong>Company Website</strong>: <a href=\"https://gdmissionsystems.com/\" target=\"_blank\">gdmissionsystems.com</a></li></ul></div><div>As an intern at General Dynamics Mission Systems, I automated the installation of CentOS 8 Stream over NFS using DHCP and TFTP for secure kiosk deployment. I hardened kickstarts to meet STIG compliance and prevent cyber-attacks. I created Bash and Python scripts to automate device setup, user permissions, and environment configurations. I also implemented secure booting and classified data clearance measures for enhanced security.</div><h3>Technical Experiences</h3><p>During this internship I learned a lot about low-level code used to set up the operating system. I worked heavily with bash scripts and kickstart files to automate the installation of CentOS 8 Stream. This process meant selecting specific packages for the operating system, setting up user permissions, and configuring the environment. I also learned about the security measures that are taken to ensure that the operating system is secure. This included setting up secure booting and restricting port access to prevent cyber-attacks. I also learned about the process of clearing classified data from a device and the measures that are taken to ensure that the data is completely removed from the device.</p><h3>Challenges</h3><p>When working at GDMS, one of the biggest issues I faced was the transfer of information from one system to another. This is due to the fact no linux system is allowed to connect to the internet and lead to creating offline mirror repositories. Furthermore, in order to transfer edited scripts from one system to another, I had to learn about how network switches are used to route data and how to configure paths to allow for the transfer of data. This taught me a lot about network routing and bash low-level bash commands.</p>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/GDMS/US%20Navy.jpg",
+        "/assets/img/portfolio/GDMS/tactical%20system.webp",
+      ]
+    },
+    "robotics-lab":{
+      title:"Collaborative Robotics Lab",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project Information</h3><ul><li><strong>Category</strong>: Project</li><li><strong>Position</strong>: Research Assistant</li><li><strong>Project date</strong>: August 2022 - Present</li><li><strong>Publication</strong>: <a href=\"https://doi.org/10.48550/arXiv.2304.11753\">arXiv</a></li></ul></div><div>Worked on the Fetch Robotic System, a research platform for human robotic interactions. The study focused on the idea of transparency, and whether an autonomous system should always reveal its true capabilities. For this project, I was responsible for creating an autonomous system that utilizes computer vision, motion plans, ROS, and webserver to create a seamless interaction between the robot and the user.</div><h3>User Study</h3><p>For the user study, we provided four different options from which the user can select from. The goal behind the user study was for the user and robot to collaborate with each other. The user would select a move, and that would trigger an action from the robot. An important aspect of the robot system is that the robot selects its move given the same information as the user. Before the user study begins the user is told that the robot is either capable or confused. If capable, the robot has the ability to select all the blocks, while if confused, the robot can only select a subset of the blocks. In the backend, the robot is running an algorithim that is either transparent or opaque. The transparent algorithim was rewarded more for picking moves the communicated the type of robot(confused or capable) while opaque was rewarded solely based on the highest reward.</p><h4>Transparency</h4><p>The idea behind transparency is that the robot selects the move that a confused robot would not be able to select. This immediately reveals to the user the type of the robot. By making a robot transparent, it ensures that the user is aware of the robot's capabilities. In our scenario, the transparent move provided the greatest potential of reward. However, the reward is only achieved if both the user and robot select the same block.</p><h4>Opacity</h4><p>The idea behind opacity is that the robot selects a move that both the capable and confused robot can select. This would be considered a safe move since it is known that no matter what the robot has the ability to select this move. In our scenario, the opaque move provided a lower reward but still higher than no collaboration.</p><h3>Development</h3><p>The user study involved a variety of different technolgies to get interactions between the different systems working. The first step was detecting the move chosen by the user. To do this a computer vision, algorithim was used to detect when the block was moved off the QR codes placed below. Once the block is selected, it runs through an algorithim to calculate the move for the robot. The move is then sent to the robot using a Flask server which communicates with the actuators on the robot using ROS. The robot has pre-determined motion plans for specific mapped positions to allow for easy selection of blocks. The final part is the GUI that was made using Tkinter to display the realtime score to the user.</p><h3>Demo</h3><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"auto\" src=\"https://www.youtube-nocookie.com/embed/u8q1Z7WHUuI\" title=\"YouTube video player\" width=\"100%\"></iframe>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/Collab/fetch.jpg",
+        "/assets/img/portfolio/Collab/frontFig.png",
+      ]
+    },
+    "nlp-food-science":{
+      title:"Natural Language Processing in Food Science",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Category</strong>: Project</li><li><strong>Position</strong>: Research Assistant</li><li><strong>Project date</strong>: September 2021 - Present</li></ul></div><p>Developed a model to analyze the relationship between sensory and chemical descriptions of food products using word2vec models and visualized the results using Orange, Tableau and Gephi. The model was able to detect unusual patterns in between sensory and chemical descriptions.</p><ul><li>Analyzed word relations from 40,000+ abstracts and created scripts to fetch abstracts, clean data, and train models</li><li>Worked with food science professors to detect unusual patterns in between sensory and chemical descriptions through Gensim word2vec models visualized in Orange, Tableau and Gephi</li></ul><h3>Inspiration</h3><p>This research area is based on another research paper that was published in nature called <a href=\"https://doi.org/10.1038/s41586-019-1335-8\" target=\"_blank\">\"Unsupervised word embeddings capture latent knowledge from materials science literature\"</a>. The paper was about how word2vec models can be used to analyze the relationship between chemical and physical properties of materials.</p><h3>Our Approach</h3><p>We decided to tak the approach utilized by this paper and modify it to work for our scenario. We started by observing 4 different journals from which we scraped abstracts to build our dataset (60k+ abstracts). This dataset is then cleaned and preprocessed to remove stop words, punctuation, and other unnecessary characters. We then train our word2vec model on this dataset and use the model to analyze the relationship between sensory and chemical descriptions of food products.<br><br>One important distinguishing factor between our approach and the approach used in the paper is that our dataset is much smaller than the dataset used in the paper. This is because we are working with a very specific domain (food science) and the number of abstracts available for this domain is limited. To compensate for this, we utilized Google's word2vec to model to provide a foundation for the model and trained our model on top of it. This allowed us to achieve similar results to the paper.</p><h3>Results</h3><p>Below is an example of some of the findings found from our analysis.</p><img src=\"/assets/img/portfolio/NLP/figure.png\" class=\"img-fluid\" alt=\"\">",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/NLP/Ishana1.png",
+        "/assets/img/portfolio/NLP/Ishana2.png",
+        "/assets/img/portfolio/NLP/Ishana3.png",
+      ]
+    },
+    "band-aid":{
+      title:"Band Aid Together",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Category</strong>: Hackathon</li><li><strong>Competition</strong>: Hack Violet 2022</li><li><strong>Project date</strong>: 06 February, 2022</li><li><strong>Project URL</strong>: <a href=\"https://devpost.com/software/aid-band\" target=\"_blank\">DEVPOST</a></li></ul></div><p>Developed an utilizing Google Firebase to notify others if a person is having a seizure. The app was developed using Android Studio and an Arduino MKR 1010 Wi-Fi with an EMG sensor attached to provide live data to the app. The app was developed in Kotlin and the Arduino code was developed in C++. The app won Best Hardware Hack for its use of hardware components & UT Prosim Hack for its potential to help others.</p><h3>Inspiration</h3><p>Nearly a month ago, we had a close friend experience a panic attack in an isolated area. When we saw the unfortunate effects of this incident on him, we were inspired to find a way to link one to their loved ones and help them get through it. Upon further research, we found out that women and mothers are disproportionately more likely to suffer from routine panic attacks and anxiety, especially in the Pandemic Era. Panic attacks and anxiety have also been linked to an increase in seizures.</p><h3>Challenges</h3><h4>Bluetooth Low Energy (BLE)</h4><p>We initially chose the Arduino Nano 33 IoTs BLE module as our communication link to the mobile application. BLE appeared to be the ideal choice for our implementation due to its low latency and long-lasting performance. However, we encountered several challenges during the BLE implementation, both in terms of code and security. On the code side, we faced difficulties securing a GATT connection with the mobile phone because the phone's MAC address would change periodically. Additionally, there were issues with correctly reading UUID characteristics even when the connection was established. From a security perspective, the Nano device lacked robustness in a central-to-peripheral framework, as anyone could connect using the MAC address and access the BLE's characteristics. Initially, we considered encryption but eventually opted for a cloud-based solution, which successfully resolved all our problems. As part of this transition, we also switched to the Arduino MKR WiFi 1010 board, as it facilitated streamlined communication with the mobile app via the cloud. This switch not only reduced latency but also addressed our security concerns effectively.</p><h4>Firebase</h4><p>One of the primary hurdles we encountered revolved around the implementation of Google Firebase. We recognized that adopting a cloud-based solution had the potential to alleviate several of the challenges associated with BLE. However, we encountered difficulties, particularly concerning the compatibility of Firebase with the Nano device. This compelled us to transition to an alternative option, the Arduino MKR Wi-Fi 1010. By utilizing specific libraries, we successfully established a connection between Arduino and Firebase. A similar integration was achieved with Android Studio, enabling us to develop a system where the Arduino transmitted time and sensor data securely to the cloud, while the mobile app accessed and utilized this information accordingly.</p><h3>Demo</h3><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"auto\" src=\"https://www.youtube-nocookie.com/embed/ql4GMirMMN0\" title=\"YouTube video player\" width=\"100%\"></iframe>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/Band%20Aid%20Together/App.jpg",
+        "/assets/img/portfolio/Band%20Aid%20Together/sensor.jpg",
+        "/assets/img/portfolio/Band%20Aid%20Together/Firebase.jpg",
+        "/assets/img/portfolio/Band%20Aid%20Together/arduino.jpg",
+      ]
+    },
+    "finance-quizzar":{
+      title:"Finance QuizzAR",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Category</strong>: Hackathon</li><li><strong>Hackathon</strong>: HackDuke</li><li><strong>Project date</strong>: 24 October, 2021</li><li><strong>Project URL</strong>: <a href=\"https://devpost.com/software/finance-quizzar\" target=\"_blank\">DEVPOST</a></li></ul></div><p>Created an application to help students with ADHD learn utilizing an interactive game. Utilized a Leap Motion Sensor to track hand movements in Unity. Won education track & best financial hack.</p><h3>Inspiration</h3><p>Our personal connection to this project arose when we witnessed a friend, who has ADHD, facing difficulties in understanding personal finance and investment terminology. Children with ADHD often experience challenges with concentration, making it harder for them to learn. Research has shown that interactive games can enhance the concentration and attention span of children with ADHD, facilitating their learning journey. Motivated by this, we have taken it upon ourselves to develop an affordable application that can be used on a smartphone along with Google Cardboard.</p><h3>Challenges</h3><p>In the beginning, our efforts were directed towards incorporating this idea into an augmented reality (AR) experience. However, encountering difficulties in effectively managing anchor points led us to shift our focus towards developing a prototype virtual reality (VR) application. Additionally, we faced challenges with the precise execution of hand gestures and controlling the ball, as the sensitivity of the initial hand motion and ball-grabbing physics was quite high. To address this issue, we successfully implemented numerous constraints to enhance the control and movement of the ball.</p><h3>Demo</h3><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"auto\" src=\"https://www.youtube-nocookie.com/embed/r9CR9aCKWP8\" title=\"YouTube video player\" width=\"100%\"></iframe>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/Finance%20Quizzar/Home.jpg",
+        "/assets/img/portfolio/Finance%20Quizzar/Main.jpg",
+        "/assets/img/portfolio/Finance%20Quizzar/Sensor.jpg",
+      ]
+    },
+    "insignex":{
+      title:"InSignEx",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Internship information</h3><ul><li><strong>Position</strong>: Research Intern</li><li><strong>Internship date</strong>: June 2020 - May 2021</li><li><strong>Location</strong>: Gujarat, India</li><li><strong>Company Website</strong>:<a href=\"https://www.insignex.com/\" target=\"_blank\">insignex.com</a></li><li><strong>Publication</strong>: <a href=\"https://doi.org/10.1007/978-981-16-2123-9_31\" target=\"_blank\">Paper</a></li></ul></div><p>Developed an automated irrigation system for banana farmers to collect and evaluate data using Python, Flask, and MySQL. Prototyped designs and measured power draw of a NodeMCU with a shunt resistor to reduce power consumption to 30mA. Created a proof-of-concept for the user interface in Adobe XD, modeling data using historical information from the region about the climate, soil, and irrigation system</p><h3>NodeMCU</h3><p>For this project my work was heavily focused on the NodeMCU. The NodeMCU is a low power microcontroller that is also affordable and easy to use. During my internship, I learned about shunt resistors and different measuring techniques to measure current draw in the mili/micro amp range using regular multimeter's. This process involved utilizing datasheets to understand the capabilities at a chip level and then using that information to turn of certain components of the integrated chip to save power for longer battery life. Furthermore, my work involved using external clocks to wake up the microcontroller from deep sleep mode to relay information periodically back to a central computer over WiFi.</p><h3>Server</h3><p>After the data was collected from the NodeMCU through the different sensors the data was relayed back to the central server. The server was a Raspberry Pi 4 that was running a Flask server and compiling the data in a MySql database. This allowed for easy access at a later time for visualizations and analysis.</p><h3>Paper</h3><p>All of the findings from the project were compiled into a paper that was published in the IEEE conference on Intelligent Systems and Control (ISCO) 2021. The paper can be found at the link provided above. Below is the abstract to provide a bit of information on the paper.<br><br><i> Abstract:</i> The growth and production of fruits from crops are influenced by many factors. Light, temperature, nutrients, and water are the four major factors that influence the crop’s growth (Environmental factors affecting plant growth, [1]). The main factor left to be controlled is water and nutrients. An array of electroconductive sensors is used to figure out the soil moisture throughout the farm. Each moisture sensor is paired with a stem diameter sensor to measure plant health and growth. This pair of sensors is used to measure the growth of crops over time. This allows for continuous monitoring of the crops to help the farmer understand how the crops are progressing. Continuous monitoring and history of information provided by these sensors help the farmer make changes to the watering schedule and nutrients in the soil to ensure optimal crop growth.</p>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/Insignex/irrigation%20system.jpg",
+        "/assets/img/portfolio/Insignex/Fertigation%20system.png",
+        "/assets/img/portfolio/Insignex/smart_farming_block_diagram.png",
+      ]
+    },
+    "teach4charity":{
+      title:"Teach4Charity",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Position</strong>: Founder &amp; CEO</li><li><strong>Project date</strong>: January 2019 - June 2022</li></ul></div><p>Founded program to raise interest in STEM while helping them develop their skills. The program Benefited 50+ kids, performed 500+ tutoring sessions, 10 tutors and collected over $4,000 dollars for charity. Donations helped provide educational materials to the local elementary school, and Sankara Eye Foundation 501(c)(3) charity perform over 100 free eye surgeries.</p><h3>Mission</h3><p>The goal behind our project is to help students in our local neighbor and help people around the world get the gift of sight by donating to <a href=\"http://giftofvision.in/index.php\">Sankara Eye Foundation</a>.</p><h3>Motivation</h3><p>I come from a family that always believed in the best education, and my parents always made sure to give me the resources they could to help me succeed. However, I have realized that not every student is afforded with the same opportunities and I wanted to help them. That is why I started Teach4Charity, an initiative that gave students tutoring at an affordable price and donated all the proceeds to charity. We accepted any student no matter their financial situation, and we were able to help them succeed in their classes.</p><h3>Accomplishments</h3><p>Through this project we were able to help over 50 students in a variety of grades and subjects. We were able to raise over $4,000 dollars for charity and help over 100 people get the gift of sight. This initiative was also able to provide materials to the local elementary school and help them with their STEM program. This program also provided 10+ tutors a way to give back to the community in a fun and impactful way.</p>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/Teach4Charity-portfolio.jpg",
+      ]
+    },
+    "tj-space-program":{
+      title:"TJ Space Program",
+      tags:["Mailchimp","HubSpot","Webhooks","ETL"],
+      desc:"<div class=\"portfolio-info\"><h3>Project information</h3><ul><li><strong>Organization</strong>: TJ Space Program</li><li><strong>Position</strong>: Sat-4 Lead</li><li><strong>Project date</strong>: September 2017 - June 2021</li><li><strong>Project URL</strong>: <a href=\"https://activities.tjhsst.edu/cubesat/\">Website</a></li></ul></div><p>The TJ Space program is a high school club working with professionals from GMU, NASA, and other organizations to build and design cubesats. TJ REVERB is a 2U cubesat launched in November 29th, 2022 on SpaceX CRS-26 and deployed December 29th from the International Space Station. The cubesat is a 2U satellite testing the Iridium network in space. The Iridium network is a network of satellites that provide global communication. Currently, the Iridium network is primarily used on the surface of Earth, but the TJ REVERB mission will test the network in space. The Iridium network will also be utilized to geolocate the cubesat's position in space based on relative location to satellites.</p><h3>Current Status</h3><p>As of today (May 2023), the TJREVERB was not 100% successful. The cubesat was deployed from the ISS, after which a full power system failure occurred. The cubesat is currently providing a live update through a heart beat on the Sat-4 system providing us with the current location of the cubesat. The cubesat is currently in a stable orbit and is expected to stay in orbit for 2-3 years. The TJREVERB mission is still considered a success as the cubesat was deployed and is providing a live update. However, due to the power system failure, the cubesat is not able to provide the full functionality of the mission.</p><h3>Roles</h3><h4>Sat-4 Lead</h4><p>As the SAT-4 Lead for the TJREVERB mission, I was responsible for leading the team's development with the primary radio system. The primary radio system is a tested platform known to work under space conditions providing a way to communicate with the cubesat in scenarios where the Iridium network is not available.</p><h4>Electronics Subteam</h4><p>As a member of the electronics subteam I spent a majority of my time working on the power system for the cubesat. The power system is a critical component of the cubesat as it is responsible for providing power to all the subsystems. The power system is also responsible for charging the batteries utilizing the solar panels during the day and managing power consumption as well as power output to each subsystem through relays which designate different modes based on current battery levels.</p><h4>BlueCube Lead</h4><p>When starting out on the TJREVERB mission, I was the BlueCube Lead. The BlueCube is an outreach initiative by the TJ Space Program to provide a platform for other high school students to learn about cubesats through interactive demonstrations and physical models which can be utilized to interact with our Cubesat as well as understand the elements that go into building a fully functioning Cubesat. As the BlueCube Lead, I was responsible for leading the development of the prototype BlueCube as well as the development of the curriculum for the BlueCube. This role entailed reach out to foreign and local high school space programs to provide them with the opportunity to learn about cubesats and the TJREVERB mission as well as providing them with the opportunity to learn more.</p>",
+      // meta:"~250k contacts • < 2m sync SLA • 1.2k automations/day",
+      // actions:[
+      //   {label:"Process Diagram", href:"#"}
+      // ],
+      images:[
+        "/assets/img/portfolio/TJ%20Nanosatelite/Assembled.jpg",
+        "/assets/img/portfolio/TJ%20Nanosatelite/CubeSat.jpg",
+        "/assets/img/portfolio/TJ%20Nanosatelite/Work.jpg",
+      ]
+    }
+  };
+
+  const $ = sel => document.querySelector(sel);
+  const $$ = sel => Array.from(document.querySelectorAll(sel));
+
+  const lightbox = $("#lightbox");
+  const slideStage = $("#slideStage");
+  const dotsWrap = $("#dots");
+  const nextBtn = $("#nextBtn");
+  const prevBtn = $("#prevBtn");
+  const lbTitle = $("#lbTitle");
+  const lbBody = $("#lbBody");
+  const lbTags = $("#lbTags");
+  const lbDesc = $("#lbDesc");
+  const lbMeta = $("#lbMeta");
+  const lbActions = $("#lbActions");
+
+  let currentId = null;
+  let currentIndex = 0;
+  let lastFocus = null;
+  let touchX = 0;
+  let scrollY = 0;
+
+  function renderProject(p){
+    lbTitle.textContent = p.title;
+    lbTags.innerHTML = p.tags.map(t=>`<span class="tag">${t}</span>`).join("");
+    lbDesc.innerHTML = p.desc;
+    lbMeta.textContent = p.meta || "";
+    lbActions.innerHTML = (p.actions||[]).map(a=>`<a class="btn" href="${a.href}" target="_blank" rel="noopener">${a.label}</a>`).join("");
+
+    slideStage.innerHTML = "";
+    dotsWrap.innerHTML = "";
+    p.images.forEach((src,i)=>{
+      const img = new Image();
+      img.src = src;
+      img.alt = `${p.title} image ${i+1}`;
+      if(i===0) img.classList.add("active");
+      slideStage.appendChild(img);
+
+      const d = document.createElement("button");
+      d.className = "dot" + (i===0?" active":"");
+      d.setAttribute("aria-label",`Go to image ${i+1}`);
+      d.addEventListener("click",()=>goTo(i));
+      dotsWrap.appendChild(d);
+    });
+    currentIndex = 0;
+    slideStage.dataset.count = p.images.length;
+  }
+
+  function goTo(i){
+    const images = Array.from(slideStage.querySelectorAll("img"));
+    if(!images.length) return;
+    images.forEach(img=>img.classList.remove("active"));
+    dotsWrap.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
+    const count = images.length;
+    currentIndex = (i%count+count)%count;
+    images[currentIndex].classList.add("active");
+    dotsWrap.children[currentIndex]?.classList.add("active");
+  }
+  const next = ()=>goTo(currentIndex+1);
+  const prev = ()=>goTo(currentIndex-1);
+
+  function openLightbox(id, pushHash=true){
+    const p = PROJECTS[id];
+    if(!p) return;
+    currentId = id;
+    renderProject(p);
+    lastFocus = document.activeElement;
+    lightbox.setAttribute("aria-hidden","false");
+    lightbox.style.display = "flex";
+    lightbox.dataset.currentId = id;
+    scrollY = window.scrollY || window.pageYOffset;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+    if(pushHash){
+      const url = new URL(location.href);
+      url.hash = `project=${id}`;
+      history.pushState({project:id},"",url);
+    }
+    requestAnimationFrame(()=>{
+        lightbox.classList.add("is-visible");
+    });
+    $("#prevBtn").focus();
+        if (prev && typeof prev.focus === "function") {
+      try { prev.focus({ preventScroll:true }); }
+      catch(e){ prev.focus(); }
+    }
+  }
+
+  function closeLightbox(popHash=true){
+    lightbox.setAttribute("aria-hidden","true");
+    lightbox.classList.remove("is-visible");
+    if(popHash && location.hash.startsWith("#project=")) {
+      history.pushState({}, "", location.pathname + location.search);
+    }
+    const onTransitionEnd = (e)=>{
+      if(e.target !== lightbox) return;
+      lightbox.style.display = "none";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY || 0);
+      lightbox.removeEventListener("transitionend", onTransitionEnd);
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        try { lastFocus.focus({ preventScroll:true }); }
+        catch(e){ lastFocus.focus(); }
+      }
+    };
+    lightbox.addEventListener("transitionend", onTransitionEnd);
+  }
+
+  // Open from cards
+  $("#projects").addEventListener("click", e=>{
+    const card = e.target.closest("[data-lightbox-id]");
+    if(card){ openLightbox(card.dataset.lightboxId); }
+  });
+
+  // Controls
+  nextBtn.addEventListener("click", next);
+  prevBtn.addEventListener("click", prev);
+
+  // Close anywhere with data-close (backdrop or button), including clicks on the SVG path
+  lightbox.addEventListener("click", e=>{
+    if (e.target.closest("[data-close]")) closeLightbox();
+  });
+
+  document.addEventListener("keydown", e=>{
+    if(lightbox.getAttribute("aria-hidden")==="false"){
+      if(e.key==="Escape") closeLightbox();
+      if(e.key==="ArrowRight") next();
+      if(e.key==="ArrowLeft") prev();
+      // rudimentary focus trap
+      const focusables = lightbox.querySelectorAll(".focusable, [href], button");
+      if(e.key==="Tab" && focusables.length){
+        const first = focusables[0], last = focusables[focusables.length-1];
+        if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+        else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+      }
+    }
+  });
+
+  // Swipe
+  slideStage.addEventListener("touchstart", e=>{ touchX = e.touches[0].clientX; }, {passive:true});
+  slideStage.addEventListener("touchend", e=>{
+    const dx = e.changedTouches[0].clientX - touchX;
+    if(Math.abs(dx) > 40) dx<0 ? next() : prev();
+  });
+
+  // Deep-link: #project=slug
+  function tryOpenFromHash(){
+    const m = location.hash.match(/project=([A-Za-z0-9\-_.]+)/);
+    if(m && PROJECTS[m[1]]) openLightbox(m[1], /*pushHash*/false);
+  }
+  window.addEventListener("popstate", tryOpenFromHash);
+  tryOpenFromHash();
+</script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+(function(){
+  const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const MAX_DPR = 2;
+
+  class SpotFillOnScroll {
+    constructor(img){
+      this.img = img;
+
+      // Configs
+      this.fillMs = +img.dataset.fillms || 4000;
+      this.spotMs = +img.dataset.spotms || 1000;     // 1s per spot
+      this.brush  = +img.dataset.brush  || 200;
+      this.soft   = Math.min(.98, Math.max(.1, +img.dataset.softness || .7));
+      this.once   = img.dataset.once === "0" ? false : true;
+
+      // Wrapper + canvases
+      const wrap = document.createElement("span");
+      wrap.className = "acf-wrap";
+
+      const sheen = document.createElement("span");
+      sheen.className = "acf-sheen";
+
+      const cMain = document.createElement("canvas");   // final
+      const cColor= document.createElement("canvas");   // color buffer
+      const cGray = document.createElement("canvas");   // grayscale buffer
+      const cMask = document.createElement("canvas");   // mask
+      const cComp = document.createElement("canvas");   // compositor
+
+      this.wrap = wrap; this.sheen = sheen;
+      this.canvas = cMain; this.ctx = cMain.getContext("2d");
+      this.color = cColor; this.cctx = cColor.getContext("2d");
+      this.gray  = cGray; this.gctx = cGray.getContext("2d");
+      this.mask  = cMask; this.mctx = cMask.getContext("2d");
+      this.comp  = cComp; this.kctx = cComp.getContext("2d");
+
+      // Insert wrapper
+      img.after(wrap);
+      wrap.appendChild(img);
+      wrap.appendChild(cMain);
+      wrap.appendChild(sheen);
+
+      // Spots + brush canvas
+      this.brushCan = document.createElement("canvas");
+      this.spots = [];
+      this.animating = false;
+
+      // Init when ready
+      if (img.complete) this.init();
+      else img.addEventListener("load", ()=>this.init(), {once:true});
+
+      // Observe resize
+      this.ro = new ResizeObserver(()=>this.resize());
+      this.ro.observe(wrap);
+
+      // ScrollTrigger
+      ScrollTrigger.create({
+        trigger: wrap,
+        start: "top 80%",
+        once: this.once,
+        onEnter: () => this.start(),
+        onEnterBack: () => { if(!this.once) this.start(); }
+      });
+    }
+
+    init(){
+      this.resize(true);
+      this.renderBaseLayers();
+      this.resetMask();
+      this.planSpots();
+      this.drawFrame();
+
+      // now hide original img safely
+      this.wrap.classList.add("acf-ready");
+    }
+
+    resize(first=false){
+      const r = this.wrap.getBoundingClientRect();
+      const dpr = Math.min(MAX_DPR, devicePixelRatio || 1);
+      const W = Math.max(1, Math.floor(r.width  * dpr));
+      const H = Math.max(1, Math.floor(r.height * dpr));
+
+      [this.canvas, this.color, this.gray, this.mask, this.comp].forEach(c=>{
+        c.width = W; c.height = H;
+        c.style.width  = r.width+"px";
+        c.style.height = r.height+"px";
+      });
+
+      this.brushPx = Math.round(this.brush * (W / Math.max(1,r.width)));
+      this.makeBrush();
+
+      if (!first){
+        this.renderBaseLayers();
+        this.resetMask();
+        this.planSpots();
+        this.drawFrame();
+      }
+    }
+
+    renderBaseLayers(){
+      const W = this.color.width, H = this.color.height;
+      const img = this.img;
+
+      const iw=img.naturalWidth, ih=img.naturalHeight;
+      const ir=iw/ih, cr=W/H;
+      let dw,dh,dx=0,dy=0;
+      if (ir>cr){ dh=H; dw=dh*ir; dx=(W-dw)/2; }
+      else { dw=W; dh=dw/ir; dy=(H-dh)/2; }
+
+      // COLOR
+      this.cctx.filter = "none";
+      this.cctx.clearRect(0,0,W,H);
+      this.cctx.drawImage(img, dx, dy, dw, dh);
+
+      // GRAYSCALE — FIX: no pixel reads
+      this.gctx.clearRect(0,0,W,H);
+      this.gctx.filter = "grayscale(100%) contrast(1)";
+      this.gctx.drawImage(img, dx, dy, dw, dh);
+
+      this.cctx.filter = "none";
+      this.gctx.filter = "none";
+    }
+
+    makeBrush(){
+      const size = Math.max(12, this.brushPx);
+      this.brushCan.width = this.brushCan.height = size;
+      const b = this.brushCan.getContext("2d");
+
+      const r = size/2, s=this.soft;
+      const g = b.createRadialGradient(r,r,r*s, r,r,r);
+      g.addColorStop(0,"rgba(255,255,255,1)");
+      g.addColorStop(1,"rgba(255,255,255,0)");
+
+      b.clearRect(0,0,size,size);
+      b.fillStyle = g;
+      b.fillRect(0,0,size,size);
+    }
+
+    resetMask(){
+      this.mctx.globalCompositeOperation="source-over";
+      this.mctx.clearRect(0,0,this.mask.width,this.mask.height);
+    }
+
+    planSpots(){
+      const W = this.canvas.width;
+      const H = this.canvas.height;
+
+      // Step slightly smaller than brush for strong overlap
+      const step = Math.max(4, Math.floor(this.brushCan.width * 0.5));
+      const r    = this.brushCan.width / 2;
+
+      // Overscan: start before 0, end after width/height
+      const startX = -r;
+      const endX   = W + r;
+      const startY = -r;
+      const endY   = H + r;
+
+      const cols = Math.ceil((endX - startX) / step);
+      const rows = Math.ceil((endY - startY) / step);
+
+      const spots = [];
+
+      for (let ry = 0; ry < rows; ry++) {
+        for (let cx = 0; cx < cols; cx++) {
+          // Base grid position
+          let x = startX + cx * step;
+          let y = startY + ry * step;
+
+          // Small jitter for organic feel
+          const jitter = step * 0.3;
+          x += (Math.random() - 0.5) * jitter;
+          y += (Math.random() - 0.5) * jitter;
+
+          // No clamping now – let brush hang off the edges,
+          // canvas will clip automatically and fully cover borders.
+          spots.push({
+            x,
+            y,
+            start: 0,
+            end: 0,
+            lastA: 0,
+            done: false
+          });
+        }
+      }
+
+      // Shuffle for random reveal order
+      for (let i = spots.length - 1; i > 0; i--) {
+        const j = (Math.random() * (i + 1)) | 0;
+        [spots[i], spots[j]] = [spots[j], spots[i]];
+      }
+
+      // Timing: each spot fades in over ~spotMs, whole run ~fillMs
+      const total = spots.length;
+      const dur   = prefersReduced ? 800 : this.fillMs;
+      const sdur  = prefersReduced ? 200 : this.spotMs;
+      const gap   = Math.max(1, (dur - sdur) / Math.max(1, total - 1));
+      const t0    = performance.now();
+
+      spots.forEach((s, idx) => {
+        s.start = t0 + idx * gap;
+        s.end   = s.start + sdur;
+        s.lastA = 0;
+        s.done  = false;
+      });
+
+      this.spots = spots;
+    }
+
+    easeOutCubic(t){ return 1 - Math.pow(1-t,3); }
+
+    growSpot(s, now){
+      const p = Math.min(1, Math.max(0,(now-s.start)/(s.end-s.start)));
+      const a = this.easeOutCubic(p);
+      const da = a - s.lastA;
+
+      if (da>0){
+        const r=this.brushCan.width/2;
+        const sx=(s.x-r)|0, sy=(s.y-r)|0;
+
+        this.mctx.globalCompositeOperation="lighter";
+        this.mctx.globalAlpha = da;
+        this.mctx.drawImage(this.brushCan, sx, sy);
+        this.mctx.globalAlpha = 1;
+        this.mctx.globalCompositeOperation="source-over";
+
+        s.lastA = a;
+      }
+      if (p>=1) s.done=true;
+    }
+
+    drawFrame(){
+      const ctx=this.ctx, W=this.canvas.width, H=this.canvas.height;
+      ctx.clearRect(0,0,W,H);
+
+      // grayscale base
+      ctx.drawImage(this.gray, 0, 0);
+
+      // color ⊗ mask
+      this.kctx.clearRect(0,0,W,H);
+      this.kctx.globalCompositeOperation="source-over";
+      this.kctx.drawImage(this.color,0,0);
+
+      this.kctx.globalCompositeOperation="destination-in";
+      this.kctx.drawImage(this.mask,0,0);
+
+      ctx.drawImage(this.comp,0,0);
+    }
+
+    start(){
+      this.resetMask();
+      this.planSpots();
+      this.wrap.classList.add("acf-animating");
+
+      if (!this.animating){
+        this.animating = true;
+        this.tick();
+      }
+    }
+
+    tick = () => {
+      if (!this.animating) return;
+      const now = performance.now();
+
+      let active = false;
+      for (let s of this.spots){
+        if (now >= s.start && !s.done){
+          this.growSpot(s, now);
+          active = true;
+        }
+      }
+
+      this.drawFrame();
+
+      // stop when all done
+      if (!active && this.spots.every(s=>s.done)){
+        this.animating=false;
+        this.wrap.classList.remove("acf-animating");
+        return;
+      }
+      requestAnimationFrame(this.tick);
+    }
+  }
+
+  // Initialize all images
+  document.querySelectorAll("img.animated-color-fill").forEach(img=>{
+    new SpotFillOnScroll(img);
+  });
+})();
+</script>
 
 </body>
-
 </html>
