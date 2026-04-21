@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Dynamics | Soham Gandhi</title>
+    <link rel="icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        main { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .content-block { margin-bottom: 4rem; }
+        .content-block h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; }
+        .content-block p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+        /* Bullet Points List */
+        .impact-list { list-style: none; padding-left: 0; }
+        .impact-list li { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
+        .impact-list li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); font-size: 1.2rem; line-height: 1.4; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../experience.html" style="color: var(--accent);">Experience</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../blog.html">Blog</a>
+</nav>
+
+<header class="page-header" style="max-width: 900px;">
+    <a href="../experience.html" class="back-link">Back to Experience</a>
+    <h1>General Dynamics Mission Systems</h1>
+    <div class="meta">
+        Software Engineering Intern <span>| Fairfax, VA</span> <span>| May 2022 - Aug 2022</span>
+    </div>
+    <div class="tech-stack" style="margin-top: 1.5rem;">
+        <span class="skill-tag">Linux / Bash</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">NFS / DHCP / TFTP</span>
+        <span class="skill-tag">Cybersecurity (DoD STIG)</span>
+    </div>
+</header>
+
+<main>
+    <section class="content-block" style="padding: 0;">
+        <h2>Overview</h2>
+        <p>During my time at General Dynamics Mission Systems, my work focused on bridging software engineering with IT infrastructure and cybersecurity. I was responsible for modernizing and securing the operating system deployment pipeline for mission-critical hardware, ensuring that systems could be spun up rapidly without compromising strict defense-grade security protocols.</p>
+    </section>
+
+    <section class="content-block" style="padding: 0;">
+        <h2>Key Impact & Responsibilities</h2>
+        <ul class="impact-list">
+            <li><strong>Automated Provisioning:</strong> Engineered an automated Linux OS deployment pipeline over the network (NFS) utilizing DHCP and TFTP. This eliminated manual OS installation bottlenecks and cut overall deployment time by 50%.</li>
+            <li><strong>Security Hardening:</strong> Defense systems require rigorous compliance. I developed custom Bash and Python scripts to harden system kickstarts, ensuring all newly deployed operating systems automatically complied with Department of Defense (DoD) Security Technical Implementation Guide (STIG) requirements right out of the box.</li>
+            <li><strong>Infrastructure Efficiency:</strong> By automating both the deployment and the security hardening phases, I significantly reduced the manual administrative overhead required by the engineering team to prep hardware for deployment.</li>
+        </ul>
+    </section>
+</main>
+
+<footer style="margin-top: 0;">
+    <a href="mailto:sohamgandhi@live.com" class="btn">Let's Talk</a>
+</footer>
+
+</body>
+</html>

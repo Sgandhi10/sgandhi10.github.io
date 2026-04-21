@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Science NLP | Soham Gandhi</title>
+    <link rel="icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        main { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .content-block { margin-bottom: 4rem; }
+        .content-block h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; display: block; }
+        .content-block p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../experience.html">Experience</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../blog.html">Blog</a>
+</nav>
+
+<header class="page-header" style="max-width: 900px;">
+    <a href="../projects.html" class="back-link">Back to Projects</a>
+    <h1>Food Science NLP</h1>
+    <div class="meta">
+        Research Assistant <span>| Data & Machine Learning</span>
+    </div>
+    <div class="tech-stack" style="margin-top: 1.5rem;">
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Word2Vec</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Data Visualization</span>
+    </div>
+</header>
+
+<main>
+    <section class="content-block" style="padding: 0;">
+        <h2>Project Overview</h2>
+        <p>Working as a Research Assistant, I applied Natural Language Processing (NLP) techniques to the food science domain. The project aimed to uncover the hidden linguistic and statistical relationships between how humans describe the taste of food and its actual chemical composition.</p>
+    </section>
+
+    <section class="split-grid" style="padding: 0;">
+        <div class="split-item">
+            <h3>The Challenge</h3>
+            <p style="color: var(--text-muted);">Sensory descriptions of food are highly subjective, while chemical descriptions are highly objective. Bridging these two datasets is incredibly difficult without human bias. We needed a computational way to map words like "fruity" or "earthy" to specific molecular compounds across massive datasets of food reviews.</p>
+        </div>
+        <div class="split-item">
+            <h3>The Solution</h3>
+            <p style="color: var(--text-muted);">I developed a machine learning model utilizing Word2Vec to process massive text corpora. By representing words as high-dimensional vectors, the model was able to mathematically identify clusters and correlations between qualitative sensory words and quantitative chemical data.</p>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <h2>Technical Implementations</h2>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Model Architecture:</strong> Trained custom Word2Vec models on extensive food science text data to establish mathematical proximity between descriptive adjectives and chemical nouns.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Data Visualization:</strong> Translated complex, high-dimensional vector data into comprehensible charts and graphs using Orange, Tableau, and Gephi to make the findings accessible to non-technical food scientists.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Data Cleaning:</strong> Wrote Python scripts to sanitize unstructured review data, removing stop words, applying stemming, and standardizing formatting prior to model ingestion.</li>
+        </ul>
+    </section>
+</main>
+
+<footer style="margin-top: 0;"><a href="https://github.com/Sgandhi10" target="_blank" class="btn">View my GitHub</a></footer>
+</body>
+</html>

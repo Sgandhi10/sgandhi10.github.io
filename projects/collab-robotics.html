@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Robotics Lab | Soham Gandhi</title>
+    <link rel="icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        main { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .content-block { margin-bottom: 4rem; }
+        .content-block h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; display: block; }
+        .content-block p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../experience.html">Experience</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../blog.html">Blog</a>
+</nav>
+
+<header class="page-header" style="max-width: 900px;">
+    <a href="../projects.html" class="back-link">Back to Projects</a>
+    <h1>Collaborative Robotics Lab</h1>
+    <div class="meta">
+        Undergraduate Researcher <span>| 3rd Place at CHCI 2023</span>
+    </div>
+    <div class="tech-stack" style="margin-top: 1.5rem;">
+        <span class="skill-tag">ROS (Robot Operating System)</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Human-Robot Interaction</span>
+    </div>
+</header>
+
+<main>
+    <section class="content-block" style="padding: 0;">
+        <h2>Project Overview</h2>
+        <p>Working as an Undergraduate Researcher, I spearheaded the front-end software development to interface with a Fetch Mobile Manipulator robot. The goal was to build a system to study and improve implicit communication and trust between humans and collaborative robots in shared workspaces.</p>
+    </section>
+
+    <section class="split-grid" style="padding: 0;">
+        <div class="split-item">
+            <h3>The Challenge</h3>
+            <p style="color: var(--text-muted);">Industrial and service robots often lack intuitive ways to communicate their internal states or intended actions to human partners, leading to inefficiency and lack of trust. We needed a robust interface to connect the robot's complex backend processing with a comprehensible user interface during active user studies.</p>
+        </div>
+        <div class="split-item">
+            <h3>The Solution</h3>
+            <p style="color: var(--text-muted);">I developed a responsive web application using React and ROSLibJS. This architecture allowed the React frontend to subscribe to and publish ROS topics in real-time over WebSockets, establishing a seamless two-way communication channel between the human operator and the Fetch Robot.</p>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <h2>Research & Impact</h2>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">User Studies:</strong> Facilitated comprehensive user studies to map how varying speeds, proximity, and visual feedback from the robot affected human trust metrics.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">System Architecture:</strong> Successfully bridged standard web development stacks (React) with complex robotic middleware (ROS), allowing for rapid iteration of the user interface without altering the core robotic navigation stack.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Recognition:</strong> Our team's research and resulting platform were awarded 3rd Place at the Center for Human-Computer Interaction (CHCI) showcase in 2023.</li>
+        </ul>
+    </section>
+</main>
+
+<footer style="margin-top: 0;"><a href="https://github.com/Sgandhi10" target="_blank" class="btn">View my GitHub</a></footer>
+</body>
+</html>

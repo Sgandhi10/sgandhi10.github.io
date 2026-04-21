@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haptic Tactics | Soham Gandhi</title>
+    <link rel="icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        main { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .content-block { margin-bottom: 4rem; }
+        .content-block h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; display: block; }
+        .content-block p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../experience.html">Experience</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../blog.html">Blog</a>
+</nav>
+
+<header class="page-header" style="max-width: 900px;">
+    <a href="../projects.html" class="back-link">Back to Projects</a>
+    <h1>Haptic Tactics</h1>
+    <div class="meta">
+        Intro to XR <span>| Hardware Lead</span>
+    </div>
+    <div class="tech-stack" style="margin-top: 1.5rem;">
+        <span class="skill-tag">Hardware Design</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">XR / Unity</span>
+        <span class="skill-tag">Bluetooth</span>
+    </div>
+</header>
+
+<main>
+    <section class="content-block" style="padding: 0;">
+        <h2>Project Overview</h2>
+        <p>Haptic Tactics bridged the gap between digital XR environments and physical tactile feedback. Operating as the Hardware Lead, I developed a custom physical peripheral for the Oculus Quest 2 designed to realistically simulate the physical resistance and vibration of operating a power drill in a virtual space.</p>
+    </section>
+
+    <section class="split-grid" style="padding: 0;">
+        <div class="split-item">
+            <h3>The Challenge</h3>
+            <p style="color: var(--text-muted);">Standard XR controllers lack the ability to provide meaningful, variable physical resistance. When a user in a virtual reality simulation drives a drill into a piece of wood versus a piece of metal, the standard controller only provides uniform vibration, destroying the immersion and limiting XR's usefulness for industrial training.</p>
+        </div>
+        <div class="split-item">
+            <h3>The Solution</h3>
+            <p style="color: var(--text-muted);">I designed and built a custom physical device utilizing a motor and a linear actuator to generate active physical resistance. By intercepting Bluetooth signals from the Oculus environment, the device dynamically adjusted its feedback based on the virtual material being interacted with.</p>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <h2>Technical Implementations</h2>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Signal Interception:</strong> Authored Python scripts capable of intercepting and processing live Bluetooth telemetry directly from the Oculus Quest 2, translating digital virtual states into actionable hardware commands.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Electromechanical Design:</strong> Integrated a high-torque motor and a linear actuator to provide variable, real-time pushback against the user's trigger pull, simulating different material densities.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Rapid Prototyping:</strong> Utilized CAD software and 3D printing to iteratively design the housing and mechanical linkages, ensuring the peripheral was ergonomic and functional alongside standard VR hardware.</li>
+        </ul>
+    </section>
+</main>
+
+<footer style="margin-top: 0;"><a href="https://github.com/Sgandhi10" target="_blank" class="btn">View my GitHub</a></footer>
+</body>
+</html>

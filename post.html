@@ -1,0 +1,94 @@
+### Step 3: The Blog Template (`post.html`)
+Place this in your root folder. This single file acts as a dynamic template. It looks at the URL (e.g., `post.html?id=emulating-hardware`), fetches the Markdown file, parses it, and styles it to match your dark theme perfectly.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Soham Gandhi</title>
+    <link rel="icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        main { padding: 8rem 2rem 4rem; max-width: 800px; margin: 0 auto; min-height: 80vh; }
+        .back-link { display: inline-flex; align-items: center; margin-bottom: 2rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+        .back-link::before { content: '←'; margin-right: 0.5rem; transition: transform 0.2s; }
+        .back-link:hover::before { transform: translateX(-5px); }
+        .back-link:hover { color: var(--accent); }
+
+        #post-title { font-size: 3rem; margin-bottom: 1rem; color: var(--text-main); line-height: 1.2; letter-spacing: -1px; }
+        #post-meta { color: var(--accent); font-size: 0.95rem; margin-bottom: 3rem; font-weight: 500; border-bottom: 1px solid var(--card-border); padding-bottom: 1.5rem; }
+
+        /* Beautiful Dark Theme Markdown Styling */
+        #markdown-content { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; }
+        #markdown-content h2 { color: var(--text-main); font-size: 1.8rem; margin: 2.5rem 0 1rem; border: none; padding: 0; }
+        #markdown-content h3 { color: var(--text-main); font-size: 1.4rem; margin: 2rem 0 1rem; }
+        #markdown-content p { margin-bottom: 1.5rem; }
+        #markdown-content pre { background: var(--section-bg); padding: 1.5rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid var(--card-border); }
+        #markdown-content code { font-family: monospace; color: var(--accent); }
+        #markdown-content ul, #markdown-content ol { margin-bottom: 1.5rem; padding-left: 2rem; }
+        #markdown-content li { margin-bottom: 0.5rem; }
+        #markdown-content strong { color: var(--text-main); }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html" style="color: var(--accent);">Blog</a>
+</nav>
+
+<main>
+    <a href="blog.html" class="back-link">Back to Articles</a>
+    <h1 id="post-title">Loading...</h1>
+    <div id="post-meta"></div>
+    <div id="markdown-content"></div>
+</main>
+
+<footer>
+    <a href="mailto:sohamgandhi@live.com" class="btn">Contact Me</a>
+</footer>
+
+<script>
+    // 1. Get the 'id' parameter from the URL (e.g., ?id=hacking-gcode)
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get('id');
+
+    if (!postId) {
+        document.getElementById('post-title').innerText = "Post Not Found";
+        document.getElementById('markdown-content').innerHTML = "<p>Invalid post ID.</p>";
+    } else {
+        // 2. Fetch the JSON to get the title and date
+        fetch('blogs/posts.json')
+            .then(response => response.json())
+            .then(posts => {
+                const postMeta = posts.find(p => p.id === postId);
+                if(postMeta) {
+                    document.getElementById('post-title').innerText = postMeta.title;
+
+                    // Format the date nicely
+                    const dateObj = new Date(postMeta.date);
+                    const formattedDate = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                    document.getElementById('post-meta').innerText = `${formattedDate} • ${postMeta.tag}`;
+                }
+            });
+
+        // 3. Fetch the Markdown file and render it
+        fetch(`blogs/${postId}.md`)
+            .then(response => {
+                if(!response.ok) throw new Error("File not found");
+                return response.text();
+            })
+            .then(markdown => {
+                document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
+            })
+            .catch(err => {
+                document.getElementById('markdown-content').innerHTML = "<p>Sorry, the content for this post could not be loaded.</p>";
+            });
+    }
+</script>
+</body>
+</html>

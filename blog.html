@@ -1,0 +1,65 @@
+<section>
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All Posts</button>
+        <button class="filter-btn" data-filter="Verification">Verification</button>
+        <button class="filter-btn" data-filter="Hardware">Hardware</button>
+    </div>
+
+    <div id="dynamic-blog-list">
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('blogs/posts.json')
+            .then(response => response.json())
+            .then(posts => {
+                // Sort posts by date (newest first)
+                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                const listContainer = document.getElementById('dynamic-blog-list');
+
+                posts.forEach(post => {
+                    const dateObj = new Date(post.date);
+                    const formattedDate = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+
+                    const articleHtml = `
+                            <article class="blog-post item" data-category="${post.tag}">
+                                <div class="post-meta">
+                                    <span class="blog-date">${formattedDate}</span>
+                                    <span class="blog-tag">${post.tag}</span>
+                                </div>
+                                <h2>${post.title}</h2>
+                                <p>${post.summary}</p>
+                                <a href="post.html?id=${post.id}" class="read-more">Read Article</a>
+                            </article>
+                        `;
+                    listContainer.insertAdjacentHTML('beforeend', articleHtml);
+                });
+
+                // Re-initialize filtering logic after posts are loaded
+                setupFilters();
+            });
+    });
+
+    function setupFilters() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filterValue = btn.getAttribute('data-filter');
+
+                items.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+</script>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InSignEx | Soham Gandhi</title>
+    <link rel="icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        main { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .content-block { margin-bottom: 4rem; }
+        .content-block h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; display: block; }
+        .content-block p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../experience.html">Experience</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../blog.html">Blog</a>
+</nav>
+
+<header class="page-header" style="max-width: 900px;">
+    <a href="../projects.html" class="back-link">Back to Projects</a>
+    <h1>InSignEx</h1>
+    <div class="meta">
+        Developer <span>| Intelligent Agriculture</span>
+    </div>
+    <div class="tech-stack" style="margin-top: 1.5rem;">
+        <span class="skill-tag">Embedded Systems</span>
+        <span class="skill-tag">Sensors</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">Hardware Design</span>
+    </div>
+</header>
+
+<main>
+    <section class="content-block" style="padding: 0;">
+        <h2>Project Overview</h2>
+        <p>InSignEx is an embedded hardware project focused on precision agriculture. I developed an intelligent, automated irrigation system capable of monitoring crop health in real-time, allowing for highly efficient water usage and targeted nutrient distribution.</p>
+    </section>
+
+    <section class="split-grid" style="padding: 0;">
+        <div class="split-item">
+            <h3>The Challenge</h3>
+            <p style="color: var(--text-muted);">Traditional agriculture relies heavily on timed watering schedules, which leads to massive water waste and suboptimal crop yields. Farmers lack cost-effective, granular data regarding the actual hydration levels and health of individual plant clusters.</p>
+        </div>
+        <div class="split-item">
+            <h3>The Solution</h3>
+            <p style="color: var(--text-muted);">I engineered a microcontroller-based system that utilized a combination of capacitive soil moisture sensors and precision stem diameter sensors. By continually reading these physical metrics, the system could dynamically adjust watering schedules only when the crop biologically required it.</p>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <h2>Technical Implementations</h2>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Sensor Integration:</strong> Calibrated and integrated analog sensors to accurately read environmental variables without succumbing to fast corrosion (a common issue with cheap soil sensors).</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Logic Control:</strong> Wrote embedded C++ to process sensor data streams, applying logic thresholds to trigger relays that controlled water pumps and solenoid valves automatically.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Data Visualization:</strong> Allowed farmers to track trends over time, helping them understand the correlation between stem growth, water usage, and crop yield.</li>
+        </ul>
+    </section>
+</main>
+
+<footer style="margin-top: 0;"><a href="https://github.com/Sgandhi10" target="_blank" class="btn">View my GitHub</a></footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Soham Gandhi</title>
+    <link rel="icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html" style="color: var(--accent);">Projects</a>
+    <a href="blog.html">Blog</a>
+</nav>
+
+<header class="page-header">
+    <h1>All Projects</h1>
+    <p>A comprehensive archive of my work spanning full-stack software development, hardware design, robotics, and interdisciplinary engineering.</p>
+</header>
+
+<section>
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="hardware">Hardware & Embedded</button>
+        <button class="filter-btn" data-filter="software">Software & AI</button>
+        <button class="filter-btn" data-filter="interdisciplinary">Interdisciplinary & Leadership</button>
+    </div>
+
+    <div class="grid-container" id="project-grid">
+
+        <div class="card item" data-category="software">
+            <h3>Latis</h3>
+            <span class="role">Cybersecurity Startup</span>
+            <p>Full-Stack Developer. Built software for tracking medical device security updates, utilizing Next.js, VueJS, Flask, and Postgres. Containerized environment with Docker.</p>
+            <div class="project-tags">
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Docker</span>
+                <a href="projects/latis.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="software">
+            <h3>Politilink</h3>
+            <span class="role">HackViolet - Best Innovation Hack</span>
+            <p>Developed a GPT-3 application utilizing NLP and web scraping to automatically research and draft custom advocacy emails to specific local representatives based on user ZIP codes.</p>
+            <div class="project-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">GPT-3 API</span>
+                <span class="skill-tag">Python</span>
+                <a href="projects/politilink.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="software">
+            <h3>Collaborative Robotics Lab</h3>
+            <span class="role">Undergraduate Researcher</span>
+            <p>Spearheaded front-end development utilizing ROSLibJS in React to connect the ROS backend of a Fetch Robot with a user interface to study human-robot trust.</p>
+            <div class="project-tags">
+                <span class="skill-tag">ROS</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Robotics</span>
+                <a href="projects/collab-robotics.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="software">
+            <h3>Food Science NLP</h3>
+            <span class="role">Research Assistant</span>
+            <p>Developed a machine learning model to analyze the relationship between sensory and chemical descriptions of food products using Word2Vec models and complex data visualization.</p>
+            <div class="project-tags">
+                <span class="skill-tag">NLP</span>
+                <span class="skill-tag">Word2Vec</span>
+                <span class="skill-tag">Data Vis</span>
+                <a href="projects/food-science.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="hardware">
+            <h3>Haptic Tactics</h3>
+            <span class="role">Hardware Lead</span>
+            <p>Built a custom haptic device for Oculus Quest 2 to simulate physical drilling feedback. Wrote Python scripts to intercept Bluetooth telemetry to drive a motor and linear actuator.</p>
+            <div class="project-tags">
+                <span class="skill-tag">Hardware Design</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">XR</span>
+                <a href="projects/haptic-tactics.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="hardware">
+            <h3>DREAMs Lab Research</h3>
+            <span class="role">Undergraduate Research Assistant</span>
+            <p>Integrated proprietary conductive inks with SLA 3D printing to print PCBs directly into parts. Hacked legacy hardware by reverse-engineering proprietary G-code to bypass chip locks.</p>
+            <div class="project-tags">
+                <span class="skill-tag">Additive Mfg</span>
+                <span class="skill-tag">Reverse Engineering</span>
+                <a href="projects/dreams-lab.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="hardware">
+            <h3>Band Aid Together</h3>
+            <span class="role">Developer</span>
+            <p>Transitioned an Arduino Nano BLE prototype to a Wi-Fi-based approach utilizing Google Firebase and an Arduino MKR Wi-Fi 1010 to securely channel sensor data to the cloud with zero latency.</p>
+            <div class="project-tags">
+                <span class="skill-tag">IoT</span>
+                <span class="skill-tag">Google Firebase</span>
+                <span class="skill-tag">Arduino</span>
+                <a href="projects/band-aid.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="interdisciplinary">
+            <h3>Finance QuizzAR</h3>
+            <span class="role">Developer</span>
+            <p>A 3D Unity game designed to impart fundamental finance concepts. Overcame challenges involving serial connections between Unity and an external physical Arduino controller.</p>
+            <div class="project-tags">
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Arduino</span>
+                <a href="projects/finance-quizzar.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="interdisciplinary">
+            <h3>TJ Space Program</h3>
+            <span class="role">Sat-4 & BlueCube Lead</span>
+            <p>Led the BlueCube outreach initiative to teach high schoolers about cubesats. Managed power systems including charging batteries via solar panels and regulating power distribution.</p>
+            <div class="project-tags">
+                <span class="skill-tag">Systems Engineering</span>
+                <span class="skill-tag">Aerospace</span>
+                <a href="projects/tj-space.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div class="card item" data-category="interdisciplinary">
+            <h3>Teach4Charity</h3>
+            <span class="role">Organizer & Founder</span>
+            <p>Initiative that raised over $4,000 for charity, providing the gift of sight to over 100 people and supplying STEM materials to local elementary schools through student-led tutoring programs.</p>
+            <div class="project-tags">
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Community</span>
+                <a href="projects/teach4charity.html" style="margin-left: auto; font-size: 0.85rem; align-self: center;">View Details &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <a href="mailto:sohamgandhi@live.com" class="btn">Contact Me</a>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button styling
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Show or hide items based on data-category
+                items.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    });
+</script>
+</body>
+</html>

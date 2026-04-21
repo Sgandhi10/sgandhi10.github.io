@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAMs Lab | Soham Gandhi</title>
+    <link rel="icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        main { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .content-block { margin-bottom: 4rem; }
+        .content-block h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; display: block; }
+        .content-block p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../experience.html">Experience</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../blog.html">Blog</a>
+</nav>
+
+<header class="page-header" style="max-width: 900px;">
+    <a href="../projects.html" class="back-link">Back to Projects</a>
+    <h1>DREAMs Lab Research</h1>
+    <div class="meta">
+        Undergraduate Research Assistant
+    </div>
+    <div class="tech-stack" style="margin-top: 1.5rem;">
+        <span class="skill-tag">Additive Manufacturing</span>
+        <span class="skill-tag">Reverse Engineering</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SLA 3D Printing</span>
+    </div>
+</header>
+
+<main>
+    <section class="content-block" style="padding: 0;">
+        <h2>Project Overview</h2>
+        <p>Working within the DREAMs Lab, my research focused on pushing the boundaries of SLA 3D printing by integrating proprietary conductive inks. The ultimate goal was to establish a methodology for printing functional printed circuit boards (PCBs) directly inside of structural 3D printed components.</p>
+    </section>
+
+    <section class="split-grid" style="padding: 0;">
+        <div class="split-item">
+            <h3>The Challenge</h3>
+            <p style="color: var(--text-muted);">Commercial 3D printing hardware is often heavily locked down by the manufacturer. Our lab possessed legacy SLA machines that physically prevented the use of experimental, third-party conductive inks through hardcoded chip locks and encrypted G-code formatting.</p>
+        </div>
+        <div class="split-item">
+            <h3>The Solution</h3>
+            <p style="color: var(--text-muted);">To utilize our experimental materials, I had to completely bypass the manufacturer's restrictions. I reverse-engineered the proprietary G-code structure using Python, allowing us to send custom instructions to the hardware and successfully execute prints using our own conductive substrates.</p>
+        </div>
+    </section>
+
+    <section class="content-block">
+        <h2>Technical Implementations</h2>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Reverse Engineering:</strong> Analyzed the data packets and standard print files from the legacy hardware to decode the proprietary G-code syntax blocking custom prints.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Software Bypasses:</strong> Authored custom Python scripts to translate standard CAD slicing instructions into the cracked proprietary format, effectively neutralizing the manufacturer's chip locks.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Material Integration:</strong> Optimized the piezoelectric jetting and curing processes required to lay down proprietary conductive inks without compromising the structural integrity of the surrounding SLA photopolymer resin.</li>
+        </ul>
+    </section>
+</main>
+
+<footer style="margin-top: 0;"><a href="mailto:sohamgandhi@live.com" class="btn">Contact Me</a></footer>
+</body>
+</html>
