@@ -144,33 +144,7 @@
 
 <section id="experience">
     <h2>Experience</h2>
-    <div class="grid-container">
-        <div class="card">
-            <h3>Texas Instruments</h3>
-            <span class="company">Digital IC Design Engineer & Intern</span>
-            <span class="date">May 2023 - Present | Santa Clara, CA</span>
-            <ul>
-                <li style="margin-bottom: 0.8rem;"><strong>Full-Time (Jul 2025 - Present):</strong> Leading development of a bidirectional control channel over SERDES interfaces, integrating I3C and SPI.</li>
-                <li style="margin-bottom: 0.8rem;"><strong>Intern (2024):</strong> Designed high-speed SystemVerilog FIFO with prefetching logic and single-port RAM.</li>
-                <li><strong>Intern (2023):</strong> Developed automated lab methodology using Artek Variable ISI, cutting testing time by 60%.</li>
-            </ul>
-            <div class="project-tags" style="margin-top: 1rem;">
-                <a href="experience/ti.html" style="font-size: 0.85rem;">Read Full Breakdown &rarr;</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Software Engineering Intern</h3>
-            <span class="company">General Dynamics Mission Systems</span>
-            <span class="date">May 2022 - Aug 2022 | Fairfax, VA</span>
-            <ul>
-                <li>Automated Linux OS deployment over NFS using DHCP and TFTP.</li>
-                <li>Hardened system kickstarts to comply with DoD STIG security requirements.</li>
-            </ul>
-            <div class="project-tags" style="margin-top: 1rem;">
-                <a href="experience/gd.html" style="font-size: 0.85rem;">Read Full Breakdown &rarr;</a>
-            </div>
-        </div>
+    <div class="grid-container" id="experience-container">
     </div>
     <div class="btn-container">
         <a href="experience.html" class="btn">View All Experience</a>
@@ -179,24 +153,7 @@
 
 <section id="projects">
     <h2>Featured Projects</h2>
-    <div class="grid-container">
-        <div class="card">
-            <h3>Latis</h3>
-            <span class="date">Cybersecurity Startup</span>
-            <p>Full-Stack Developer. Built software for tracking medical device security updates, utilizing Next.js, VueJS, Flask, and Postgres.</p>
-            <div class="project-tags">
-                <a href="projects/latis.html" style="margin-left: auto; font-size: 0.85rem;">View Project Details &rarr;</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Politilink</h3>
-            <span class="date">HackViolet 2023 - Best Innovation Hack</span>
-            <p>Developed a GPT-3 application utilizing NLP and web scraping to draft custom advocacy emails to local representatives.</p>
-            <div class="project-tags">
-                <a href="projects/politilink.html" style="margin-left: auto; font-size: 0.85rem;">View Project Details &rarr;</a>
-            </div>
-        </div>
+    <div class="grid-container" id="projects-container">
     </div>
     <div class="btn-container">
         <a href="projects.html" class="btn">View All Projects</a>
@@ -246,6 +203,68 @@
             //     document.getElementById('recent-blog-posts').innerHTML = '<p style="color: var(--text-muted);">Posts loading...</p>';
             // });
     });
+
+    async function loadExperience() {
+        try {
+            const response = await fetch('experience/experience.json');
+            const data = await response.json();
+            const container = document.getElementById('experience-container');
+
+            // Show only the top 2 for the homepage
+            data.slice(0, 2).forEach(item => {
+                const card = `
+                <div class="card">
+                    <h3>${item.company}</h3>
+                    <span class="company">${item.role}</span>
+                    <span class="date">${item.period} | ${item.location}</span>
+                    <ul>
+                        ${item.highlights.map(h => `<li>${h}</li>`).join('')}
+                    </ul>
+                    <div class="project-tags" style="margin-top: 1rem;">
+                        <a href="${item.detailsLink}" class="read-more-link">Read Full Breakdown</a>
+                    </div>
+                </div>
+            `;
+                container.insertAdjacentHTML('beforeend', card);
+            });
+        } catch (e) {
+            console.error("Error loading experience:", e);
+        }
+    }
+
+    async function loadFeaturedProjects() {
+        try {
+            const res = await fetch('projects/projects.json');
+            const data = await res.json();
+            const container = document.getElementById('projects-container');
+
+            // Only show projects where featured is true
+            const featured = data.filter(proj => proj.featured === true);
+
+            featured.forEach(proj => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                <h3>${proj.title}</h3>
+                <span class="date" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 500;">
+                    ${proj.category}
+                </span>
+                <p style="margin-bottom: 1.5rem; color: var(--text-muted); line-height: 1.6;">
+                    ${proj.description}
+                </p>
+                <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                    ${proj.tags.map(t => `<span class="skill-tag">${t}</span>`).join('')}
+                    <a href="${proj.detailsLink}" class="read-more-link" style="margin-left: auto; font-size: 0.9rem; font-weight: bold;">
+                        View Details
+                    </a>
+                </div>
+            `;
+                container.appendChild(card);
+            });
+        } catch (e) {
+            console.error("Error loading featured projects:", e);
+        }
+    }
 </script>
 
 <script>
@@ -261,7 +280,11 @@
         else if (isDeleting && charIndex === 0) { isDeleting = false; i = (i + 1) % words.length; typeSpeed = 400; }
         setTimeout(typeEffect, typeSpeed);
     }
-    document.addEventListener('DOMContentLoaded', () => setTimeout(typeEffect, 1000));
+    document.addEventListener('DOMContentLoaded', () => {
+        loadExperience();
+        loadFeaturedProjects();
+        typeEffect();
+    });
 </script>
 </body>
 </html>

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "collab-robotics",
+    "title": "Collaborative Robotics",
+    "category": "Research & Web Robotics",
+    "featured": false,
+    "description": "Front-end development for the Collaborative Robotics Lab. Built a specialized dashboard using React and ROS to visualize and control robotic systems in real-time.",
+    "tags": ["React", "ROS", "Robotics"],
+    "detailsLink": "projects/collab-robotics.html"
+  },
+  {
+    "id": "dream-labs",
+    "title": "DREAMs Lab Research",
+    "category": "Additive Manufacturing",
+    "featured": false,
+    "description": "Research assistant focused on integrating proprietary conductive inks into SLA 3D printing processes to enable embedded electronics in printed parts.",
+    "tags": ["3D Printing", "Materials Science", "Hardware"],
+    "detailsLink": "projects/dream-labs.html"
+  },
+  {
+    "id": "latis",
+    "title": "Latis",
+    "category": "Cybersecurity Startup",
+    "featured": false,
+    "description": "Full-stack development for a medical device security tracking platform, utilizing Next.js and Postgres in a Dockerized environment.",
+    "tags": ["Next.js", "Docker", "Postgres", "Flask"],
+    "detailsLink": "projects/latis.html"
+  },
+  {
+    "id": "politilink",
+    "title": "Politilink",
+    "category": "HackViolet 2023 - Best Innovation",
+    "featured": false,
+    "description": "GPT-3 application utilizing NLP to research and draft advocacy emails to local representatives based on user ZIP codes.",
+    "tags": ["React", "Python", "GPT-3", "NLP"],
+    "detailsLink": "projects/politilink.html"
+  },
+  {
+    "id": "tj-space",
+    "title": "TJ Space (CubeSat)",
+    "category": "Aerospace Engineering",
+    "featured": true,
+    "description": "Contributed to the design and systems engineering of a small satellite (CubeSat), focusing on digital design and signal processing.",
+    "tags": ["Systems Engineering", "Digital Design", "Aerospace"],
+    "detailsLink": "projects/tj-space.html"
+  },
+  {
+    "id": "band-aid",
+    "title": "Band Aid Together",
+    "category": "HackViolet 2022 - IoT Healthcare",
+    "featured": false,
+    "description": "IoT-based seizure detection device using Arduino MKR Wi-Fi 1010 and Firebase for real-time emergency notifications.",
+    "tags": ["IoT", "Arduino", "Firebase", "C++"],
+    "detailsLink": "projects/band-aid.html"
+  },
+  {
+    "id": "finance-quizzar",
+    "title": "Finance QuizzAR",
+    "category": "EdTech & AR",
+    "featured": false,
+    "description": "An educational platform designed to teach financial literacy through interactive, augmented reality quizzes and gamified learning experiences.",
+    "tags": ["AR", "Unity", "Financial Literacy"],
+    "detailsLink": "projects/finance-quizzar.html"
+  },
+  {
+    "id": "food-science",
+    "title": "Food Science NLP",
+    "category": "Machine Learning Research",
+    "featured": false,
+    "description": "Utilized Word2Vec NLP models to correlate sensory descriptions with chemical compounds in food, uncovering patterns in flavor science.",
+    "tags": ["Python", "NLP", "Machine Learning", "Word2Vec"],
+    "detailsLink": "projects/food-science.html"
+  },
+  {
+    "id": "haptic-tactics",
+    "title": "Haptic Tactics",
+    "category": "XR & Haptics",
+    "featured": true,
+    "description": "A device designed to provide physical feedback in Virtual Reality environments, enhancing immersion through tactile hardware integration.",
+    "tags": ["VR", "Haptics", "C++", "Hardware Design"],
+    "detailsLink": "projects/haptic-tactics.html"
+  },
+  {
+    "id": "teach4charity",
+    "title": "Teach4Charity",
+    "category": "Community Initiative",
+    "featured": false,
+    "description": "Founded a tutoring initiative that leveraged student expertise to raise over $4,000 for various charitable organizations.",
+    "tags": ["Leadership", "Community Service", "Education"],
+    "detailsLink": "projects/teach4charity.html"
+  }
+]

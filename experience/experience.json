@@ -1,0 +1,40 @@
+[
+  {
+    "id": "ti",
+    "company": "Texas Instruments",
+    "role": "Digital IC Design Engineer & Intern",
+    "location": "Santa Clara, CA",
+    "period": "May 2023 - Present",
+    "highlights": [
+      "Leading development of a bidirectional control channel over SERDES interfaces, integrating next-gen communication protocols.",
+      "Designed high-speed SystemVerilog FIFOs with prefetching logic and single-port RAM, improving performance by 50%.",
+      "Developed automated lab methodology using Artek Variable ISI, cutting testing time by 60%."
+    ],
+    "detailsLink": "experience/ti.html"
+  },
+  {
+    "id": "gd",
+    "company": "General Dynamics Mission Systems",
+    "role": "Software Engineering Intern",
+    "location": "Fairfax, VA",
+    "period": "May 2022 - Aug 2022",
+    "highlights": [
+      "Automated Linux OS deployment over NFS using DHCP and TFTP, cutting deployment time by 50%.",
+      "Hardened system kickstarts to comply with DoD STIG requirements."
+    ],
+    "detailsLink": "experience/gd.html"
+  },
+  {
+    "id": "insignex",
+    "company": "InSignEx",
+    "role": "Developer",
+    "location": "Gujarat, India",
+    "period": "May 2020 - June 2021",
+    "highlights": [
+      "Engineered an intelligent irrigation system using soil moisture and stem diameter sensors to measure crop health over time dynamically",
+      "Calibrated and integrated analog sensors to accurately read environmental variables without succumbing to fast corrosion.",
+      "Wrote embedded C++ to process sensor data streams and control water pumps and solenoid valves automatically."
+    ],
+    "detailsLink": "experience/insignex.html"
+  }
+]

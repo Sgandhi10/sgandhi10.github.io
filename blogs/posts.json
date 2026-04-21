@@ -1,16 +1,10 @@
 [
   {
-    "id": "emulating-hardware",
-    "title": "Emulating Hardware in Software: Cutting Validation Times",
+    "id": "forward-error-correction",
+    "title": "Forward Error Correction (FEC)",
     "date": "2026-04-20",
-    "tag": "Verification",
-    "summary": "This post explores how we utilized Artek Variable ISI to simulate physical cables programmatically, cutting validation times by 60%."
-  },
-  {
-    "id": "hacking-gcode",
-    "title": "Reverse Engineering G-Code to Hack Legacy 3D Printers",
-    "date": "2026-03-15",
-    "tag": "Hardware",
-    "summary": "Here is a breakdown of how I bypassed manufacturer chip locks by reverse-engineering proprietary G-code using Python."
+    "tag": "Design Concept",
+    "summary": "This post explores the basics of forward error correction, algorithms used, and applications"
   }
+
 ]
