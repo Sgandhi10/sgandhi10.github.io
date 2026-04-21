@@ -51,7 +51,7 @@ html {
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-main), serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6;
@@ -379,54 +379,52 @@ footer {
 }
 
 /* =========================================
-   Logic Analyzer Skills (Blue Theme)
+   Logic Analyzer Skills (Refined Typography)
 ========================================= */
 .wave-window {
-    background: #0f172a; /* Deep slate blue background */
+    background: #0f172a;
     border: 1px solid #1e293b;
-    border-radius: 8px;
+    border-radius: 6px;
     font-family: 'Consolas', 'Courier New', monospace;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .wave-header {
     background: #1e293b;
-    padding: 8px 15px;
+    padding: 4px 12px; /* Further reduced padding */
     color: #94a3b8;
-    font-size: 0.85rem;
+    font-size: 0.7rem; /* Smaller header text */
     border-bottom: 1px solid #0f172a;
     display: flex;
     justify-content: space-between;
+    line-height: 1;
 }
 
 .wave-body {
     display: flex;
-    background: #020617; /* Near black-blue */
+    background: #020617;
 }
 
 .wave-left {
-    width: 140px;
+    width: 130px;
     background: #0f172a;
     border-right: 1px solid #1e293b;
     flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 .wave-label {
-    height: 40px;
+    height: 24px;
     display: flex;
     align-items: center;
-    padding: 0 15px;
-    font-size: 0.8rem;
+    padding: 0 12px;
+    font-size: 0.75rem; /* Slightly larger labels */
     font-weight: bold;
 }
 
 .wave-label.bus {
-    min-height: 80px;
+    height: 44px;
     border-top: 1px solid #1e293b;
 }
 
@@ -434,43 +432,69 @@ footer {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    overflow-x: auto;
     background-image: linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-size: 40px 24px;
 }
 
-/* Updated Clock Signal to Blue */
 .wave-clk-area {
-    height: 40px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20'%3E%3Cpath d='M0,20 L0,2 L20,2 L20,20 L40,20' stroke='%2338bdf8' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20'%3E%3Cpath d='M0,20 L0,2 L20,2 L20,20 L40,20' stroke='%2338bdf8' fill='none' stroke-width='1'/%3E%3C/svg%3E");
     background-repeat: repeat-x;
     background-position: left center;
 }
 
 .wave-bus-row {
-    min-height: 80px;
-    padding: 15px;
+    height: 44px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-wrap: nowrap;
     border-top: 1px solid #1e293b;
-    align-content: center;
+    align-items: center;
+    padding-left: 0;
 }
 
 .wave-bus-packet {
-    height: 26px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 12px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-width: 40px;
+    padding: 0 5px;
     white-space: nowrap;
-    clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 50%, calc(100% - 6px) 100%, 6px 100%, 0 50%);
+    clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 5px 100%, 0 50%);
     background: rgba(56, 189, 248, 0.05);
     border: 1px solid;
-    transition: all 0.2s ease;
+    box-sizing: border-box;
+    margin-right: -1px;
+
+    /* Smooth transition for the emphasis effect */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: crosshair; /* Engineering/Precision cursor */
+    z-index: 1;
 }
 
 .wave-bus-packet:hover {
-    background: rgba(56, 189, 248, 0.2);
-    transform: scale(1.05);
+    /* Brighten the text and border */
+    filter: brightness(1.4);
+
+    /* Add a glow effect matching the specific border color */
+    box-shadow: 0 0 15px currentColor;
+
+    /* Subtle lift */
+    transform: translateY(-1px) scale(1.02);
+
+    /* Ensure the hovered packet sits above its neighbors */
+    z-index: 10;
+
+    /* Increase background opacity for a "filled" look on hover */
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Optional: Dim other packets when one is hovered to focus attention */
+.wave-bus-row:hover .wave-bus-packet:not(:hover) {
+    opacity: 0.6;
+    filter: grayscale(0.2);
 }

@@ -81,9 +81,9 @@
             .then(markdown => {
                 document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
             })
-            .catch(err => {
-                document.getElementById('markdown-content').innerHTML = "<p>Sorry, the content for this post could not be loaded.</p>";
-            });
+            // .catch(err => {
+            //     document.getElementById('markdown-content').innerHTML = "<p>Sorry, the content for this post could not be loaded.</p>";
+            // });
     }
 </script>
 </body>
