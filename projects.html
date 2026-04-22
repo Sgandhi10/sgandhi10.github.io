@@ -4,10 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Soham Gandhi</title>
+
     <link rel="icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+        /* Custom Header for the Projects Gallery */
+        .projects-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+
+        .projects-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .projects-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Custom Arrow Link */
+        .read-more-link::after {
+            content: ' \2192';
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+        .read-more-link:hover::after {
+            transform: translateX(4px);
+        }
+    </style>
 </head>
 <body>
+
 <nav>
     <a href="index.html">Home</a>
     <a href="experience.html">Experience</a>
@@ -15,67 +49,74 @@
     <a href="blog.html">Blog</a>
 </nav>
 
-<header class="page-header">
-    <h1>All Projects</h1>
-    <p>A comprehensive archive of my work spanning full-stack software development, hardware design, robotics, and interdisciplinary engineering.</p>
-</header>
+<main class="container" style="padding-top: 6rem; padding-bottom: 4rem;">
 
-<main>
+    <div class="projects-header">
+        <h1>Project Archive</h1>
+        <p>A complete collection of my hardware, software, and research initiatives.</p>
+    </div>
+
     <section>
         <div class="grid-container" id="full-projects-list">
         </div>
     </section>
+
 </main>
 
 <footer>
-    <a href="mailto:sohamgandhi@live.com" class="btn">Contact Me</a>
+    <p>&copy; 2026 Soham Gandhi.</p>
 </footer>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('projects/projects.json')
-            .then(res => res.json())
-            .then(data => {
-                const container = document.getElementById('full-projects-list');
-                data.forEach(proj => {
-                    const card = `
-                    <div class="card">
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const res = await fetch('projects/projects.json');
+            if (!res.ok) throw new Error("Failed to load projects.json");
+
+            const data = await res.json();
+            const container = document.getElementById('full-projects-list');
+
+            // Compatibility check: works whether your JSON is a raw array [] or an object {"projects": []}
+            const projectList = data.projects ? data.projects : data;
+
+            projectList.forEach(proj => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                // We use flexbox on the card to ensure the "View Details" link always sits at the bottom
+                card.style.display = 'flex';
+                card.style.flexDirection = 'column';
+
+                card.innerHTML = `
                         <h3>${proj.title}</h3>
-                        <span class="date" style="color: var(--accent);">${proj.category}</span>
-                        <p style="margin: 1rem 0; color: var(--text-muted);">${proj.description}</p>
-                        <div class="project-tags">
-                            ${proj.tags.map(t => `<span class="skill-tag">${t}</span>`).join('')}
+                        <span class="date" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 500;">
+                            ${proj.category}
+                        </span>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-muted); line-height: 1.6;">
+                            ${proj.description}
+                        </p>
+
+                        <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: auto;">
+                            ${proj.tags.map(t => `<span class="skill-tag" style="font-size: 0.75rem; background: var(--card-border); padding: 4px 8px; border-radius: 4px;">${t}</span>`).join('')}
+
+                            <a href="${proj.detailsLink}" class="read-more-link" style="margin-left: auto; font-size: 0.9rem; font-weight: bold; text-decoration: none; color: var(--text-color);">
+                                View Details
+                            </a>
                         </div>
+                    `;
+
+                container.appendChild(card);
+            });
+        } catch (e) {
+            console.error("Error loading all projects:", e);
+            document.getElementById('full-projects-list').innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px;">
+                        <p style="color: var(--text-muted);">Unable to load projects at this time. Please check your network connection or the JSON file structure.</p>
                     </div>
                 `;
-                    container.insertAdjacentHTML('beforeend', card);
-                });
-            });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const items = document.querySelectorAll('.item');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active button styling
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filterValue = btn.getAttribute('data-filter');
-
-                // Show or hide items based on data-category
-                items.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.classList.remove('hidden');
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                });
-            });
-        });
+        }
     });
 </script>
+
 </body>
 </html>

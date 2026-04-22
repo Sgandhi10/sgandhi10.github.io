@@ -253,7 +253,7 @@
                     ${proj.description}
                 </p>
                 <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-                    ${proj.tags.map(t => `<span class="skill-tag">${t}</span>`).join('')}
+                    ${(proj.tags || []).map(t => `<span class="skill-tag">${t}</span>`).join('')}
                     <a href="${proj.detailsLink}" class="read-more-link" style="margin-left: auto; font-size: 0.9rem; font-weight: bold;">
                         View Details
                     </a>

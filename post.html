@@ -4,32 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post | Soham Gandhi</title>
+
     <link rel="icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <style>
-        main { padding: 8rem 2rem 4rem; max-width: 800px; margin: 0 auto; min-height: 80vh; }
-        .back-link { display: inline-flex; align-items: center; margin-bottom: 2rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
-        .back-link::before { content: '←'; margin-right: 0.5rem; transition: transform 0.2s; }
-        .back-link:hover::before { transform: translateX(-5px); }
-        .back-link:hover { color: var(--accent); }
+        /* Blog Reader Specific Styles */
+        .reader-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem 2rem; /* Extra top padding to clear fixed navs if you have them */
+        }
 
-        #post-title { font-size: 3rem; margin-bottom: 1rem; color: var(--text-main); line-height: 1.2; letter-spacing: -1px; }
-        #post-meta { color: var(--accent); font-size: 0.95rem; margin-bottom: 3rem; font-weight: 500; border-bottom: 1px solid var(--card-border); padding-bottom: 1.5rem; }
+        .blog-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 1.5rem;
+        }
 
-        /* Beautiful Dark Theme Markdown Styling */
-        #markdown-content { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; }
-        #markdown-content h2 { color: var(--text-main); font-size: 1.8rem; margin: 2.5rem 0 1rem; border: none; padding: 0; }
-        #markdown-content h3 { color: var(--text-main); font-size: 1.4rem; margin: 2rem 0 1rem; }
-        #markdown-content p { margin-bottom: 1.5rem; }
-        #markdown-content pre { background: var(--section-bg); padding: 1.5rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid var(--card-border); }
-        #markdown-content code { font-family: monospace; color: var(--accent); }
-        #markdown-content ul, #markdown-content ol { margin-bottom: 1.5rem; padding-left: 2rem; }
-        #markdown-content li { margin-bottom: 0.5rem; }
-        #markdown-content strong { color: var(--text-main); }
+        .blog-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .post-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+
+        .meta-separator {
+            color: var(--card-border);
+        }
+
+        /* Styling for the injected Markdown content */
+        .blog-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .blog-content h2, .blog-content h3 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent); /* Or keep it standard text color */
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid var(--card-border);
+        }
+
+        .blog-content pre {
+            background: #0f172a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid #1e293b;
+        }
+
+        .blog-content code {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #38bdf8;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-left: 0;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        /* Smooth scrolling for the whole page */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Ensure headers don't get hidden under a fixed navigation bar */
+        .blog-content h1,
+        .blog-content h2,
+        .blog-content h3,
+        .blog-content h4 {
+            scroll-margin-top: 80px; /* Adjust this value based on your nav bar height */
+        }
+
+        /* Optional: Make the anchor links look like standard links */
+        .blog-content a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .blog-content a:hover {
+            border-bottom: 1px solid var(--accent);
+        }
     </style>
 </head>
 <body>
+
 <nav>
     <a href="index.html">Home</a>
     <a href="experience.html">Experience</a>
@@ -37,54 +127,112 @@
     <a href="blog.html" style="color: var(--accent);">Blog</a>
 </nav>
 
-<main>
-    <a href="blog.html" class="back-link">Back to Articles</a>
-    <h1 id="post-title">Loading...</h1>
-    <div id="post-meta"></div>
-    <div id="markdown-content"></div>
+<main class="reader-container">
+
+    <header class="blog-header">
+        <h1 id="post-title">Loading Article...</h1>
+        <div id="post-meta" class="post-meta">
+        </div>
+    </header>
+
+    <article id="markdown-content" class="blog-content">
+    </article>
+
 </main>
 
-<footer>
-    <a href="mailto:sohamgandhi@live.com" class="btn">Contact Me</a>
+<footer id="contact">
+    <div class="btn-container" style="margin-bottom: 2rem;">
+        <a href="blog.html" class="btn">&larr; Back to all articles</a>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 Soham Gandhi.</p>
 </footer>
 
 <script>
-    // 1. Get the 'id' parameter from the URL (e.g., ?id=hacking-gcode)
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('id');
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
 
-    if (!postId) {
-        document.getElementById('post-title').innerText = "Post Not Found";
-        document.getElementById('markdown-content').innerHTML = "<p>Invalid post ID.</p>";
-    } else {
-        // 2. Fetch the JSON to get the title and date
+        if (!postId) {
+            document.getElementById('post-title').innerText = "Post Not Found";
+            document.getElementById('markdown-content').innerHTML = "<p>Invalid post ID. Please return to the blog and select a valid article.</p>";
+            return;
+        }
+
+        let globalPostMeta = null;
+
+        // 1. Fetch JSON for Metadata
         fetch('blogs/posts.json')
             .then(response => response.json())
             .then(posts => {
-                const postMeta = posts.find(p => p.id === postId);
-                if(postMeta) {
-                    document.getElementById('post-title').innerText = postMeta.title;
-
-                    // Format the date nicely
-                    const dateObj = new Date(postMeta.date);
-                    const formattedDate = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-                    document.getElementById('post-meta').innerText = `${formattedDate} • ${postMeta.tag}`;
+                globalPostMeta = posts.find(p => p.id === postId);
+                if (globalPostMeta) {
+                    document.getElementById('post-title').innerText = globalPostMeta.title;
+                    document.title = `${globalPostMeta.title} | Soham Gandhi`; // Update browser tab
                 }
-            });
+            })
+            .catch(err => console.error("Error fetching post metadata:", err));
 
-        // 3. Fetch the Markdown file and render it
+        // 2. Fetch and Render Markdown Content
         fetch(`blogs/${postId}.md`)
             .then(response => {
-                if(!response.ok) throw new Error("File not found");
+                if (!response.ok) throw new Error("Markdown file not found");
                 return response.text();
             })
             .then(markdown => {
-                document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
+                // Calculate Reading Time (assuming ~200 words per minute)
+                const wordCount = markdown.split(/\s+/).length;
+                const readTime = Math.max(1, Math.ceil(wordCount / 200));
+
+                // Build the Metadata Bar now that we have the read time
+                if (globalPostMeta) {
+                    const formatDate = (d) => new Date(d).toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'long', day: 'numeric'
+                    });
+
+                    let metaHTML = `<span class="meta-item">Published: ${formatDate(globalPostMeta.date)}</span>`;
+
+                    // Last Updated (only if different)
+                    if (globalPostMeta.last_edited && globalPostMeta.last_edited !== globalPostMeta.date) {
+                        metaHTML += `
+                                <span class="meta-separator">|</span>
+                                <span class="meta-item">Updated: ${formatDate(globalPostMeta.last_edited)}</span>
+                            `;
+                    }
+
+                    // Reading Time & Tag
+                    metaHTML += `
+                            <span class="meta-separator">|</span>
+                            <span class="meta-item">${readTime} min read</span>
+                            <span class="meta-separator">|</span>
+                            <span class="meta-item" style="color: var(--accent); font-weight: bold;">${globalPostMeta.tag || 'Article'}</span>
+                        `;
+
+                    document.getElementById('post-meta').innerHTML = metaHTML;
+                }
+
+                // Render Markdown
+                const contentDiv = document.getElementById('markdown-content');
+                contentDiv.innerHTML = marked.parse(markdown);
+
+                // Auto-generate IDs for all headings so internal Markdown links work
+                contentDiv.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+                    // Converts "My Heading 1!" to "my-heading-1"
+                     // Trim leading/trailing dashes
+                    heading.id = heading.textContent
+                        .toLowerCase()
+                        .replace(/\W+/g, '-') // Replace non-word characters with dashes
+                        .replace(/^-+|-+$/g, '');
+                });
             })
-            // .catch(err => {
-            //     document.getElementById('markdown-content').innerHTML = "<p>Sorry, the content for this post could not be loaded.</p>";
-            // });
-    }
+            .catch(err => {
+                document.getElementById('post-title').innerText = "Error Loading Article";
+                document.getElementById('markdown-content').innerHTML = `
+                        <div style="text-align: center; padding: 3rem;">
+                            <p style="color: var(--text-muted); margin-bottom: 2rem;">Sorry, the content for this post could not be loaded. Please ensure the Markdown file exists at blogs/${postId}.md</p>
+                        </div>
+                    `;
+            });
+    });
 </script>
 </body>
 </html>

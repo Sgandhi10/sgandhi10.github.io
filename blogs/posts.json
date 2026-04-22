@@ -1,10 +1,11 @@
 [
   {
-    "id": "forward-error-correction",
-    "title": "Forward Error Correction (FEC)",
-    "date": "2026-04-20",
+    "id": "error-correction",
+    "title": "Error Correction",
+    "date": "2026-04-21",
+    "last_edited": "2026-04-21",
     "tag": "Design Concept",
-    "summary": "This post explores the basics of forward error correction, algorithms used, and applications"
+    "summary": "This post explores error correction algorithms such as Hamming Codes and Reed-Solemn."
   }
 
 ]
