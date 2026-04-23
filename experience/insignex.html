@@ -26,39 +26,55 @@
     <a href="../projects.html" class="back-link">Back to Projects</a>
     <h1>InSignEx</h1>
     <div class="meta">
-        Developer <span>| Intelligent Agriculture</span>
+        Embedded Developer
+        <span class="separator">|</span>
+        <span>Gujarat, India</span>
+        <span class="separator">|</span>
+        <span>May 2020 - Jun 2021</span>
     </div>
     <div class="tech-stack" style="margin-top: 1.5rem;">
         <span class="skill-tag">Embedded Systems</span>
         <span class="skill-tag">Sensors</span>
-        <span class="skill-tag">C++</span>
-        <span class="skill-tag">Hardware Design</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Flask</span>
     </div>
 </header>
 
 <main>
     <section class="content-block" style="padding: 0;">
         <h2>Project Overview</h2>
-        <p>InSignEx is an embedded hardware project focused on precision agriculture. I developed an intelligent, automated irrigation system capable of monitoring crop health in real-time, allowing for highly efficient water usage and targeted nutrient distribution.</p>
+        <p>InSignEx is an embedded hardware project focused on precision agriculture. I developed an intelligent,
+            automated irrigation system capable of monitoring crop health in real-time, allowing for highly efficient
+            water usage and targeted nutrient distribution.</p>
     </section>
 
     <section class="split-grid" style="padding: 0;">
         <div class="split-item">
             <h3>The Challenge</h3>
-            <p style="color: var(--text-muted);">Traditional agriculture relies heavily on timed watering schedules, which leads to massive water waste and suboptimal crop yields. Farmers lack cost-effective, granular data regarding the actual hydration levels and health of individual plant clusters.</p>
+            <p style="color: var(--text-muted);">In the Gujarat region of India, water supplies are often unreliable
+                and fluctuate weekly, making it difficult for farmers to consistently water and fertilize crops. Furthermore,
+                farms require cost-effective solutions capable of scaling across acres of land, even in areas where internet
+                connectivity may be unreliable.</p>
         </div>
         <div class="split-item">
             <h3>The Solution</h3>
-            <p style="color: var(--text-muted);">I engineered a microcontroller-based system that utilized a combination of capacitive soil moisture sensors and precision stem diameter sensors. By continually reading these physical metrics, the system could dynamically adjust watering schedules only when the crop biologically required it.</p>
+            <p style="color: var(--text-muted);">The solution integrates a fertigation system with an app-based monitoring platform.
+                This provides easy access to data and visualizations, helping users quickly understand trends regarding plant growth,
+                soil absorption, and mineral saturation.</p>
         </div>
     </section>
 
     <section class="content-block">
         <h2>Technical Implementations</h2>
         <ul style="list-style: none; padding-left: 0;">
-            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Sensor Integration:</strong> Calibrated and integrated analog sensors to accurately read environmental variables without succumbing to fast corrosion (a common issue with cheap soil sensors).</li>
-            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Logic Control:</strong> Wrote embedded C++ to process sensor data streams, applying logic thresholds to trigger relays that controlled water pumps and solenoid valves automatically.</li>
-            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Data Visualization:</strong> Allowed farmers to track trends over time, helping them understand the correlation between stem growth, water usage, and crop yield.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Low Power Mode:</strong>
+                Conducted a power analysis on the ESP32 to minimize power consumption during idle periods, utilizing external clocks
+                to trigger system actions.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Logic Control:</strong>
+                Wrote embedded C++ code to interact with a Python-based Flask server, transmitting sensor data back to a centralized system.</li>
+            <li style="margin-bottom: 1rem; color: var(--text-muted);"><strong style="color: var(--text-main);">Data Visualization:</strong>
+                Developed a preliminary application allowing users to easily view data trends, adjust fertilizer and watering schedules,
+                and spot anomalies.</li>
         </ul>
     </section>
 </main>

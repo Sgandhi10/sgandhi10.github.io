@@ -6,29 +6,25 @@
     <title>Texas Instruments | Soham Gandhi</title>
     <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/style.css">
-    <style>
-        main { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
-        .content-block { margin-bottom: 4rem; }
-        .content-block h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; }
-        .content-block p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
-        .impact-list { list-style: none; padding-left: 0; }
-        .impact-list li { position: relative; padding-left: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
-        .impact-list li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); font-size: 1.2rem; line-height: 1.4; }
-    </style>
 </head>
 <body>
 
 <nav>
     <a href="../index.html">Home</a>
+    <a href="../experience.html" style="color: var(--accent);">Experience</a>
     <a href="../projects.html">Projects</a>
     <a href="../blog.html">Blog</a>
 </nav>
 
 <header class="page-header" style="max-width: 900px;">
-    <a href="/index.html#experience" class="back-link">Back to Experience</a>
+    <a href="../experience.html" class="back-link">Back to Experience</a>
     <h1>Texas Instruments</h1>
     <div class="meta">
-        Digital IC Design Engineer <span>| Santa Clara, CA</span> <span>| 2023 - Present</span>
+        <span>Digital IC Design Engineer</span>
+        <span class="separator">|</span>
+        <span>Santa Clara, CA</span>
+        <span class="separator">|</span>
+        <span>May 2023 - Present</span>
     </div>
     <div class="tech-stack" style="margin-top: 1.5rem;">
         <span class="skill-tag">SystemVerilog</span>
@@ -38,20 +34,55 @@
     </div>
 </header>
 
-<main>
+<main style="max-width: 900px;">
     <section class="content-block" style="padding: 0;">
         <h2>Overview</h2>
-        <p>At Texas Instruments, my work centers on the architecture, design, and verification of high-speed digital systems, specifically focusing on FPD-Link and automotive SerDes interfaces. Over multiple roles—from Validation Intern to Digital IC Design Engineer—I have consistently optimized workflows, reduced testing times, and improved system reliability for next-generation communication protocols.</p>
+        <p>At Texas Instruments, my work centers on the architecture, design, and verification of high-speed digital
+            systems, specifically focusing on automotive SerDes interfaces. Progressing through multiple roles—from
+            Validation Intern to Digital IC Design Engineer—I have consistently optimized workflows, reduced testing
+            times, and improved system reliability for next-generation communication protocols.
+        </p>
     </section>
 
-    <section class="content-block" style="padding: 0;">
-        <h2>Key Impact & Responsibilities</h2>
-        <ul class="impact-list">
-            <li><strong>Next-Gen Protocols:</strong> Currently leading the development of a bidirectional control channel over SERDES interfaces, integrating I3C and SPI to increase secondary channel bandwidth by 12×.</li>
-            <li><strong>Formal Verification:</strong> Implemented formal verification techniques to exhaustively validate complex state machines, successfully reducing design bugs by 25% prior to tape-out.</li>
-            <li><strong>UVM Architecture:</strong> Designed reusable IP modules for block-level Universal Verification Methodology (UVM) environments, cutting verification setup times by a factor of 10.</li>
-            <li><strong>Automated Lab Validation:</strong> Developed a methodology to emulate automotive high-speed SerDes cables using a programmable Artek Variable ISI channel, slashing physical testing time by 60%.</li>
-        </ul>
+    <section style="padding: 0; margin-bottom: 2.5rem; background: transparent; border: none; box-shadow: none;">
+        <div class="timeline">
+            <div class="role-block">
+                <div class="role-header">
+                    <h3 class="role-title">Digital IC Design Engineer</h3>
+                    <span class="role-date">Jul 2025 - Present</span>
+                </div>
+                <ul class="impact-list">
+                    <li><strong>Next-Gen Protocols:</strong> Leading the development of a bidirectional control
+                        channel over SERDES interfaces, integrating I3C and SPI to increase secondary channel bandwidth by 12×.</li>
+                    <li><strong>Formal Verification:</strong> Implemented formal verification techniques to exhaustively
+                        validate complex state machines, successfully reducing design bugs by 25% prior to tape-out.</li>
+                    <li><strong>UVM Architecture:</strong> Designed reusable IP modules for block-level Universal Verification
+                        Methodology (UVM) environments, cutting verification setup times by a factor of 10.</li>
+                </ul>
+            </div>
+
+            <div class="role-block">
+                <div class="role-header">
+                    <h3 class="role-title">Digital IC Design Intern</h3>
+                    <span class="role-date">May 2024 - Aug 2024</span>
+                </div>
+                <ul class="impact-list">
+                    <li><strong>RTL Design:</strong> Designed and implemented high-speed FIFOs in SystemVerilog to ensure reliable data transfer and synchronization across complex clock domains.</li>
+                    <li><strong>Simulation & Verification:</strong> Executed block-level RTL simulations to rigorously verify logic functionality and validate strict timing constraints.</li>
+                </ul>
+            </div>
+
+            <div class="role-block" style="margin-bottom: 0;">
+                <div class="role-header">
+                    <h3 class="role-title">Validation Engineering Intern</h3>
+                    <span class="role-date">May 2023 - Aug 2023</span>
+                </div>
+                <ul class="impact-list">
+                    <li><strong>Automated Lab Validation:</strong> Developed a methodology to emulate automotive high-speed
+                        SerDes cables using a programmable Artek Variable ISI channel, slashing physical testing time by 60%.</li>
+                </ul>
+            </div>
+        </div>
     </section>
 </main>
 

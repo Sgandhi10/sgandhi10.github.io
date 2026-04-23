@@ -38,7 +38,7 @@
 }
 
 /* =========================================
-   Global Reset
+   Global Reset & Base Styles
 ========================================= */
 * {
     margin: 0;
@@ -55,7 +55,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth fade when switching modes */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -66,6 +66,12 @@ a {
 
 a:hover {
     opacity: 0.8;
+}
+
+main {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 /* =========================================
@@ -97,7 +103,7 @@ nav a:hover {
 }
 
 /* =========================================
-   Typography & Headers
+   Typography & Sections
 ========================================= */
 section {
     padding: 5rem 2rem;
@@ -120,7 +126,9 @@ h2 {
     display: inline-block;
 }
 
-/* Subpage Specific Headers */
+/* =========================================
+   Page Headers (Shared across subpages)
+========================================= */
 .page-header {
     padding: 8rem 2rem 3rem;
     max-width: 1100px;
@@ -128,27 +136,53 @@ h2 {
     border-bottom: 1px solid var(--card-border);
     transition: border-color 0.3s ease;
 }
+
 .page-header h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     letter-spacing: -1px;
 }
+
 .page-header p {
     color: var(--text-muted);
     font-size: 1.1rem;
     max-width: 700px;
 }
+
 .page-header .meta {
     display: flex;
-    gap: 1.5rem;
-    color: var(--accent);
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-}
-.page-header .meta span {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
     color: var(--text-muted);
     font-weight: 400;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.meta .separator {
+    color: var(--card-border);
+}
+
+/* Specific Centered Header (Experience/Projects list) */
+.list-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.list-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.list-header p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* =========================================
@@ -219,6 +253,33 @@ h2 {
 }
 
 /* =========================================
+   Resume/Experience Specific Cards
+========================================= */
+.resume-card {
+    margin-bottom: 2rem;
+}
+
+.resume-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.resume-bullets {
+    padding-left: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.resume-bullets li {
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
    Tags & Buttons
 ========================================= */
 .project-tags, .skill-tags, .tech-stack {
@@ -263,11 +324,29 @@ h2 {
 
 .btn:hover {
     background-color: var(--accent);
-    color: #ffffff; /* Explicitly set to white so it looks good hovering in both themes */
+    color: #ffffff;
     opacity: 1;
 }
 
-/* Filters */
+.read-more-link {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more-link::after {
+    content: ' \2192';
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.read-more-link:hover::after {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   Filters
+========================================= */
 .filter-container {
     display: flex;
     gap: 1rem;
@@ -295,27 +374,271 @@ h2 {
 }
 
 /* =========================================
-   Footer
+   Homepage Specific (#hero, #about)
 ========================================= */
-footer {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-color: var(--section-bg);
-    margin-top: 4rem;
-    transition: background-color 0.3s ease;
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.social-links {
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.about-content {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.profile-photo {
+    flex-shrink: 0;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    filter: grayscale(100%);
+    background: var(--card-bg);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-photo {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
 }
 
 /* =========================================
-   Specific Components
+   Experience Detail Pages (.content-block, .impact-list)
 ========================================= */
-/* Hero Typewriter */
+.content-block {
+    margin-bottom: 2.5rem;
+}
+
+.content-block h2 {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 0.5rem;
+    display: block;
+}
+
+.content-block p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Timeline Components */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--card-border);
+}
+
+.role-block {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+}
+
+.role-block::before {
+    content: '';
+    position: absolute;
+    left: -2.4rem;
+    top: 1.85rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 4px solid var(--bg-color);
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.role-title {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin: 0;
+    font-weight: 600;
+}
+
+.role-date {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.impact-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.impact-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.impact-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+/* =========================================
+   Blog Reader Components (.blog-content)
+========================================= */
+.reader-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem 2rem;
+}
+
+.blog-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 1.5rem;
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+.meta-separator {
+    color: var(--card-border);
+}
+
+.blog-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.blog-content h2, .blog-content h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border: 1px solid var(--card-border);
+}
+
+.blog-content pre {
+    background: #0f172a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border: 1px solid #1e293b;
+}
+
+.blog-content code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #38bdf8;
+}
+
+.blog-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+    margin-left: 0;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+    scroll-margin-top: 80px;
+}
+
+.blog-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.blog-content a:hover {
+    border-bottom: 1px solid var(--accent);
+}
+
+/* =========================================
+   Typewriter & Utilities
+========================================= */
 .typewriter-container {
     font-size: 2rem;
     color: var(--text-muted);
@@ -334,7 +657,6 @@ footer {
     50% { border-color: var(--accent); }
 }
 
-/* Subpage Utilities */
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -343,14 +665,17 @@ footer {
     font-weight: 500;
     color: var(--text-muted);
 }
+
 .back-link::before {
     content: '←';
     margin-right: 0.5rem;
     transition: transform 0.2s;
 }
+
 .back-link:hover::before {
     transform: translateX(-5px);
 }
+
 .back-link:hover {
     color: var(--accent);
 }
@@ -361,6 +686,7 @@ footer {
     gap: 3rem;
     margin-bottom: 4rem;
 }
+
 @media (max-width: 768px) {
     .split-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
@@ -372,6 +698,7 @@ footer {
     border: 1px solid var(--card-border);
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
 .split-item h3 {
     color: var(--text-main);
     margin-bottom: 1rem;
@@ -379,7 +706,7 @@ footer {
 }
 
 /* =========================================
-   Logic Analyzer Skills (Refined Typography)
+   Logic Analyzer Skills (GTKWave)
 ========================================= */
 .wave-window {
     background: #0f172a;
@@ -393,9 +720,9 @@ footer {
 
 .wave-header {
     background: #1e293b;
-    padding: 4px 12px; /* Further reduced padding */
+    padding: 4px 12px;
     color: #94a3b8;
-    font-size: 0.7rem; /* Smaller header text */
+    font-size: 0.7rem;
     border-bottom: 1px solid #0f172a;
     display: flex;
     justify-content: space-between;
@@ -419,7 +746,7 @@ footer {
     display: flex;
     align-items: center;
     padding: 0 12px;
-    font-size: 0.75rem; /* Slightly larger labels */
+    font-size: 0.75rem;
     font-weight: bold;
 }
 
@@ -468,33 +795,39 @@ footer {
     border: 1px solid;
     box-sizing: border-box;
     margin-right: -1px;
-
-    /* Smooth transition for the emphasis effect */
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    cursor: crosshair; /* Engineering/Precision cursor */
+    cursor: crosshair;
     z-index: 1;
 }
 
 .wave-bus-packet:hover {
-    /* Brighten the text and border */
     filter: brightness(1.4);
-
-    /* Add a glow effect matching the specific border color */
     box-shadow: 0 0 15px currentColor;
-
-    /* Subtle lift */
     transform: translateY(-1px) scale(1.02);
-
-    /* Ensure the hovered packet sits above its neighbors */
     z-index: 10;
-
-    /* Increase background opacity for a "filled" look on hover */
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Optional: Dim other packets when one is hovered to focus attention */
 .wave-bus-row:hover .wave-bus-packet:not(:hover) {
     opacity: 0.6;
     filter: grayscale(0.2);
+}
+
+/* =========================================
+   Footer
+========================================= */
+footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--section-bg);
+    margin-top: 4rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
 }

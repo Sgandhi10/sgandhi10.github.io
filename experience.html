@@ -7,63 +7,6 @@
 
     <link rel="icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/style.css">
-
-    <style>
-        /* Custom Header for the Experience Timeline */
-        .experience-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-top: 2rem;
-        }
-
-        .experience-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .experience-header p {
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        /* Specific tweaks for experience cards to look like a timeline/resume */
-        .resume-card {
-            margin-bottom: 2rem;
-        }
-
-        .resume-header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .resume-bullets {
-            padding-left: 1.2rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .resume-bullets li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Custom Arrow Link */
-        .read-more-link::after {
-            content: ' \2192';
-            display: inline-block;
-            transition: transform 0.2s ease;
-        }
-        .read-more-link:hover::after {
-            transform: translateX(4px);
-        }
-    </style>
 </head>
 <body>
 
@@ -76,7 +19,7 @@
 
 <main class="container" style="padding-top: 6rem; padding-bottom: 4rem;">
 
-    <div class="experience-header">
+    <div class="list-header">
         <h1>Professional Experience</h1>
         <p>My background in digital IC design, software engineering, and hardware-software integration.</p>
     </div>
@@ -93,28 +36,39 @@
 </footer>
 
 <script>
+    /**
+     * @typedef {Object} ExperienceItem
+     * @property {string} company
+     * @property {string} role
+     * @property {string} period
+     * @property {string} location
+     * @property {string[]} highlights
+     * @property {string} [detailsLink]
+     */
+
     document.addEventListener('DOMContentLoaded', async () => {
         try {
             const res = await fetch('experience/experience.json');
-            if (!res.ok) throw new Error("Failed to load experience.json");
+            if (!res.ok) {
+                console.error("Failed to load experience.json");
+                return;
+            }
 
             const data = await res.json();
             const container = document.getElementById('full-experience-list');
 
-            // Compatibility check: works whether JSON is a raw array [] or an object {"experience": []}
+            /** @type {ExperienceItem[]} */
             const expList = data.experience ? data.experience : data;
 
             expList.forEach(item => {
                 const card = document.createElement('div');
                 card.className = 'card resume-card';
 
-                // Build the bullet points
                 const bullets = item.highlights.map(h => `<li>${h}</li>`).join('');
 
-                // Optional Details Link
                 const linkHTML = item.detailsLink ? `
                         <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--card-border);">
-                            <a href="${item.detailsLink}" class="read-more-link" style="font-size: 0.9rem; font-weight: bold; text-decoration: none; color: var(--text-color);">
+                            <a href="${item.detailsLink}" class="read-more-link" style="color: var(--text-main);">
                                 Read Full Breakdown
                             </a>
                         </div>

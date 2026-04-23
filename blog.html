@@ -35,21 +35,34 @@
 </footer>
 
 <script>
+    /**
+     * @typedef {Object} Post
+     * @property {string} id
+     * @property {string} title
+     * @property {string} summary
+     * @property {string} date
+     */
+
     document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('blog-posts-container');
         const loadingText = document.getElementById('loading-text');
 
         fetch('blogs/posts.json')
             .then(response => {
-                if (!response.ok) throw new Error("Could not load posts.json");
+                if (!response.ok) {
+                    console.error("Could not load posts.json");
+                    return null;
+                }
                 return response.json();
             })
             .then(posts => {
+                if (!posts) return;
+
                 // Clear the loading message
                 container.innerHTML = '';
 
                 // Sort posts: Newest first
-                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
                 if (posts.length === 0) {
                     container.innerHTML = '<p style="color: var(--text-muted);">No posts found yet. Check back soon!</p>';
@@ -85,7 +98,9 @@
             })
             .catch(error => {
                 console.error("Error fetching blog posts:", error);
-                loadingText.innerHTML = 'Error loading articles. Please ensure blogs/posts.json exists and is formatted correctly.';
+                if (loadingText) {
+                    loadingText.innerHTML = 'Error loading articles. Please ensure blogs/posts.json exists and is formatted correctly.';
+                }
             });
     });
 </script>
