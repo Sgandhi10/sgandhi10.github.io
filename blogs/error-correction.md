@@ -1,5 +1,5 @@
 # Inspiration
-The past few weeks my a coworker of mine has been posing different 
+The past few weeks a coworker of mine has been posing different 
 challenge problems as a way to explore different ways of thinking. The first 
 question posed was a simple but help to start the conversation.  
 
@@ -206,11 +206,11 @@ The first solution is summing the expected array and subtracting it from the
 received array. The subtraction of the two will provide the value that is 
 missing.
 $$
-\begin{aligned}
+\begin{aligned} \\
 S_{expected} &= \frac{n(n+1)}{2} \\
 S_{actual}   &= \sum_{i=1}^{n-1} a_i \\
 d            &= S_{expected} - S_{actual}
-\end{aligned}
+\end{aligned} \\
 $$
 
 ### Solution 2
@@ -222,27 +222,27 @@ received array separately we should get a unique output which can then be
 used to determine the missing number by XORing.
 
 $$
-\begin{aligned}
+\begin{aligned} \\
 X_{expected} &= \bigoplus_{i=1}^{N} i = i_1 \oplus i_1 \oplus i_2 ... i_
-{N-1} \oplus i_N\\
+{N-1} \oplus i_N \\
 X_{actual}   &= \bigoplus_{i=1}^{N-1} a_i \\
-d            &= X_{expected} \oplus X_{actual}
-\end{aligned}
+d            &= X_{expected} \oplus X_{actual} \\
+\end{aligned} \\
 $$
 
 To better highlight what is going on I have provided a simple example below 
 where N = 5 and 3 is the missing element.  
 $$
-\begin{aligned}
+\begin{aligned} \\
 \text{Expected: } X_{exp} &= 3'b001 \oplus 3'b010 \oplus 3'b011 \oplus 3'b100 \oplus 3'b101 \\
 &= 3'b001 \\
 \text{Actual: } X_{act}   &= 3'b001 \oplus 3'b010 \oplus 3'b100 \oplus 3'b101 \\
 &= 3'b010 \\
-\hline
+\hline \\
 \text{Dropped: } d       &= X_{exp} \oplus X_{act} \\
 &= 3'b001 \oplus 3'b010 \\
-&= 3'b011
-\end{aligned}
+&= 3'b011 \\
+\end{aligned} \\
 $$
 
 ## Question 2

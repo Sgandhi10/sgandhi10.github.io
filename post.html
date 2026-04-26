@@ -8,7 +8,23 @@
     <link rel="icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/style.css">
 
+    <!-- Markdown Parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- MathJax for LaTeX Support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -107,7 +123,34 @@
                 }
 
                 const contentDiv = document.getElementById('markdown-content');
-                contentDiv.innerHTML = marked.parse(markdown);
+
+                // Configure marked to preserve line breaks
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true
+                });
+
+                // Protect math blocks from being mangled by the Markdown parser
+                const mathBlocks = [];
+                const protectedMarkdown = markdown
+                    .replace(/\$\$([\s\S]+?)\$\$/g, (match) => {
+                        mathBlocks.push(match);
+                        return `@@MATH_BLOCK_${mathBlocks.length - 1}@@`;
+                    })
+                    .replace(/\$([^\$\n]+?)\$/g, (match) => {
+                        mathBlocks.push(match);
+                        return `@@MATH_BLOCK_${mathBlocks.length - 1}@@`;
+                    });
+
+                // Parse the protected markdown
+                let htmlContent = marked.parse(protectedMarkdown);
+
+                // Restore math blocks exactly as they were
+                htmlContent = htmlContent.replace(/@@MATH_BLOCK_(\d+)@@/g, (match, index) => {
+                    return mathBlocks[parseInt(index)];
+                });
+
+                contentDiv.innerHTML = htmlContent;
 
                 contentDiv.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
                     heading.id = heading.textContent
@@ -115,6 +158,19 @@
                         .replace(/\W+/g, '-')
                         .replace(/^-+|-+$/g, '');
                 });
+
+                // Trigger MathJax to process the newly added content
+                const renderMath = () => {
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        window.MathJax.typesetPromise([contentDiv]).catch(err => console.error("MathJax error:", err));
+                    }
+                };
+
+                if (window.MathJax && window.MathJax.typesetPromise) {
+                    renderMath();
+                } else {
+                    document.getElementById('MathJax-script').addEventListener('load', renderMath);
+                }
             })
             .catch(err => {
                 document.getElementById('post-title').innerText = "Error Loading Article";
