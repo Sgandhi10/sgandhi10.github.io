@@ -33,7 +33,7 @@
     "featured": false,
     "description": "GPT-3 application utilizing NLP to research and draft advocacy emails to local representatives based on user ZIP codes.",
     "tags": ["React", "Python", "GPT-3", "NLP"],
-    "detailsLink": "projects/politilink.html"
+    "detailsLink": "https://devpost.com/software/politilink"
   },
   {
     "id": "tj-space",
@@ -51,7 +51,7 @@
     "featured": false,
     "description": "IoT-based seizure detection device using Arduino MKR Wi-Fi 1010 and Firebase for real-time emergency notifications.",
     "tags": ["IoT", "Arduino", "Firebase", "C++"],
-    "detailsLink": "projects/band-aid.html"
+    "detailsLink": "https://devpost.com/software/aid-band"
   },
   {
     "id": "finance-quizzar",
@@ -60,7 +60,7 @@
     "featured": false,
     "description": "An educational platform designed to teach financial literacy through interactive, augmented reality quizzes and gamified learning experiences.",
     "tags": ["AR", "Unity", "Financial Literacy"],
-    "detailsLink": "projects/finance-quizzar.html"
+    "detailsLink": "https://devpost.com/software/finance-quizzar"
   },
   {
     "id": "food-science",

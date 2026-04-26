@@ -196,6 +196,10 @@
             featured.forEach(proj => {
                 const card = document.createElement('div');
                 card.className = 'card';
+
+                const isExternal = proj.isExternal || proj.detailsLink.startsWith('http');
+                const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+
                 card.innerHTML = `
                 <h3>${proj.title}</h3>
                 <span class="date" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 500;">
@@ -206,8 +210,8 @@
                 </p>
                 <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
                     ${(proj.tags || []).map(t => `<span class="skill-tag">${t}</span>`).join('')}
-                    <a href="${proj.detailsLink}" class="read-more-link" style="margin-left: auto;">
-                        View Details
+                    <a href="${proj.detailsLink}" class="read-more-link" style="margin-left: auto;" ${targetAttr}>
+                        View ${isExternal ? 'Site' : 'Details'}
                     </a>
                 </div>
             `;

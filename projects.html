@@ -43,6 +43,7 @@
      * @property {string} description
      * @property {string[]} tags
      * @property {string} detailsLink
+     * @property {boolean} [isExternal]
      */
 
     document.addEventListener('DOMContentLoaded', async () => {
@@ -65,6 +66,9 @@
                 card.style.display = 'flex';
                 card.style.flexDirection = 'column';
 
+                const isExternal = proj.isExternal || proj.detailsLink.startsWith('http');
+                const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+
                 card.innerHTML = `
                         <h3>${proj.title}</h3>
                         <span class="date" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 500;">
@@ -77,8 +81,8 @@
                         <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: auto;">
                             ${proj.tags.map(t => `<span class="skill-tag" style="font-size: 0.75rem; background: var(--card-border); padding: 4px 8px; border-radius: 4px;">${t}</span>`).join('')}
 
-                            <a href="${proj.detailsLink}" class="read-more-link" style="margin-left: auto; color: var(--text-main);">
-                                View Details
+                            <a href="${proj.detailsLink}" class="read-more-link" style="margin-left: auto; color: var(--text-main);" ${targetAttr}>
+                                View ${isExternal ? 'Site' : 'Details'}
                             </a>
                         </div>
                     `;
