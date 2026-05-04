@@ -6,7 +6,7 @@
     "location": "Santa Clara, CA",
     "period": "May 2023 - Present",
     "highlights": [
-      "Leading development of a bidirectional control channel over SERDES interfaces, integrating next-gen communication protocols.",
+      "Leading development of a bidirectional control channel over SerDes interfaces, integrating communication protocols to increase communication speeds.",
       "Designed high-speed SystemVerilog FIFOs with prefetching logic and single-port RAM, improving performance by 50%.",
       "Developed automated lab methodology using Artek Variable ISI, cutting testing time by 60%."
     ],
@@ -32,7 +32,7 @@
     "period": "May 2020 - June 2021",
     "highlights": [
       "Engineered an intelligent irrigation system using soil moisture and stem diameter sensors to measure crop health over time dynamically",
-      "Calibrated and integrated analog sensors to accurately read environmental variables without succumbing to fast corrosion.",
+      "Calibrated and integrated analog sensors to accurately read environmental variables while resisting environmental factors.",
       "Wrote embedded C++ to process sensor data streams and control water pumps and solenoid valves automatically."
     ],
     "detailsLink": "experience/insignex.html"

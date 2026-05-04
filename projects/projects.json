@@ -2,19 +2,21 @@
   {
     "id": "collab-robotics",
     "title": "Collaborative Robotics",
-    "category": "Research & Web Robotics",
+    "category": "Research & Human Computer Interaction",
     "featured": false,
-    "description": "Front-end development for the Collaborative Robotics Lab. Built a specialized dashboard using React and ROS to visualize and control robotic systems in real-time.",
-    "tags": ["React", "ROS", "Robotics"],
-    "detailsLink": "projects/collab-robotics.html"
+    "description": "Devised an experiment to test the concept of transparency in a collaborative environment using a Fetch robot.",
+    "tags": ["ROS", "Robotics", "Python", "Publication"],
+    "date": "2023-04-01",
+    "detailsLink": "https://arxiv.org/pdf/2304.11753"
   },
   {
     "id": "dream-labs",
     "title": "DREAMs Lab Research",
     "category": "Additive Manufacturing",
     "featured": false,
-    "description": "Research assistant focused on integrating proprietary conductive inks into SLA 3D printing processes to enable embedded electronics in printed parts.",
-    "tags": ["3D Printing", "Materials Science", "Hardware"],
+    "description": "Focused on integrating conductive inks into FDM and SLA 3D printing processes to enable embedded electronics in printed parts.",
+    "tags": ["3D Printing", "Materials Science", "Hardware Hacking"],
+    "date": "2022-08-01",
     "detailsLink": "projects/dream-labs.html"
   },
   {
@@ -22,8 +24,9 @@
     "title": "Latis",
     "category": "Cybersecurity Startup",
     "featured": false,
-    "description": "Full-stack development for a medical device security tracking platform, utilizing Next.js and Postgres in a Dockerized environment.",
-    "tags": ["Next.js", "Docker", "Postgres", "Flask"],
+    "description": "Startup idea utilizing a decentralized network setup for secure firmware updates.",
+    "tags": ["Hedera", "Rust", "Blockchain", "Filecoin"],
+    "date": "2023-03-01",
     "detailsLink": "projects/latis.html"
   },
   {
@@ -31,17 +34,19 @@
     "title": "Politilink",
     "category": "HackViolet 2023 - Best Innovation",
     "featured": false,
-    "description": "GPT-3 application utilizing NLP to research and draft advocacy emails to local representatives based on user ZIP codes.",
-    "tags": ["React", "Python", "GPT-3", "NLP"],
+    "description": "GPT-3 Chrome extension that allows users to read articles and easily determine the associated representative they can contact about the article's topic.",
+    "tags": ["React", "Python", "GPT-3", "Chrome Extension"],
+    "date": "2023-02-01",
     "detailsLink": "https://devpost.com/software/politilink"
   },
   {
     "id": "tj-space",
-    "title": "TJ Space (CubeSat)",
-    "category": "Aerospace Engineering",
+    "title": "TJ REVERB (2U CubeSat)",
+    "category": "Hardware Engineering",
     "featured": true,
-    "description": "Contributed to the design and systems engineering of a small satellite (CubeSat), focusing on digital design and signal processing.",
-    "tags": ["Systems Engineering", "Digital Design", "Aerospace"],
+    "description": "Contributed to the design and systems engineering of a small satellite (2U CubeSat), focusing on electronics and communication systems.",
+    "tags": ["Satellite", "CubeSat", "Communication", "Electronics"],
+    "date": "2021-09-01",
     "detailsLink": "projects/tj-space.html"
   },
   {
@@ -49,8 +54,9 @@
     "title": "Band Aid Together",
     "category": "HackViolet 2022 - IoT Healthcare",
     "featured": false,
-    "description": "IoT-based seizure detection device using Arduino MKR Wi-Fi 1010 and Firebase for real-time emergency notifications.",
+    "description": "IoT-based seizure detection device using Arduino and Firebase for real-time emergency notifications.",
     "tags": ["IoT", "Arduino", "Firebase", "C++"],
+    "date": "2022-02-01",
     "detailsLink": "https://devpost.com/software/aid-band"
   },
   {
@@ -58,8 +64,9 @@
     "title": "Finance QuizzAR",
     "category": "EdTech & AR",
     "featured": false,
-    "description": "An educational platform designed to teach financial literacy through interactive, augmented reality quizzes and gamified learning experiences.",
+    "description": "An educational platform designed to teach financial literacy through interactive, augmented reality quizzes and gamified learning experiences (AR Quizleet).",
     "tags": ["AR", "Unity", "Financial Literacy"],
+    "date": "2022-01-01",
     "detailsLink": "https://devpost.com/software/finance-quizzar"
   },
   {
@@ -67,8 +74,9 @@
     "title": "Food Science NLP",
     "category": "Machine Learning Research",
     "featured": false,
-    "description": "Utilized Word2Vec NLP models to correlate sensory descriptions with chemical compounds in food, uncovering patterns in flavor science.",
+    "description": "Used Word2Vec NLP models to correlate sensory descriptions with chemical compounds in food, uncovering patterns in flavor science and chemistry.",
     "tags": ["Python", "NLP", "Machine Learning", "Word2Vec"],
+    "date": "2021-11-01",
     "detailsLink": "projects/food-science.html"
   },
   {
@@ -76,8 +84,9 @@
     "title": "Haptic Tactics",
     "category": "XR & Haptics",
     "featured": true,
-    "description": "A device designed to provide physical feedback in Virtual Reality environments, enhancing immersion through tactile hardware integration.",
-    "tags": ["VR", "Haptics", "C++", "Hardware Design"],
+    "description": "A device designed to simulate drilling for aerospace manufacturing, providing physical feedback in virtual reality environments, enhancing immersion through tactile hardware integration.",
+    "tags": ["VR", "Haptics", "C++", "Hardware Design", "Unity", "3D Printing"],
+    "date": "2022-05-01",
     "detailsLink": "projects/haptic-tactics.html"
   },
   {
@@ -87,6 +96,7 @@
     "featured": false,
     "description": "Founded a tutoring initiative that leveraged student expertise to raise over $4,000 for various charitable organizations.",
     "tags": ["Leadership", "Community Service", "Education"],
+    "date": "2020-09-01",
     "detailsLink": "projects/teach4charity.html"
   }
 ]

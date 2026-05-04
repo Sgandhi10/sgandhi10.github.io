@@ -47,7 +47,7 @@
         const container = document.getElementById('blog-posts-container');
         const loadingText = document.getElementById('loading-text');
 
-        fetch('blogs/posts-tmp.json')
+        fetch('blogs/posts.json')
             .then(response => {
                 if (!response.ok) {
                     console.error("Could not load posts.json");

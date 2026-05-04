@@ -199,11 +199,12 @@
 
                 const isExternal = proj.isExternal || proj.detailsLink.startsWith('http');
                 const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+                const projectDate = proj.date ? new Date(proj.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' }) : '';
 
                 card.innerHTML = `
                 <h3>${proj.title}</h3>
                 <span class="date" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 500;">
-                    ${proj.category}
+                    ${proj.category} ${projectDate ? `&bull; ${projectDate}` : ''}
                 </span>
                 <p style="margin-bottom: 1.5rem; color: var(--text-muted); line-height: 1.6;">
                     ${proj.description}
