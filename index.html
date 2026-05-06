@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Soham Gandhi - Young engineer harnessing robotics and technology to solve complex challenges.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Soham Gandhi | Portfolio">
+    <meta property="og:description" content="Young engineer harnessing robotics and technology to solve complex challenges.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/soham-gandhi.jpg">
+    
     <title>Soham Gandhi | Portfolio</title>
     <link rel="icon" href="assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/app.js" defer></script>
 </head>
 <body>
 
@@ -17,26 +31,26 @@
     <a href="blog.html">Blog</a>
 </nav>
 
-<header id="hero">
-    <p style="color: var(--accent); font-size: 1.2rem; margin-bottom: 0.5rem;">Hello, my name is</p>
+<header id="hero" class="fade-in-section">
+    <p class="hero-subtitle">Hello, my name is</p>
     <h1>Soham Gandhi</h1>
     <div class="typewriter-container">
         I am a <span class="typewriter-text" id="typewriter"></span>
     </div>
-    <p style="max-width: 650px; color: var(--text-muted); font-size: 1.1rem;">
+    <p class="hero-description">
         Currently at Texas Instruments, I focus on crafting efficient, high-performance designs using SystemVerilog and Python. Passionate about pushing the boundaries of silicon and cutting-edge digital architecture.
     </p>
-    <div style="margin-top: 2rem;">
-        <a href="assets/Soham's Resume.pdf" class="btn" download>Download Resume</a>
+    <div class="hero-actions">
+        <a href="assets/Soham's Resume.pdf" class="btn btn-primary" download>Download Resume</a>
     </div>
 </header>
 
-<section id="about">
+<section id="about" class="fade-in-section">
     <h2>About Me</h2>
     <div class="about-content">
-        <div style="color: var(--text-muted); max-width: 700px;">
-            <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.7;">I am an engineer focused on turning technology and robotics into real social value. I like hard, open-ended problems and I enjoy learning across fields to solve them. I work best in positive, collaborative teams and I try to bring a practical mindset, clear communication, and steady execution to every project.</p>
-            <p style="line-height: 1.7;">I started by tinkering at home, then in 7th grade a Raspberry Pi pulled me deeper into computer engineering. My first bigger project was a robot that navigated the house to deliver drinks to my parents. Since then, I have kept raising the bar, from robots that detect microbes to digital design work and a small satellite project, all of which strengthened my creativity, systems thinking, and problem-solving skills.</p>
+        <div class="about-text">
+            <p class="about-paragraph">I am an engineer focused on turning technology and robotics into real social value. I like hard, open-ended problems and I enjoy learning across fields to solve them. I work best in positive, collaborative teams and I try to bring a practical mindset, clear communication, and steady execution to every project.</p>
+            <p class="about-paragraph m-0">I started by tinkering at home, then in 7th grade a Raspberry Pi pulled me deeper into computer engineering. My first bigger project was a robot that navigated the house to deliver drinks to my parents. Since then, I have kept raising the bar, from robots that detect microbes to digital design work and a small satellite project, all of which strengthened my creativity, systems thinking, and problem-solving skills.</p>
         </div>
         <div class="profile-photo">
             <img src="assets/img/soham-gandhi.jpg" alt="Soham Gandhi">
@@ -44,17 +58,17 @@
     </div>
 </section>
 
-<section id="skills">
+<section id="skills" class="fade-in-section">
     <h2>Skills & Technologies</h2>
     <div class="wave-window">
         <div class="wave-header">
             <span>GTKWave - soham_skills.vcd</span>
-            <span style="color: #38bdf8;">500ps/div</span>
+            <span style="color: #3796f7;">500ps/div</span>
         </div>
 
         <div class="wave-body">
             <div class="wave-left">
-                <div class="wave-label" style="color: #38bdf8;">sys_clk</div>
+                <div class="wave-label" style="color: #3796f7;">sys_clk</div>
                 <div class="wave-label bus" style="color: #7dd3fc;">hw_bus</div>
                 <div class="wave-label bus" style="color: #60a5fa;">sw_bus</div>
                 <div class="wave-label bus" style="color: #94a3b8;">tools_bus</div>
@@ -99,7 +113,7 @@
     </div>
 </section>
 
-<section id="experience">
+<section id="experience" class="fade-in-section">
     <h2>Experience</h2>
     <div class="grid-container" id="experience-container">
     </div>
@@ -108,7 +122,7 @@
     </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="fade-in-section">
     <h2>Featured Projects</h2>
     <div class="grid-container" id="projects-container">
     </div>
@@ -117,7 +131,7 @@
     </div>
 </section>
 
-<section id="blog">
+<section id="blog" class="fade-in-section">
     <h2>Latest Writing</h2>
     <div class="grid-container" id="recent-blog-posts">
     </div>
@@ -126,122 +140,18 @@
     </div>
 </section>
 
-<footer id="contact">
-    <h2 style="border: none; font-size: 2rem; margin-bottom: 1rem;">Let's Connect</h2>
-    <div class="social-links"><a href="mailto:sohamgandhi@live.com" class="btn">Email Me</a></div>
-    <div class="social-links" style="margin-top: 2rem;">
+<footer id="contact" class="fade-in-section">
+    <h2 class="contact-title">Let's Connect</h2>
+    <div class="social-links"><a href="mailto:sohamgandhi@live.com" class="btn btn-primary">Email Me</a></div>
+    <div class="social-links mt-2">
         <a href="https://linkedin.com/in/soham-gandhi/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Sgandhi10" target="_blank">GitHub</a>
     </div>
-    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 3rem;">
+    <p class="footer-copyright">
         &copy; 2026 Soham Gandhi.
     </p>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('blogs/posts.json')
-            .then(response => response.json())
-            .then(posts => {
-                posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-                const topTwo = posts.slice(0, 2);
-                const container = document.getElementById('recent-blog-posts');
-                topTwo.forEach(post => {
-                    container.insertAdjacentHTML('beforeend', `
-                        <div class="card">
-                            <h3>${post.title}</h3>
-                            <p style="margin-bottom: 1rem; color: var(--text-muted);">${post.summary}</p>
-                            <a href="post.html?id=${post.id}">Read Article &rarr;</a>
-                        </div>
-                    `);
-                });
-            })
-    });
-
-    async function loadExperience() {
-        try {
-            const response = await fetch('experience/experience.json');
-            const data = await response.json();
-            const container = document.getElementById('experience-container');
-
-            data.slice(0, 2).forEach(item => {
-                const card = `
-                <div class="card">
-                    <h3>${item.company}</h3>
-                    <span class="company">${item.role}</span>
-                    <span class="date">${item.period} | ${item.location}</span>
-                    <ul>
-                        ${item.highlights.map(h => `<li>${h}</li>`).join('')}
-                    </ul>
-                    <div class="project-tags" style="margin-top: 1rem;">
-                        <a href="${item.detailsLink}" class="read-more-link">Read Full Breakdown</a>
-                    </div>
-                </div>
-            `;
-                container.insertAdjacentHTML('beforeend', card);
-            });
-        } catch (e) {
-            console.error("Error loading experience:", e);
-        }
-    }
-
-    async function loadFeaturedProjects() {
-        try {
-            const res = await fetch('projects/projects.json');
-            const data = await res.json();
-            const container = document.getElementById('projects-container');
-
-            const featured = data.filter(proj => proj.featured === true);
-
-            featured.forEach(proj => {
-                const card = document.createElement('div');
-                card.className = 'card';
-
-                const isExternal = proj.isExternal || proj.detailsLink.startsWith('http');
-                const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
-                const projectDate = proj.date ? new Date(proj.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' }) : '';
-
-                card.innerHTML = `
-                <h3>${proj.title}</h3>
-                <span class="date" style="display: block; margin-bottom: 0.5rem; color: var(--accent); font-weight: 500;">
-                    ${proj.category} ${projectDate ? `&bull; ${projectDate}` : ''}
-                </span>
-                <p style="margin-bottom: 1.5rem; color: var(--text-muted); line-height: 1.6;">
-                    ${proj.description}
-                </p>
-                <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-                    ${(proj.tags || []).map(t => `<span class="skill-tag">${t}</span>`).join('')}
-                    <a href="${proj.detailsLink}" class="read-more-link" style="margin-left: auto;" ${targetAttr}>
-                        View ${isExternal ? 'Site' : 'Details'}
-                    </a>
-                </div>
-            `;
-                container.appendChild(card);
-            });
-        } catch (e) {
-            console.error("Error loading featured projects:", e);
-        }
-    }
-</script>
-
-<script>
-    const words = ["Developer.", "Creator.", "Tinkerer.", "Computer Engineer.", "Robotics Enthusiast."];
-    let i = 0, charIndex = 0, isDeleting = false;
-    function typeEffect() {
-        const el = document.getElementById('typewriter');
-        let currentWord = words[i];
-        el.innerHTML = isDeleting ? currentWord.substring(0, charIndex - 1) : currentWord.substring(0, charIndex + 1);
-        charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
-        let typeSpeed = isDeleting ? 40 : 80;
-        if (!isDeleting && charIndex === currentWord.length) { typeSpeed = 2000; isDeleting = true; }
-        else if (isDeleting && charIndex === 0) { isDeleting = false; i = (i + 1) % words.length; typeSpeed = 400; }
-        setTimeout(typeEffect, typeSpeed);
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-        loadExperience();
-        loadFeaturedProjects();
-        typeEffect();
-    });
-</script>
+<!-- Scripts moved to assets/app.js -->
 </body>
 </html>

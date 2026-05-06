@@ -5,7 +5,6 @@
     "date": "2026-04-21",
     "last_edited": "2026-04-21",
     "tag": "Design Concept",
-    "summary": "This post explores error correction algorithms such as Hamming Codes and Reed-Solemn."
+    "summary": "An exploration of algorithmic puzzles from a hardware logic perspective, demonstrating how concepts like XOR gates parallel the fundamentals of error correction techniques such as Hamming Codes."
   }
-
 ]

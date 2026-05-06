@@ -1,21 +1,32 @@
 [
   {
-    "id": "collab-robotics",
-    "title": "Collaborative Robotics",
-    "category": "Research & Human Computer Interaction",
-    "featured": false,
-    "description": "Devised an experiment to test the concept of transparency in a collaborative environment using a Fetch robot.",
-    "tags": ["ROS", "Robotics", "Python", "Publication"],
+    "id": "bearhw",
+    "title": "BERH2 Lab Research",
+    "category": "Hardware Design & Verification",
+    "featured": true,
+    "description": "Developed a custom pointer encryption assembly instruction based on ARM's Pointer Authentication Code (PAC) to mitigate Spectre vulnerabilities.",
+    "tags": [
+      "Hardware Security",
+      "Computer Architecture",
+      "SystemVerilog",
+      "ARM Assembly",
+      "Cryptography"
+    ],
     "date": "2023-04-01",
-    "detailsLink": "https://arxiv.org/pdf/2304.11753"
+    "detailsLink": "projects/bearhw.html"
   },
   {
     "id": "dream-labs",
     "title": "DREAMs Lab Research",
     "category": "Additive Manufacturing",
     "featured": false,
-    "description": "Focused on integrating conductive inks into FDM and SLA 3D printing processes to enable embedded electronics in printed parts.",
-    "tags": ["3D Printing", "Materials Science", "Hardware Hacking"],
+    "description": "Researched and implemented the integration of conductive inks into FDM and SLA 3D printing processes to create embedded electronics within printed components.",
+    "tags": [
+      "3D Printing",
+      "Materials Science",
+      "Embedded Electronics",
+      "Prototyping"
+    ],
     "date": "2022-08-01",
     "detailsLink": "projects/dream-labs.html"
   },
@@ -23,9 +34,15 @@
     "id": "latis",
     "title": "Latis",
     "category": "Cybersecurity Startup",
-    "featured": false,
-    "description": "Startup idea utilizing a decentralized network setup for secure firmware updates.",
-    "tags": ["Hedera", "Rust", "Blockchain", "Filecoin"],
+    "featured": true,
+    "description": "Conceptualized a decentralized network platform designed to facilitate and verify secure firmware updates for IoT devices.",
+    "tags": [
+      "Rust",
+      "Blockchain",
+      "Hedera Hashgraph",
+      "Decentralized Systems",
+      "IoT Security"
+    ],
     "date": "2023-03-01",
     "detailsLink": "projects/latis.html"
   },
@@ -34,8 +51,14 @@
     "title": "Politilink",
     "category": "HackViolet 2023 - Best Innovation",
     "featured": false,
-    "description": "GPT-3 Chrome extension that allows users to read articles and easily determine the associated representative they can contact about the article's topic.",
-    "tags": ["React", "Python", "GPT-3", "Chrome Extension"],
+    "description": "Developed a Chrome extension leveraging GPT-3 to analyze news articles and connect users with their relevant local representatives based on the article's subject matter.",
+    "tags": [
+      "React",
+      "Python",
+      "LLM",
+      "Chrome Extension",
+      "NLP"
+    ],
     "date": "2023-02-01",
     "detailsLink": "https://devpost.com/software/politilink"
   },
@@ -43,9 +66,15 @@
     "id": "tj-space",
     "title": "TJ REVERB (2U CubeSat)",
     "category": "Hardware Engineering",
-    "featured": true,
-    "description": "Contributed to the design and systems engineering of a small satellite (2U CubeSat), focusing on electronics and communication systems.",
-    "tags": ["Satellite", "CubeSat", "Communication", "Electronics"],
+    "featured": false,
+    "description": "Contributed to the systems engineering and hardware design of a 2U CubeSat, with a primary focus on the satellite's electronics and communication subsystems.",
+    "tags": [
+      "Systems Engineering",
+      "RF Communications",
+      "PCB Design",
+      "Aerospace",
+      "CubeSat"
+    ],
     "date": "2021-09-01",
     "detailsLink": "projects/tj-space.html"
   },
@@ -54,8 +83,14 @@
     "title": "Band Aid Together",
     "category": "HackViolet 2022 - IoT Healthcare",
     "featured": false,
-    "description": "IoT-based seizure detection device using Arduino and Firebase for real-time emergency notifications.",
-    "tags": ["IoT", "Arduino", "Firebase", "C++"],
+    "description": "Engineered an IoT wearable seizure detection device utilizing Arduino and Firebase to deliver real-time emergency alerts.",
+    "tags": [
+      "IoT",
+      "Arduino",
+      "C++",
+      "Firebase",
+      "Wearable Technology"
+    ],
     "date": "2022-02-01",
     "detailsLink": "https://devpost.com/software/aid-band"
   },
@@ -64,8 +99,14 @@
     "title": "Finance QuizzAR",
     "category": "EdTech & AR",
     "featured": false,
-    "description": "An educational platform designed to teach financial literacy through interactive, augmented reality quizzes and gamified learning experiences (AR Quizleet).",
-    "tags": ["AR", "Unity", "Financial Literacy"],
+    "description": "Created an interactive augmented reality platform aimed at teaching financial literacy through gamified learning experiences and 3D quizzes.",
+    "tags": [
+      "Augmented Reality",
+      "Unity",
+      "C#",
+      "EdTech",
+      "Game Development"
+    ],
     "date": "2022-01-01",
     "detailsLink": "https://devpost.com/software/finance-quizzar"
   },
@@ -74,8 +115,14 @@
     "title": "Food Science NLP",
     "category": "Machine Learning Research",
     "featured": false,
-    "description": "Used Word2Vec NLP models to correlate sensory descriptions with chemical compounds in food, uncovering patterns in flavor science and chemistry.",
-    "tags": ["Python", "NLP", "Machine Learning", "Word2Vec"],
+    "description": "Applied Word2Vec natural language processing models to correlate sensory descriptions with chemical compounds, revealing novel patterns in flavor chemistry.",
+    "tags": [
+      "Python",
+      "NLP",
+      "Machine Learning",
+      "Data Analysis",
+      "Word2Vec"
+    ],
     "date": "2021-11-01",
     "detailsLink": "projects/food-science.html"
   },
@@ -83,9 +130,16 @@
     "id": "haptic-tactics",
     "title": "Haptic Tactics",
     "category": "XR & Haptics",
-    "featured": true,
-    "description": "A device designed to simulate drilling for aerospace manufacturing, providing physical feedback in virtual reality environments, enhancing immersion through tactile hardware integration.",
-    "tags": ["VR", "Haptics", "C++", "Hardware Design", "Unity", "3D Printing"],
+    "featured": false,
+    "description": "Designed and built a haptic feedback device to simulate aerospace drilling procedures in virtual reality, significantly enhancing immersion through tactile hardware integration.",
+    "tags": [
+      "Virtual Reality",
+      "Haptics",
+      "Unity",
+      "C++",
+      "Mechatronics",
+      "3D Printing"
+    ],
     "date": "2022-05-01",
     "detailsLink": "projects/haptic-tactics.html"
   },
@@ -94,8 +148,13 @@
     "title": "Teach4Charity",
     "category": "Community Initiative",
     "featured": false,
-    "description": "Founded a tutoring initiative that leveraged student expertise to raise over $4,000 for various charitable organizations.",
-    "tags": ["Leadership", "Community Service", "Education"],
+    "description": "Founded and managed a student-led tutoring initiative that successfully raised over $4,000 to support various charitable organizations.",
+    "tags": [
+      "Leadership",
+      "Project Management",
+      "Education",
+      "Non-Profit"
+    ],
     "date": "2020-09-01",
     "detailsLink": "projects/teach4charity.html"
   }
