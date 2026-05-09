@@ -6,37 +6,32 @@
     <title>Latis | Soham Gandhi</title>
     <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/style.css">
-    <style>
-        main { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
-        .content-block { margin-bottom: 4rem; }
-        .content-block h2 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; display: block; }
-        .content-block p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
-    </style>
+
 </head>
 <body>
 
 <nav>
     <a href="../index.html">Home</a>
+    <a href="../experience.html">Experience</a>
     <a href="../projects.html">Projects</a>
     <a href="../blog.html">Blog</a>
 </nav>
 
-<header class="page-header" style="max-width: 900px;">
+<header class="page-header subpage-header">
     <a href="/projects.html" class="back-link">Back to Projects</a>
     <h1>Latis</h1>
     <div class="meta">
         Cybersecurity Startup <span>| Full-Stack Developer</span>
     </div>
     <div class="tech-stack" style="margin-top: 1.5rem;">
-        <span class="skill-tag">Next.js</span>
-        <span class="skill-tag">VueJS</span>
-        <span class="skill-tag">Flask</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Blockchain</span>
+        <span class="skill-tag">Hashgraph</span>
+        <span class="skill-tag">Javascript</span>
+        <span class="skill-tag">Cryptography</span>
     </div>
 </header>
 
-<main>
+<main class="subpage-main">
     <section class="content-block" style="padding: 0;">
         <h2>Project Overview</h2>
         <p>Latis is a cybersecurity initiative designed to track and manage security updates for medical devices. The goal of the startup was to create a robust, scalable platform capable of handling sensitive security data while providing a seamless interface for administrators and clients to monitor device vulnerabilities.</p>
@@ -52,8 +47,67 @@
             <p style="color: var(--text-muted);">I developed a full-stack architecture using Next.js and VueJS for a dynamic, responsive front-end, paired with a Python/Flask and PostgreSQL backend for secure data management. To ensure consistent deployment environments, I fully containerized the application using Docker.</p>
         </div>
     </section>
+
+    <section class="content-block">
+        <h2>Project Gallery</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
+            Here are a few visuals from the Latis platform and presentation.
+        </p>
+        <div id="dynamic-gallery" class="image-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <!-- Images will be injected here automatically by JavaScript -->
+        </div>
+        
+        <script>
+            // To add more images to the gallery, simply upload them to the 'assets/img/latis' folder 
+            // and add their filenames to this array.
+            const galleryImages = [
+                "Manufacturing Client.jpg",
+                "OEM Client.jpg",
+                "Presentation.jpg",
+                "Welcome Page.jpg"
+            ];
+
+            const galleryContainer = document.getElementById('dynamic-gallery');
+            const imagePath = '../assets/img/latis/';
+
+            galleryImages.forEach(filename => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'gallery-item';
+                itemDiv.style.cssText = 'border-radius: 12px; overflow: hidden; border: 1px solid var(--card-border); background-color: var(--card-bg); transition: transform 0.3s ease;';
+                
+                const img = document.createElement('img');
+                img.src = imagePath + filename;
+                // Format alt text by removing the extension and replacing dashes with spaces
+                img.alt = "Latis - " + filename.split('.')[0].replace(/-/g, ' '); 
+                img.style.cssText = 'width: 100%; height: 100%; display: block; aspect-ratio: 4/3; object-fit: cover;';
+                
+                itemDiv.appendChild(img);
+                galleryContainer.appendChild(itemDiv);
+            });
+        </script>
+        <style>
+            .gallery-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+        </style>
+    </section>
 </main>
 
-<footer style="margin-top: 0;"><a href="https://github.com/Sgandhi10" target="_blank" class="btn">View my GitHub</a></footer>
+<footer style="border-top: 1px solid var(--card-border); margin-top: 4rem;">
+    <div class="simple-footer">
+        <div class="footer-left">
+            <a href="mailto:sohamgandhi@live.com" class="footer-link">Let's Chat</a>
+        </div>
+        <div class="footer-right">
+            <a href="https://devpost.com/sohamgandhi" target="_blank" class="footer-link">Devpost</a>
+            <a href="https://linkedin.com/in/soham-gandhi/" target="_blank" class="footer-link">LinkedIn</a>
+            <a href="https://github.com/Sgandhi10" target="_blank" class="footer-link">GitHub</a>
+        </div>
+    </div>
+    <div style="text-align: center; padding-bottom: 2rem; color: var(--text-muted); font-size: 0.85rem;">
+        &copy; 2026 Soham Gandhi
+    </div>
+</footer>
 </body>
 </html>

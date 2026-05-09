@@ -1,7 +1,7 @@
 [
   {
     "id": "bearhw",
-    "title": "BERH2 Lab Research",
+    "title": "BEARHW Lab Research",
     "category": "Hardware Design & Verification",
     "featured": true,
     "description": "Developed a custom pointer encryption assembly instruction based on ARM's Pointer Authentication Code (PAC) to mitigate Spectre vulnerabilities.",
@@ -12,23 +12,24 @@
       "ARM Assembly",
       "Cryptography"
     ],
-    "date": "2023-04-01",
+    "date": "2025-05-01",
     "detailsLink": "projects/bearhw.html"
   },
   {
-    "id": "dream-labs",
-    "title": "DREAMs Lab Research",
-    "category": "Additive Manufacturing",
+    "id": "virgil",
+    "title": "Virgil",
+    "category": "HackViolet 2025 - Best Use of AI",
     "featured": false,
-    "description": "Researched and implemented the integration of conductive inks into FDM and SLA 3D printing processes to create embedded electronics within printed components.",
+    "description": "Developed an AI-powered platform using GPT-4o and RAG to help users find ideal places to live in the US based on their personal values, leveraging state legislation and county census data.",
     "tags": [
-      "3D Printing",
-      "Materials Science",
-      "Embedded Electronics",
-      "Prototyping"
+      "Svelte",
+      "Python",
+      "PostgreSQL",
+      "Redis",
+      "LLM"
     ],
-    "date": "2022-08-01",
-    "detailsLink": "projects/dream-labs.html"
+    "date": "2025-02-01",
+    "detailsLink": "https://devpost.com/software/test-sixpel"
   },
   {
     "id": "latis",
@@ -63,20 +64,36 @@
     "detailsLink": "https://devpost.com/software/politilink"
   },
   {
-    "id": "tj-space",
-    "title": "TJ REVERB (2U CubeSat)",
-    "category": "Hardware Engineering",
+    "id": "dream-labs",
+    "title": "DREAMs Lab Research",
+    "category": "Additive Manufacturing",
     "featured": false,
-    "description": "Contributed to the systems engineering and hardware design of a 2U CubeSat, with a primary focus on the satellite's electronics and communication subsystems.",
+    "description": "Researched and implemented the integration of conductive inks into FDM and SLA 3D printing processes to create embedded electronics within printed components.",
     "tags": [
-      "Systems Engineering",
-      "RF Communications",
-      "PCB Design",
-      "Aerospace",
-      "CubeSat"
+      "3D Printing",
+      "Materials Science",
+      "Embedded Electronics",
+      "Prototyping"
     ],
-    "date": "2021-09-01",
-    "detailsLink": "projects/tj-space.html"
+    "date": "2022-08-01",
+    "detailsLink": "projects/dream-labs.html"
+  },
+  {
+    "id": "haptic-tactics",
+    "title": "Haptic Tactics",
+    "category": "XR & Haptics",
+    "featured": false,
+    "description": "Designed and built a haptic feedback device to simulate aerospace drilling procedures in virtual reality, significantly enhancing immersion through tactile hardware integration.",
+    "tags": [
+      "Virtual Reality",
+      "Haptics",
+      "Unity",
+      "C++",
+      "Mechatronics",
+      "3D Printing"
+    ],
+    "date": "2022-05-01",
+    "detailsLink": "projects/haptic-tactics.html"
   },
   {
     "id": "band-aid",
@@ -111,37 +128,20 @@
     "detailsLink": "https://devpost.com/software/finance-quizzar"
   },
   {
-    "id": "food-science",
-    "title": "Food Science NLP",
-    "category": "Machine Learning Research",
+    "id": "tj-space",
+    "title": "TJ REVERB (2U CubeSat)",
+    "category": "Hardware Engineering",
     "featured": false,
-    "description": "Applied Word2Vec natural language processing models to correlate sensory descriptions with chemical compounds, revealing novel patterns in flavor chemistry.",
+    "description": "Contributed to the systems engineering and hardware design of a 2U CubeSat, with a primary focus on the satellite's electronics and communication subsystems.",
     "tags": [
-      "Python",
-      "NLP",
-      "Machine Learning",
-      "Data Analysis",
-      "Word2Vec"
+      "Systems Engineering",
+      "RF Communications",
+      "PCB Design",
+      "Aerospace",
+      "CubeSat"
     ],
-    "date": "2021-11-01",
-    "detailsLink": "projects/food-science.html"
-  },
-  {
-    "id": "haptic-tactics",
-    "title": "Haptic Tactics",
-    "category": "XR & Haptics",
-    "featured": false,
-    "description": "Designed and built a haptic feedback device to simulate aerospace drilling procedures in virtual reality, significantly enhancing immersion through tactile hardware integration.",
-    "tags": [
-      "Virtual Reality",
-      "Haptics",
-      "Unity",
-      "C++",
-      "Mechatronics",
-      "3D Printing"
-    ],
-    "date": "2022-05-01",
-    "detailsLink": "projects/haptic-tactics.html"
+    "date": "2021-09-01",
+    "detailsLink": "projects/tj-space.html"
   },
   {
     "id": "teach4charity",
