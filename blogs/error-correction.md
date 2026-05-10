@@ -380,6 +380,7 @@ right now. I will leave that as a challenge for you to deepen your
 understanding for Hamming codes.
 
 # Reed-Solomon
+Coming Soon
 
 # Challenge Question Solutions
 
@@ -459,4 +460,41 @@ Solving this quadratic equation for $t$ will give us the values of $x$ and $y$.
 
 ### Solution 2
 
-*Disclaimer: Gemini and ChatGPT were utilized for the purpose of research only*
+Having seen the more mathematically elegant Solution 1, we can now approach this problem from a logic gate perspective — the same angle used in Question 1, Solution 2.
+
+The key insight is that with two missing elements, we can reduce the problem into two independent single-missing-element problems, each solvable with XOR.
+
+**Step 1: Find the sum of the two missing numbers.**
+
+Just as in Question 1 Solution 1, compute the difference between the expected sum and the actual sum:
+
+$$
+\begin{aligned} \\
+S_1 &= \sum_{i=1}^{N} i - \sum_{j=1}^{N-2} a_j = x + y \\
+\end{aligned} \\
+$$
+
+**Step 2: Partition the problem using the midpoint.**
+
+Take the average of $S_1$ to find a midpoint $m$ that splits the number line into two halves, guaranteeing one missing number falls in each half:
+
+$$
+m = \left\lfloor \frac{S_1}{2} \right\rfloor
+$$
+
+Numbers from $1$ to $m$ form the **lower half**, and numbers from $m+1$ to $N$ form the **upper half**. Since $x + y = S_1$ and $m = \lfloor S_1 / 2 \rfloor$, one of the missing values must be $\leq m$ and the other must be $> m$.
+
+**Step 3: Apply XOR to each half independently.**
+
+This reduces to two separate instances of Question 1, Solution 2. For each half, XOR the expected values against the values present in the received array:
+
+$$
+\begin{aligned} \\
+x &= \bigoplus_{i=1}^{m} i \;\oplus\; \bigoplus_{\substack{j \in \text{actual} \\ a_j \leq m}} a_j \\
+y &= \bigoplus_{i=m+1}^{N} i \;\oplus\; \bigoplus_{\substack{j \in \text{actual} \\ a_j > m}} a_j \\
+\end{aligned} \\
+$$
+
+Each XOR isolates the single missing element in its respective half, yielding both $x$ and $y$ without any multiplication or division — making this approach highly efficient for hardware implementation.
+
+*Disclaimer: LLMs were used for research and formatting assistance only. All content has been reviewed and verified for accuracy. If you have any questions or points of contention, please reach out.*
