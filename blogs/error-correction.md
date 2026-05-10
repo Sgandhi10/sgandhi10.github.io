@@ -494,4 +494,9 @@ $$
 
 Each XOR isolates the single missing element in its respective half, yielding both $x$ and $y$ without any multiplication or division — making this approach highly efficient for hardware implementation.
 
+# Sources Referenced
+
+1. [youtube.com/watch?v=X8jsijhllIA](https://www.youtube.com/watch?v=X8jsijhllIA)
+2. [youtube.com/watch?v=75Jrba2uGFM](https://www.youtube.com/watch?v=75Jrba2uGFM)
+
 *Disclaimer: LLMs were used for research and formatting assistance only. All content has been reviewed and verified for accuracy. If you have any questions or points of contention, please reach out.*
