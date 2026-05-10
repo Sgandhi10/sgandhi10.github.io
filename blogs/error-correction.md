@@ -379,9 +379,6 @@ up fairly easily to larger size. While I will not be discussing that here
 right now. I will leave that as a challenge for you to deepen your 
 understanding for Hamming codes.
 
-# Reed-Solomon
-Coming Soon
-
 # Challenge Question Solutions
 
 ## Question 1
