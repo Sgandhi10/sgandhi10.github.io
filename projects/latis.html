@@ -6,9 +6,10 @@
     <title>Latis | Soham Gandhi</title>
     <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="../assets/js/project-page.js" defer></script>
 
 </head>
-<body>
+<body data-project-id="latis">
 
 <nav>
     <a href="../index.html">Home</a>
@@ -17,34 +18,27 @@
     <a href="../blog.html">Blog</a>
 </nav>
 
-<header class="page-header subpage-header">
-    <a href="/projects.html" class="back-link">Back to Projects</a>
-    <h1>Latis</h1>
-    <div class="meta">
-        Cybersecurity Startup <span>| Full-Stack Developer</span>
-    </div>
-    <div class="tech-stack" style="margin-top: 1.5rem;">
-        <span class="skill-tag">Blockchain</span>
-        <span class="skill-tag">Hashgraph</span>
-        <span class="skill-tag">Javascript</span>
-        <span class="skill-tag">Cryptography</span>
-    </div>
+<header class="page-header subpage-header" id="project-header">
+    <a href="../projects.html" class="back-link">Back to Projects</a>
+    <h1 id="proj-title"></h1>
+    <div class="meta" id="proj-meta"></div>
+    <div class="tech-stack" id="proj-tags" style="margin-top: 1.5rem;"></div>
 </header>
 
 <main class="subpage-main">
     <section class="content-block" style="padding: 0;">
         <h2>Project Overview</h2>
-        <p>Latis is a cybersecurity initiative designed to track and manage security updates for medical devices. The goal of the startup was to create a robust, scalable platform capable of handling sensitive security data while providing a seamless interface for administrators and clients to monitor device vulnerabilities.</p>
+        <p>Latis is a cybersecurity initiative designed to track and manage security updates for industrial devices. The goal of the startup was to create a robust, scalable platform capable of handling sensitive security data while providing a seamless interface for administrators and clients to monitor device vulnerabilities.</p>
     </section>
 
     <section class="split-grid" style="padding: 0;">
         <div class="split-item">
             <h3>The Challenge</h3>
-            <p style="color: var(--text-muted);">Medical devices often rely on outdated software, making them prime targets for cyberattacks. The challenge was building an architecture secure enough to handle healthcare-adjacent tech data, while also being agile enough to scale from a prototype to a market-ready product quickly.</p>
+            <p style="color: var(--text-muted);">Devices in the manufacturing sector often rely on outdated software, making them prime targets for cyberattacks. The challenge was building an architecture secure enough to handle legacy devices that were not built for the modern level of connectivity, while also being agile enough to scale from a prototype to a market-ready product quickly.</p>
         </div>
         <div class="split-item">
             <h3>The Solution</h3>
-            <p style="color: var(--text-muted);">I developed a full-stack architecture using Next.js and VueJS for a dynamic, responsive front-end, paired with a Python/Flask and PostgreSQL backend for secure data management. To ensure consistent deployment environments, I fully containerized the application using Docker.</p>
+            <p style="color: var(--text-muted);">I led a team of 8 students working to build a functional MVP alongside a business case presenting the logistics and feasibility of the idea. The MVP was a web portal that utilized hardware crypto wallets to authenticate users and carry out transactions using smart contracts written in Solidity, deployed to Hedera for encryption keys and secure information storage, and to Filecoin for large file storage.</p>
         </div>
     </section>
 

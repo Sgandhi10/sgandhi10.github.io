@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BERH2 Lab Research | Soham Gandhi</title>
+    <title>BEARHW Lab Research | Soham Gandhi</title>
     <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="../assets/js/project-page.js" defer></script>
 
 </head>
-<body>
+<body data-project-id="bearhw">
 
 <nav>
     <a href="../index.html">Home</a>
@@ -17,19 +18,11 @@
     <a href="../blog.html">Blog</a>
 </nav>
 
-<header class="page-header subpage-header">
-    <a href="/projects.html" class="back-link">Back to Projects</a>
-    <h1>BERH2 Lab Research</h1>
-    <div class="meta">
-        Hardware Design & Verification <span>| Researcher</span>
-    </div>
-    <div class="tech-stack" style="margin-top: 1.5rem;">
-        <span class="skill-tag">SystemVerilog</span>
-        <span class="skill-tag">ARM Assembly</span>
-        <span class="skill-tag">Computer Architecture</span>
-        <span class="skill-tag">Hardware Security</span>
-        <span class="skill-tag">Cryptography</span>
-    </div>
+<header class="page-header subpage-header" id="project-header">
+    <a href="../projects.html" class="back-link">Back to Projects</a>
+    <h1 id="proj-title"></h1>
+    <div class="meta" id="proj-meta"></div>
+    <div class="tech-stack" id="proj-tags" style="margin-top: 1.5rem;"></div>
 </header>
 
 <main class="subpage-main">
@@ -46,7 +39,7 @@
         </div>
         <div class="split-item">
             <h3>The Solution</h3>
-            <p style="color: var(--text-muted);">I developed a custom pointer encryption assembly instruction inspired by ARM's Pointer Authentication Code (PAC). Using SystemVerilog, I integrated Prince Encryption alongside the BOOM core architecture, ensuring hardware-level resilience against Spectre attacks while validating the modified processor design.</p>
+            <p style="color: var(--text-muted);">I developed a custom pointer encryption assembly instruction inspired by ARM's Pointer Authentication Code (PAC). Using SystemVerilog, I integrated Prince Encryption alongside the BOOM core architecture, ensuring hardware-level resilience against Spectre attacks while validating the modified processor design. Pending Publication.</p>
         </div>
     </section>
 </main>

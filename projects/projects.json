@@ -2,14 +2,15 @@
   {
     "id": "bearhw",
     "title": "BEARHW Lab Research",
+    "role": "Researcher",
     "category": "Hardware Design & Verification",
     "featured": true,
     "description": "Developed a custom pointer encryption assembly instruction based on ARM's Pointer Authentication Code (PAC) to mitigate Spectre vulnerabilities.",
     "tags": [
-      "Hardware Security",
-      "Computer Architecture",
       "SystemVerilog",
       "ARM Assembly",
+      "Computer Architecture",
+      "Hardware Security",
       "Cryptography"
     ],
     "date": "2025-05-01",
@@ -18,6 +19,7 @@
   {
     "id": "virgil",
     "title": "Virgil",
+    "role": "Software Engineer",
     "category": "HackViolet 2025 - Best Use of AI",
     "featured": false,
     "description": "Developed an AI-powered platform using GPT-4o and RAG to help users find ideal places to live in the US based on their personal values, leveraging state legislation and county census data.",
@@ -34,22 +36,28 @@
   {
     "id": "latis",
     "title": "Latis",
+    "role": "Full-Stack Developer",
     "category": "Cybersecurity Startup",
     "featured": true,
     "description": "Conceptualized a decentralized network platform designed to facilitate and verify secure firmware updates for IoT devices.",
     "tags": [
-      "Rust",
       "Blockchain",
       "Hedera Hashgraph",
-      "Decentralized Systems",
+      "Solidity",
+      "Cryptography",
       "IoT Security"
     ],
+    "gallery": {
+      "folder": "latis",
+      "images": ["Manufacturing Client.jpg", "OEM Client.jpg", "Presentation.jpg", "Welcome Page.jpg"]
+    },
     "date": "2023-03-01",
     "detailsLink": "projects/latis.html"
   },
   {
     "id": "politilink",
     "title": "Politilink",
+    "role": "Software Engineer",
     "category": "HackViolet 2023 - Best Innovation",
     "featured": false,
     "description": "Developed a Chrome extension leveraging GPT-3 to analyze news articles and connect users with their relevant local representatives based on the article's subject matter.",
@@ -66,14 +74,15 @@
   {
     "id": "dream-labs",
     "title": "DREAMs Lab Research",
+    "role": "Undergraduate Research Assistant",
     "category": "Additive Manufacturing",
     "featured": false,
     "description": "Researched and implemented the integration of conductive inks into FDM and SLA 3D printing processes to create embedded electronics within printed components.",
     "tags": [
-      "3D Printing",
-      "Materials Science",
-      "Embedded Electronics",
-      "Prototyping"
+      "Additive Manufacturing",
+      "Reverse Engineering",
+      "Python",
+      "SLA 3D Printing"
     ],
     "date": "2022-08-01",
     "detailsLink": "projects/dream-labs.html"
@@ -81,15 +90,15 @@
   {
     "id": "haptic-tactics",
     "title": "Haptic Tactics",
+    "role": "Hardware Lead",
     "category": "XR & Haptics",
     "featured": false,
     "description": "Designed and built a haptic feedback device to simulate aerospace drilling procedures in virtual reality, significantly enhancing immersion through tactile hardware integration.",
     "tags": [
-      "Virtual Reality",
-      "Haptics",
-      "Unity",
-      "C++",
-      "Mechatronics",
+      "Hardware Design",
+      "Python",
+      "XR / Unity",
+      "Bluetooth",
       "3D Printing"
     ],
     "date": "2022-05-01",
@@ -98,6 +107,7 @@
   {
     "id": "band-aid",
     "title": "Band Aid Together",
+    "role": "Software Engineer",
     "category": "HackViolet 2022 - IoT Healthcare",
     "featured": false,
     "description": "Engineered an IoT wearable seizure detection device utilizing Arduino and Firebase to deliver real-time emergency alerts.",
@@ -114,6 +124,7 @@
   {
     "id": "finance-quizzar",
     "title": "Finance QuizzAR",
+    "role": "Software Engineer",
     "category": "EdTech & AR",
     "featured": false,
     "description": "Created an interactive augmented reality platform aimed at teaching financial literacy through gamified learning experiences and 3D quizzes.",
@@ -129,30 +140,36 @@
   },
   {
     "id": "tj-space",
-    "title": "TJ REVERB (2U CubeSat)",
-    "category": "Hardware Engineering",
+    "title": "TJ Space Program",
+    "role": "Sat-4 & BlueCube Lead",
+    "category": "Aerospace Engineering",
     "featured": false,
     "description": "Contributed to the systems engineering and hardware design of a 2U CubeSat, with a primary focus on the satellite's electronics and communication subsystems.",
     "tags": [
       "Systems Engineering",
-      "RF Communications",
-      "PCB Design",
+      "Power Systems",
       "Aerospace",
-      "CubeSat"
+      "RF Communications",
+      "PCB Design"
     ],
+    "gallery": {
+      "folder": "tj_space",
+      "images": ["067ecd73-e768-4636-887c-01976a3ba357.jpg", "Assembled.jpg", "CubeSat.jpg", "Work.jpg"]
+    },
     "date": "2021-09-01",
     "detailsLink": "projects/tj-space.html"
   },
   {
     "id": "teach4charity",
     "title": "Teach4Charity",
+    "role": "Organizer & Founder",
     "category": "Community Initiative",
     "featured": false,
     "description": "Founded and managed a student-led tutoring initiative that successfully raised over $4,000 to support various charitable organizations.",
     "tags": [
       "Leadership",
-      "Project Management",
-      "Education",
+      "Community Service",
+      "STEM Education",
       "Non-Profit"
     ],
     "date": "2020-09-01",

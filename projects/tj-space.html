@@ -7,10 +7,11 @@
     <title>TJ Space Program | Soham Gandhi</title>
     <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="../assets/js/project-page.js" defer></script>
 
 </head>
 
-<body>
+<body data-project-id="tj-space">
 
     <nav>
         <a href="../index.html">Home</a>
@@ -19,25 +20,17 @@
         <a href="../blog.html">Blog</a>
     </nav>
 
-    <header class="page-header subpage-header">
+    <header class="page-header subpage-header" id="project-header">
         <a href="../projects.html" class="back-link">Back to Projects</a>
-        <h1>TJ Space Program</h1>
-        <div class="meta">
-            Sat-4 & BlueCube Lead <span>| Aerospace Engineering</span>
-        </div>
-        <div class="tech-stack" style="margin-top: 1.5rem;">
-            <span class="skill-tag">Systems Engineering</span>
-            <span class="skill-tag">Power Systems</span>
-            <span class="skill-tag">Aerospace</span>
-        </div>
+        <h1 id="proj-title"></h1>
+        <div class="meta" id="proj-meta"></div>
+        <div class="tech-stack" id="proj-tags" style="margin-top: 1.5rem;"></div>
     </header>
 
     <main class="subpage-main">
         <section class="content-block" style="padding: 0;">
             <h2>Project Overview</h2>
-            <p>During my time in high school, I held leadership roles within the TJ Space Program. I acted as both the
-                Sat-4 Lead and the BlueCube Lead, guiding a team of students in the development, power management, and
-                educational outreach for small-scale CubeSats.</p>
+            <p>During my time in high school, I held leadership roles within the TJ Space Program. I acted as both the Sat-4 Lead and the BlueCube Lead, guiding a team of students in the development, power management, and educational outreach for small-scale CubeSats.</p>
         </section>
 
         <section class="split-grid" style="padding: 0; margin-bottom: 2.5rem;">
@@ -127,6 +120,7 @@
         &copy; 2026 Soham Gandhi
     </div>
 </footer>
+
 </body>
 
 </html>
