@@ -4,7 +4,21 @@
     "company": "Texas Instruments",
     "role": "Digital IC Design Engineer",
     "location": "Santa Clara, CA",
-    "period": "May 2023 - Present",
+    "period": "May 2023 - Jul 2026",
+    "roles": [
+      {
+        "title": "Digital IC Design Engineer",
+        "period": "Jul 2025 - Jul 2026"
+      },
+      {
+        "title": "Digital IC Design Intern",
+        "period": "May 2024 - Aug 2024"
+      },
+      {
+        "title": "Validation Engineering Intern",
+        "period": "May 2023 - Aug 2023"
+      }
+    ],
     "highlights": [
       "Leading development of a bidirectional control channel over SerDes interfaces, integrating communication protocols to increase communication speeds.",
       "Designed high-speed SystemVerilog FIFOs with prefetching logic and single-port RAM, improving performance by 50%.",

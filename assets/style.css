@@ -481,6 +481,39 @@ h2 {
 }
 
 /* Timeline Components */
+.resume-roles {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--card-border);
+}
+
+.resume-role-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.3rem 0;
+}
+
+.resume-role-title {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.resume-role-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .resume-role-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+}
+
 .timeline {
     position: relative;
     padding-left: 2rem;
